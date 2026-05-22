@@ -1,0 +1,2412 @@
+code,label,sources,files
+0I34.00,HGV Driver,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+0I34.11,HGV driver,DialogAdd,~V4003f.htm|~V40633.htm
+0I35.00,LGV Driver,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4003f.htm|~V40633.htm
+0I37.00,Motor car driver,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+12C2.00,IHD<60,DialogAdd,CFEXAM.htm|~V40024.htm
+12C3.00,IHD,DialogAdd,CFEXAM.htm|~V40024.htm
+12C4.00,Stroke,DialogAdd,~V40024.htm
+12C5.00,MI,DialogAdd,~V40024.htm
+133A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+133A.00,Student,DialogAdd,~V0.htm|~V40019.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+136K.00,Alcohol intake above rec limit,DialogAdd|PatientData,~V40017.htm|~V40019.htm|~V4001a.htm|~V40022.htm|~V40024.htm
+136L.00,Alcohol intake within rec limit,DialogAdd,~V40019.htm|~V40022.htm|~V40024.htm
+136M.00,Current non drinker,DialogAdd,~V40019.htm
+136S,,PatientData,~V40017.htm
+136S.00,Hazardous Alcohol use,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+136V.00,Alcohol units per week,DialogAdd,~V40019.htm
+137H.00,Pipe Smoker,DialogAdd,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+137J.00,Cigar Smoker,DialogAdd,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+137K.00,"Not Smoking, self reported",DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+137P.00,Cigarette Smoker,DialogAdd,~V0.htm|~V40019.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+137R.00,Current Smoker,DialogAdd,~V40019.htm|~V40022.htm|~V40024.htm
+137S.00,Ex Smoker,DialogAdd,~V0.htm|~V40019.htm|~V40022.htm|~V40024.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+137T.00,Date Ceased Smoking,DialogAdd,~V40033.htm|~V40612.htm
+137X.00,Cigarette consumption,DialogAdd,~V40019.htm
+137b,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137c,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137d,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137e,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137e.00,Returned to Smoking,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+137f,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137h,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137j,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137k,,PatientData,~V4003a.htm|~V4063b.htm
+137k.00,Refusal to give smoking status,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137l,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137m,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+137m.00,Failed to stop,DialogAdd,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+137n,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+137o,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+138X,,PatientData,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138X.00,Inactive Lifestyle,DialogAdd,~V40019.htm|~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138Y,,PatientData,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138Y.00,GPPAQ Mod Inactive,DialogAdd,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138a,,PatientData,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138a.00,GPPAQ Mod Active,DialogAdd,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138b,,PatientData,~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+138b.00,Active Lifestyle,DialogAdd,~V40019.htm|~V4001b.htm|~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+13C,,PatientData,~V40017.htm
+13C..00,Click to record new problem transferring,DialogAdd,~V40017.htm
+13C1.00,Fully mobile,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13C2.00,Mobile outside with aid,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13C6.00,Bed Ridden,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13C7.00,,PatientData,~V40017.htm
+13CA.00,Housebound,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13CX,,PatientData,~V40020.htm
+13F1.00,Independant Housing (not alone),DialogAdd,~V40020.htm
+13F2.00,Lives alone - help available,DialogAdd,~V40016.htm|~V40020.htm
+13F3.00,Lives alone - no help available,DialogAdd,~V40016.htm|~V40020.htm
+13F6100,Lives in a Nursing Home,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm
+13F8100,Long Stay Hospital Inpatient,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13FH.00,Lives with Relatives,DialogAdd,~V40020.htm
+13HQ.00,In prison,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13Hf.00,Unable to Cope,DialogAdd,~V40018.htm|~V40019.htm
+13Im,,PatientData,~V40020.htm
+13Im.00,Subj Certificate Auth Ad in Act 2000,DialogAdd,~V40016.htm|~V40020.htm
+13In,,PatientData,~V40020.htm
+13In.00,Has welfare attorney appointment Ad In Act 2000,DialogAdd,~V40020.htm
+13Io,,PatientData,~V40018.htm|~V4001a.htm
+13Io.00,Adults with Incapacity (Scot) Act 2000,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13J5,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13J5.00,Retired,DialogAdd,~V0.htm|~V40019.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13J7,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13J7.00,Unemployed,DialogAdd,~V0.htm|~V40019.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13JD,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13JD.00,Self-employed,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13JJ.00,Unfit for work,DialogAdd,~V40019.htm
+13JL.00,Medical problems at work,DialogAdd,~V40019.htm
+13JM000,Unhappy at work,DialogAdd,~V40019.htm
+13Je.00,Employed,DialogAdd,~V40019.htm
+13Jf.00,Voluntary work,DialogAdd,~V40019.htm
+13K1.00,Financial issues,DialogAdd,~V40019.htm
+13U4,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WF,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WF.11,Smoker in household,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WF100,Father smokes,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WF200,Mother smokes,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WF300,Both parents smoke,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WI,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WI.00,Parents do not smoke,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WK,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WK.00,No smokers in household,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13WL.00,Family with young children,DialogAdd,~V40019.htm
+13WR,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13YA.00,Stroke Group Member,DialogAdd|PatientData,~V40017.htm
+13Z5,,PatientData,~V40015.htm
+13Z5.00,Literacy Problems,DialogAdd,~V40015.htm|~V40019.htm|~V4001a.htm
+13Z6,,PatientData,~V40033.htm|~V40612.htm
+13ZG,,PatientData,~V4001a.htm|~V40033.htm|~V40612.htm
+13ZG.00,Language not given - patient refused,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+13ZM,,PatientData,~V40015.htm|~V40018.htm|~V40033.htm|~V40612.htm
+13ZM.00,British Sign Language,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+13ZP,,PatientData,~V40033.htm|~V40612.htm
+13ZP.00,Makaton Sign Language,DialogAdd,~V40033.htm|~V40612.htm
+13b3.00,Creole language,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13b4.00,Mirpuri,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+13l0.00,Arabic,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l1.00,Bengali,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l2.00,Cantonese,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l3.00,Czech,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l5.00,French,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l6.00,Gujerati,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l8.00,Hindi,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13l9.00,Iba,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lB.00,Mandarin,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lC.00,Polish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lD.00,Portuguese,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lE.00,Punjabi,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lF.00,Russian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lG.00,Somali,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lH.00,Spanish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lI.00,Swahili,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lJ.00,Sylheti,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lK.00,Tamil,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lL.00,Urdu,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lM.00,Yoruba,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lN.00,Kurdish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lO.00,Farsi,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lP.00,Shona,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lQ.00,Italian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lR.00,German,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lS.00,Albanian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lT.00,Croatian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lV.00,Greek,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lW.00,Japanese,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lX.00,Korean,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lY.00,Lithuanian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lZ.00,Turkish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13la.00,Ukrainian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lb.00,Vietnamese,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lc.00,Akan,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13ld.00,Amharic,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13le.00,Brawa,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lf.00,Dutch,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lg.00,Ethiopian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lh.00,Flemish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13li.00,French Creole,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lj.00,Gaelic,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lk.00,Hakka,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13ll.00,Hebrew,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lm.00,Igbo,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13ln.00,Lingala,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lo.00,Luganda,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lp.00,Malayalam,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lq.00,Norwegian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lr.00,Pashto,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13ls.00,Patois,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lt.00,Serbian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lu.00,Sinhala,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lv.00,Swedish,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lw.00,Tagalog,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lx.00,Thai,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13ly.00,Tigrinya,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13lz.00,Welsh,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+13p,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p..00,Cessation milestone,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p0.00,Date for cessation of smoking,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p1.00,4 week follow-up,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p5,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p5.00,Smoking cessation programme start date,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p5000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+13p6.00,CO reading after 4 weeks,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13p8.00,Lost to follow-up,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+13u1,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+13u1.00,Romanian,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+14A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+14B,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+14C5.00,H/O: Liver disease,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+14D5,,PatientData,~V4003b.htm|~V4003e.htm|~V40630.htm|~V40638.htm
+14GB,,PatientData,~V40039.htm|~V40636.htm
+14LJ,,PatientData,~V40017.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+14LJ.00,H/O Influenza Vaccine Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+14LK,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LK.00,H/O Aspirin Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LL,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+14LL.00,H/O Beta Blocker Allergy,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+14LM,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+14LM.00,H/O ACEi Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+14LN,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+14LN.00,History of A II allergy,DialogAdd|PatientData|PatientData2,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+14LP,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LP.00,H/O : Warfarin allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LQ,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LQ.00,H/O: Clopidogrel Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+14LX,,PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+14LX.00,H/O: dipyridamole allergy,DialogAdd,~V40017.htm|~V4003d.htm|~V40627.htm
+14NB.00,Peripheral vascular dis proc,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+14O9,,PatientData,~V40039.htm|~V40636.htm
+14O9.00,At risk of Osteoporosis,DialogAdd,~V40016.htm|~V40039.htm|~V40636.htm
+14OD,,PatientData,~V40039.htm|~V40636.htm
+16D1.00,Recurrent falls,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm
+171Z.00,Cough Symptom NOS,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+173A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+173G.00,Breathless - strenuous exertion,DialogAdd|PatientData,~V40015.htm
+173H,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+173H.00,MRC Grade 1,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+173I,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+173I.00,MRC Grade 2,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+173J,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+173J.00,MRC Grade 3,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+173K,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+173K.00,MRC Grade 4,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+173L,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+173L.00,MRC Grade 5,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+1A45,,PatientData,~V4003e.htm|~V40638.htm
+1ABJ,,PatientData,~V4001b.htm|~V4003f.htm|~V40633.htm
+1ABJ.00,No Erectile Dysfunction,DialogAdd,~V4001b.htm|~V4003f.htm|~V40633.htm
+1AC2.00,Polyuria,DialogAdd|PatientData,~V40018.htm
+1B1U,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+1B52,,PatientData,~V40017.htm
+1B52.00,Click to record new problem balance,DialogAdd,~V40017.htm
+1D1B,,PatientData,~V4001b.htm|~V4003f.htm|~V40633.htm
+1D1B.00,C/O Erectile Dysfunction,DialogAdd,~V4001b.htm|~V4003f.htm|~V40633.htm
+1FA..00,Diet,DialogAdd,NURSE2.htm
+1FB..00,Diet poor,DialogAdd,~V40019.htm
+1FH..00,Healthy diet,DialogAdd,~V40019.htm
+1J6,,PatientData,~V4003e.htm|~V40638.htm
+1J6..00,Suspected Heart Disease,DialogAdd,~V4003e.htm|~V40638.htm
+1J60,,PatientData,~V4003c.htm|~V40631.htm
+1J60.00,Suspected Heart Failure,DialogAdd,~V4003c.htm|~V40631.htm
+1J70.00,Suspected Asthma,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+1J71.00,Suspected COPD,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+1JA1,,PatientData,~V4003d.htm|~V40627.htm
+1JA1.00,Suspected Cerebrovascular Disease,DialogAdd,~V4003d.htm|~V40627.htm
+1JD,,PatientData,~V4003b.htm|~V40630.htm
+1JD..00,Suspected Hypertension,DialogAdd,~V4003b.htm|~V40630.htm
+1JJ,,PatientData,~V4001b.htm
+1JJ..00,Suspected Depression,DialogAdd,~V4001b.htm
+1P5,,PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+1P50.00,Violent Acts Towards Others,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+1P51.00,Physically Abusive Behaviour,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+1P52.00,Verbally Abusive Behaviour,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+1PC..00,User of Electronic cigarettes,DialogAdd,~V40019.htm
+1R...00,"CPR Not discussed (Enter ""Unknown"" in comment)",DialogAdd,~V40020.htm
+1R0..00,For Resuscitation,DialogAdd,~V40020.htm
+1R1..00,Not For Resuscitation,DialogAdd,~V40020.htm
+1Z0,,PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+1Z0..00,Terminal Illness,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+1Z01.00,,PatientData,~V40020.htm
+1Z1,,PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm|~V40630.htm|~V40637.htm|~V40638.htm
+1Z10,,PatientData,~V40038.htm|~V40637.htm
+1Z10.00,,PatientData,~V40033.htm|~V40612.htm
+1Z11,,PatientData,~V40038.htm|~V40637.htm
+1Z11.00,,PatientData,~V40033.htm|~V40612.htm
+1Z12.00,Chronic kidney disease stage 3,DialogAdd,~V40018.htm
+1Z13.00,Chronic kidney disease stage 4,DialogAdd,~V40018.htm
+1Z14.00,Chronic kidney disease stage 5,DialogAdd,~V40018.htm
+1Z17,,PatientData,~V40038.htm|~V40637.htm
+1Z17.00,,PatientData,~V40033.htm|~V40612.htm
+1Z18,,PatientData,~V40038.htm|~V40637.htm
+1Z18.00,,PatientData,~V40033.htm|~V40612.htm
+1Z19,,PatientData,~V40038.htm|~V40637.htm
+1Z19.00,,PatientData,~V40033.htm|~V40612.htm
+1Z1A,,PatientData,~V40038.htm|~V40637.htm
+1Z1A.00,,PatientData,~V40033.htm|~V40612.htm
+1Z1B.00,,PatientData,~V40038.htm|~V40637.htm
+1Z1D.00,,PatientData,~V40038.htm|~V40637.htm
+1Z1F.00,,PatientData,~V40038.htm|~V40637.htm
+1Z1H.00,,PatientData,~V40038.htm|~V40637.htm
+1Z1K.00,,PatientData,~V40038.htm|~V40637.htm
+1Z1M,,PatientData,~V40038.htm|~V40637.htm
+1Z1Q,,PatientData,~V40038.htm|~V40637.htm
+2126E00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40637.htm
+2126F00,COPD resolved,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+212G,,PatientData,~V0.htm|~V40017.htm|~V4001a.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+212G.00,Asthma resolved,DialogAdd,~V40017.htm|~V4001a.htm
+212H,,PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+212K,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm
+212K.00,,PatientData,~V4003b.htm|~V40630.htm
+212P,,PatientData,~V40037.htm|~V4062f.htm
+212S,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+22A..00,Weight,DialogAdd,NURSE2.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+22K,,PatientData,~V40017.htm|~V40018.htm|~V40020.htm|~V40022.htm|~V40024.htm|~V40033.htm|~V40612.htm
+22K..00,BMI,DialogAdd|PatientData,PPC CVD .htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+22K2.00,BMI high K/M2,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+22K4.00,BMI 25-29,DialogAdd,~V40020.htm|~V40025.htm
+22K5.00,BMI 30+,DialogAdd,~V40020.htm|~V40025.htm
+22K6.00,BMI <20,DialogAdd,~V40020.htm|~V40025.htm
+22K7.00,BMI 40+,DialogAdd,~V40020.htm|~V40025.htm
+22K8.00,BMI 20-24,DialogAdd,~V40020.htm|~V40025.htm
+22N0.00,Waist Circumference,DialogAdd,PPC CVD .htm|~V40033.htm|~V40612.htm
+242Z,,PatientData,~V4001a.htm
+242Z.00,Pulse Rate,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+246A,,PatientData,~V40016.htm|~V4001a.htm
+246A.00,O/E - Diastolic BP reading,DialogAdd,~V4001a.htm
+246M,,PatientData,~V4003b.htm|~V4003d.htm|~V40627.htm|~V40630.htm
+24E,,PatientData,~V4001b.htm
+24EA,,PatientData,~V40018.htm
+24EA.00,Absent right foot pulses,DialogAdd,~V40018.htm|~V4001b.htm|~V40022.htm
+24EB,,PatientData,~V40018.htm
+24EB.00,Right Foot Pulse Present,DialogAdd,~V40018.htm|~V4001b.htm|~V40022.htm
+24F,,PatientData,~V4001b.htm
+24FA,,PatientData,~V40018.htm
+24FA.00,Absent left foot pulses,DialogAdd,~V40018.htm|~V4001b.htm|~V40022.htm
+24FB,,PatientData,~V40018.htm
+24FB.00,Left Foot Pulses Present,DialogAdd,~V40018.htm|~V4001b.htm|~V40022.htm
+24H..00,Poor tissue perfusion,DialogAdd|PatientData,~V40022.htm
+27C,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+27C..00,Patient NOT pregnant,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40633.htm
+29B1.00,,PatientData,~V40018.htm
+29B2,,PatientData,~V40018.htm
+29B2.00,Anaesthesia Present,DialogAdd|PatientData,~V40018.htm
+29B3.00,,PatientData,~V40018.htm
+29B7,,PatientData,~V4001b.htm
+29B8,,PatientData,~V4001b.htm
+29B9,,PatientData,~V40018.htm|~V4001b.htm
+29B9.00,10g monofilament sensation R foot abnormal,DialogAdd,~V40018.htm|~V4001b.htm
+29BA,,PatientData,~V40018.htm|~V4001b.htm
+29BA.00,10g monofilament sensation L foot abnormal,DialogAdd,~V40018.htm|~V4001b.htm
+29BB,,PatientData,~V40018.htm|~V4001b.htm
+29BB.00,10g monofilament sensation R foot normal,DialogAdd,~V40018.htm|~V4001b.htm
+29BC,,PatientData,~V40018.htm|~V4001b.htm
+29BC.00,10g monofilament sensation L foot normal,DialogAdd,~V40018.htm|~V4001b.htm
+29H1.00,,PatientData,~V40018.htm
+29H2.00,,PatientData,~V40018.htm
+29H3.00,,PatientData,~V40018.htm
+29H4.00,O/E - Vibration sense of right foot abnormal,DialogAdd|PatientData,~V40018.htm
+29H5.00,Vibration sense of right foot normal,DialogAdd|PatientData,~V40018.htm
+29H6.00,O/E - vibration sense of left foot abnormal,DialogAdd|PatientData,~V40018.htm
+29H7.00,Vibration sense of Left Foot Normal,DialogAdd|PatientData,~V40018.htm
+29H8.00,,PatientData,~V40018.htm
+29H9.00,,PatientData,~V40018.htm
+29HA.00,,PatientData,~V40018.htm
+29HB.00,,PatientData,~V40018.htm
+29N1,,PatientData,~V4001a.htm
+29N1.00,Non Weight Bearing,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40019.htm|~V4001a.htm
+2B2..00,O/E raised intracranial pressure,DialogAdd,~V40016.htm
+2B42.00,Motor Aphasia,DialogAdd|PatientData,~V40017.htm
+2B43.00,Sensory Aphasia,DialogAdd|PatientData,~V40017.htm
+2B48.00,O/E - Dysarthria,DialogAdd|PatientData,~V40017.htm
+2BBB,,PatientData,~V40018.htm
+2BBB.00,Right retina not seen,DialogAdd|PatientData,~V40018.htm
+2BBC,,PatientData,~V40018.htm
+2BBC.00,Left retina not seen,DialogAdd,~V40018.htm
+2BBJ,,PatientData,~V40018.htm
+2BBJ.00,No right diabetic retinopathy,DialogAdd,~V40018.htm
+2BBK,,PatientData,~V40018.htm
+2BBK.00,No left diabetic retinopathy,DialogAdd,~V40018.htm
+2BBP,,PatientData,~V40018.htm
+2BBP.00,Right eye background diabetic retinopathy,DialogAdd,~V40018.htm
+2BBQ,,PatientData,~V40018.htm
+2BBQ.00,Left eye background diabetic retinopathy,DialogAdd,~V40018.htm
+2BBR,,PatientData,~V40018.htm
+2BBR.00,Right eye preproliferative diabetic retinopathy,DialogAdd,~V40018.htm
+2BBS,,PatientData,~V40018.htm
+2BBS.00,Left eye preproliferative diabetic retinopathy,DialogAdd,~V40018.htm
+2BBT,,PatientData,~V40018.htm
+2BBT.00,Right eye proliferative diabetic retinopathy,DialogAdd,~V40018.htm
+2BBV,,PatientData,~V40018.htm
+2BBV.00,Left eye proliferative diabetic retinopathy,DialogAdd,~V40018.htm
+2BL,,PatientData,~V40017.htm
+2BL2.00,O/E - Slightly deaf,DialogAdd,~V40016.htm
+2BL3,,PatientData,~V4001a.htm
+2BL3.00,Significantly Deaf,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+2BL4,,PatientData,~V4001a.htm
+2BL4.00,Very Deaf,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+2BL5,,PatientData,~V4001a.htm
+2BL5.00,Completely Deaf,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+2DG,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+2DG..00,Hearing Aid Worn,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+2F16.00,Injection sites abnormal,DialogAdd|PatientData,~V40018.htm
+2F18.00,Injection site normal,DialogAdd|PatientData,~V40018.htm
+2G4..00,General exam of legs,DialogAdd|PatientData,~V40022.htm
+2G42,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G42.00,Amputated right leg,DialogAdd,~V40018.htm
+2G43,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G43.00,Amputated left leg,DialogAdd,~V40018.htm
+2G44,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G44.00,Amputated right above knee,DialogAdd,~V40018.htm
+2G45,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G45.00,Amputated left above knee,DialogAdd,~V40018.htm
+2G46,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G46.00,Amputated right below knee,DialogAdd,~V40018.htm
+2G47,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+2G47.00,Amputated left below knee,DialogAdd,~V40018.htm
+2G54,,PatientData,~V40018.htm
+2G54.00,Right Foot Ulcer,DialogAdd,~V40018.htm
+2G55,,PatientData,~V40018.htm
+2G55.00,Left Foot Ulcer,DialogAdd,~V40018.htm
+2G5E,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5E.00,Right diabetic foot at low risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5F,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5F.00,Right diabetic foot at moderate risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5G,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5G.00,Right diabetic foot at high risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5H,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5H.00,Right diabetic foot - ulcerated,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5I,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5I.00,Left diabetic foot at low risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5J,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5J.00,Left diabetic foot at moderate risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5K,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5K.00,Left diabetic foot at high risk,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5L,,PatientData,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5L.00,Left diabetic foot - ulcerated,DialogAdd,~V40018.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+2G5d,,PatientData,~V4003f.htm|~V40633.htm
+2G5d.00,Increased Risk,DialogAdd,~V4003f.htm|~V40633.htm
+2G5e,,PatientData,~V4003f.htm|~V40633.htm
+2G5e.00,Increased Risk,DialogAdd,~V4003f.htm|~V40633.htm
+315B,,PatientData,PPC CVD .htm
+315B.00,Add Ambulatory Blood Pressure,DialogAdd,PPC CVD .htm
+337A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+337A.00,CO transfer coefficient,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+339g,,PatientData,~V4003a.htm|~V4063b.htm
+339g.00,Serial peak expiratory flow rate,DialogAdd,~V4003a.htm|~V4063b.htm
+339n,,PatientData,~V4003a.htm|~V4063b.htm
+339n.00,Serial PEFR abnormal,DialogAdd,~V4003a.htm|~V4063b.htm
+33BD,,PatientData,~V4003c.htm|~V40631.htm
+33BD.00,Echocardiogram requested,DialogAdd|PatientData,~V4003c.htm|~V40631.htm
+33G1.00,,PatientData,~V4003a.htm|~V4063b.htm
+33H1.00,,PatientData,~V4003a.htm|~V4063b.htm
+33I1.00,,PatientData,~V4003a.htm|~V4063b.htm
+33J1.00,,PatientData,~V4003a.htm|~V4063b.htm
+33K1.00,,PatientData,~V4003a.htm|~V4063b.htm
+388N.00,Anixety Score,DialogAdd,~V40015.htm|~V40018.htm|~V4001a.htm
+388P.00,Depression Score,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+388a.00,Depression anxiety stress scales score,DialogAdd,~V40015.htm
+388f,,PatientData,~V4001b.htm
+388f.00,PHQ-9,DialogAdd,~V4001b.htm
+388u,,PatientData,~V4003d.htm|~V40627.htm
+388u.00,FAST alcohol screening test result,DialogAdd,~V4003d.htm|~V40627.htm
+38B1,,PatientData|PatientData2,~V40033.htm|~V40612.htm
+38B1000,Risk Assessment by 3rd Party,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+38C..00,Health Assessment,DialogAdd|PatientData,~V40020.htm
+38C3.00,Initial problem drug use assessment,DialogAdd,~V4001c.htm
+38D3,,PatientData,~V4003d.htm|~V40627.htm
+38D3.00,AUDIT Score,DialogAdd,~V4003d.htm|~V40627.htm
+38D4,,PatientData,~V4003d.htm|~V40627.htm
+38D6,,PatientData,PPC CVD .htm|~V4001b.htm
+38D6.00,Assign Score,DialogAdd,~V4001b.htm
+38D61,,PatientData,PPC CVD .htm
+38D6100,Add ASSIGN v2.0,DialogAdd,PPC CVD .htm
+38DE000,CHA2DS2-VASc,DialogAdd|PatientData,~V4001b.htm
+38DF,,PatientData,~V40033.htm|~V40612.htm
+38DF.00,QRISK CVD 10y Risk Score,DialogAdd,~V40033.htm|~V40612.htm
+38DP,,PatientData,~V40033.htm|~V40612.htm
+38DP.00,QRISK2 CVD 10y Risk Score,DialogAdd,~V40033.htm|~V40612.htm
+38DR,,PatientData,~V40033.htm|~V40612.htm
+38DR.00,Framingham 10y Risk Score,DialogAdd,~V40033.htm|~V40612.htm
+38Dg,,PatientData,~V4001b.htm
+38Dg.00,CAT Score,DialogAdd,~V4001b.htm
+38Dh,,PatientData,~V4001b.htm
+38G2,,PatientData,~V4001b.htm
+38G2.11,SHIM Score (IIEF-5),DialogAdd,~V4001b.htm
+38G6,,PatientData,~V40033.htm|~V40612.htm
+38G6.00,Joint British Societies cardiovascular disease risk score,DialogAdd,~V40033.htm|~V40612.htm
+38G8,,PatientData,~V40033.htm|~V40612.htm
+38G8.00,Dundee CVS risk score?,DialogAdd,~V40033.htm|~V40612.htm
+38Gq,,PatientData,~V40020.htm
+38Gq.00,SPARRA score,DialogAdd,~V40020.htm
+38Gv,,PatientData,PPC CVD .htm
+38Gv.00,Diabetes UK Risk Score,DialogAdd,PPC CVD .htm
+38L,,PatientData,~V4001b.htm
+38L..00,Importance,DialogAdd,~V4001b.htm
+38M,,PatientData,~V4001b.htm
+38M..00,Confidence,DialogAdd,~V4001b.htm
+39A1,,PatientData,~V40015.htm|~V4001a.htm
+39A1.00,Dependent for bathing,DialogAdd,~V40018.htm|~V4001a.htm
+39G,,PatientData,~V40015.htm|~V4001a.htm
+39G..00,Needs help with housework,DialogAdd,~V40018.htm|~V4001a.htm
+39G0,,PatientData,~V40015.htm|~V40017.htm|~V4001a.htm
+39G0.00,Needs help with cooking,DialogAdd,~V40017.htm|~V40018.htm|~V4001a.htm
+3A...00,,PatientData,~V40015.htm|~V40018.htm
+3C...00,FeNO,DialogAdd,~V4001b.htm
+41C,,PatientData,~V40023.htm
+41M,,PatientData,~V4003f.htm|~V40633.htm
+41M..00,Blood test declined,DialogAdd,~V4003f.htm|~V40633.htm
+42W,,PatientData,~V40018.htm
+42W..00,Add Hb. A1C - diabetic control,DialogAdd,PPC CVD .htm
+42W5.00,Haemoglobin A1c level - IFCC,DialogAdd|PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+42c,,PatientData,~V40018.htm
+42c..00,,PatientData,~V40018.htm
+442J,,PatientData,~V40016.htm
+442V,,PatientData,~V40016.htm
+442W,,PatientData,~V40016.htm
+44G1,,PatientData,~V40015.htm
+44G2,,PatientData,~V40015.htm
+44I4,,PatientData,~V4001a.htm
+44I4.00,Serum potassium,DialogAdd,~V4001a.htm
+44I5,,PatientData,~V4001a.htm
+44I5.00,Serum sodium,DialogAdd,~V4001a.htm
+44J2,,PatientData,~V4001a.htm
+44J2.00,Blood Urea Abnormal,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+44J3,,PatientData,~V40016.htm|~V40018.htm|~V4001a.htm
+44J3.00,Serum Creatinine,DialogAdd|PatientData,~V40018.htm|~V4001a.htm
+44J3000,Serum Creatinine Abnormal,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+44JC.00,,PatientData,~V40018.htm
+44JD.00,,PatientData,~V40018.htm
+44JF.00,,PatientData,~V40018.htm
+44JZ.00,,PatientData,~V4001a.htm
+44OE,,PatientData,~V40017.htm|~V4003f.htm|~V40633.htm
+44OE.00,Plasma Total Cholesterol,DialogAdd|PatientData,~V40018.htm|~V4003d.htm|~V4003f.htm|~V40627.htm|~V40633.htm
+44P,,PatientData,PPC CVD .htm|~V40015.htm|~V40017.htm|~V40018.htm
+44P..00,Total Cholesterol,DialogAdd|PatientData,PPC CVD .htm|~V40015.htm|~V40017.htm|~V40018.htm|~V4003d.htm|~V4003f.htm|~V40627.htm|~V40633.htm
+44P1.00,Serum cholesterol normal,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4003d.htm|~V40627.htm
+44P2.00,Serum cholesterol borderline,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+44P3.00,Serum cholesterol raised,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+44P4.00,Serum cholesterol very high,DialogAdd|PatientData,~V4003d.htm|~V40627.htm
+44P5,,PatientData,~V40018.htm
+44PH,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+44PH.00,Total cholesterol measurement,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4003d.htm|~V4003f.htm|~V40627.htm|~V40633.htm
+44PJ,,PatientData,PPC CVD .htm
+44PJ.00,Serum Total Cholesterol,DialogAdd|PatientData,~V4003d.htm|~V4003f.htm|~V40627.htm|~V40633.htm
+44PK,,PatientData,PPC CVD .htm
+44PK.00,Serum fasting total cholesterol,DialogAdd|PatientData,~V4003d.htm|~V4003f.htm|~V40627.htm|~V40633.htm
+44PZ,,PatientData,PPC CVD .htm
+44T2.00,Add Fasting Blood Glucose,DialogAdd,PPC CVD .htm
+44TB.00,,PatientData,~V40018.htm
+44TC.00,,PatientData,~V40018.htm
+44TD.00,,PatientData,~V40018.htm
+44TL.00,,PatientData,~V40018.htm
+44V..00,Glucose Tol Test,DialogAdd,~V40025.htm
+44X7,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+44X7.00,Blood CO level,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+44YA000,Oxygen saturation at periphery,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+44YA100,Peripheral blood oxygen saturation on room air at rest,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+44YA300,Peripheral blood oxygen saturation supplmentl oxygen at rest,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+44YA500,Baseline SpO2 (oxygen saturation at periphery),DialogAdd|PatientData,~V40039.htm|~V40636.htm
+44Z1,,PatientData,~V40018.htm
+44g,,PatientData,~V40018.htm
+44g0.00,Random Glucose Level,DialogAdd,~V40015.htm|~V40018.htm
+44g1.00,Fasting Blood Glucose,DialogAdd,~V40015.htm|~V40018.htm
+44g2.00,2hour Glucose as Diagnosis,DialogAdd,~V40018.htm
+44lD,,PatientData,~V40038.htm|~V40637.htm
+44lD.00,Urine Protein/Creatinine Ratio,DialogAdd,~V40038.htm|~V40637.htm
+44lzX00,Random urine protein:creatinine ratio,DialogAdd|PatientData,~V40038.htm|~V40637.htm
+451E,,PatientData,~V40016.htm
+451E.00,GFR Calculated Abbreviated MDRD,DialogAdd|PatientData,~V40018.htm
+451F.00,GFR,DialogAdd|PatientData,~V40018.htm
+46TC,,PatientData,~V40018.htm|~V40038.htm|~V40637.htm
+46TC.00,Urine Albumin:Creatinine Ratio,DialogAdd,~V40018.htm|~V40038.htm|~V40637.htm
+46TD,,PatientData,~V40038.htm|~V40637.htm
+46TD.00,Urine microalbumin:creatinine ratio,DialogAdd,~V40038.htm|~V40637.htm
+46W0,,PatientData,~V40018.htm
+46W0.00,Urine microalbumin positive,DialogAdd,~V40018.htm
+46W1,,PatientData,~V40018.htm
+46W1.00,Urine microalbumin negative,DialogAdd,~V40018.htm
+4I2D.11,Wound Swab,DialogAdd,~V40025.htm
+4JF..00,ENT Swab,DialogAdd,~V40025.htm
+4JF4.11,Swab - Throat,DialogAdd,~V40025.htm
+4JF5.00,Sputum Sample,DialogAdd,~V40025.htm
+4JG..11,Swab - Skin,DialogAdd,~V40025.htm
+4JG4.00,Wound Swab,DialogAdd,~V40025.htm
+4JK,,PatientData,~V40025.htm
+4JK2.00,High Vaginal Swab,DialogAdd,~V40025.htm
+4JK9.00,Chlamydia swab taken,DialogAdd,~V40025.htm
+4JKD.00,LVS by patient,DialogAdd,~V40025.htm
+4JL..00,Other Sample,DialogAdd,~V40025.htm
+4JRA.00,MRSA Screening,DialogAdd,~V40025.htm
+567C,,PatientData,~V4003d.htm|~V40627.htm
+567C.00,CAT scan brain - Abnormal,DialogAdd|PatientData,~V40017.htm
+569F,,PatientData,~V4003d.htm|~V40627.htm
+569F.00,MRI Scan Normal,DialogAdd|PatientData,~V40017.htm
+569K000,,PatientData,~V4003d.htm|~V40627.htm
+56F0,,PatientData,~V4003d.htm|~V40627.htm
+56F0.00,CAT Scan brain Declined,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+56F1,,PatientData,~V40015.htm|~V4001a.htm
+56F1.00,Echocardiogram declined,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003c.htm|~V40631.htm
+585S.00,L,DialogAdd|PatientData,~V40022.htm
+585T.00,R,DialogAdd|PatientData,~V40022.htm
+585V.00,L,DialogAdd,~V40022.htm
+585W.00,R,DialogAdd,~V40022.htm
+585X.00,L,DialogAdd,~V40022.htm
+585Y.00,R,DialogAdd,~V40022.htm
+585a.00,Ankle Brachial Pressure Index,DialogAdd,~V40022.htm
+585f,,PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+585f.00,Echocardiogram shows left ventricular systolic dysfunction,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V40631.htm
+585g,,PatientData,~V4003c.htm|~V40631.htm
+585g.00,Echo left ventricular diastolic dysfunction,DialogAdd|PatientData,~V4003c.htm|~V40631.htm
+5C00,,PatientData,~V4003d.htm|~V40627.htm
+5C00.00,CAT scan brain - Normal,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+5C12,,PatientData,~V4003d.htm|~V40627.htm
+5C20,,PatientData,~V4003c.htm|~V40631.htm
+5C20.00,Echocardiogram equivocal,DialogAdd,~V4003c.htm|~V40631.htm
+614E.11,Pill Check,DialogAdd,NURSE2.htm
+61B1,,PatientData,NURSE2.htm
+61B1.00,Depo Provera given,DialogAdd|PatientData,~V40025.htm
+61B1.11,Depo Injection,DialogAdd,NURSE2.htm
+61M..00,Emergency Contraception,DialogAdd,~V40025.htm
+62P5.00,Breast feeding started,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+62PA.00,Mother currently breast feeding,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+657K.00,Booster Pneumococcal Vaccination given,DialogAdd|PatientData,~V40020.htm|~V40025.htm
+65E,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40020.htm|~V40025.htm|~V40540.htm
+65E..00,Influenza Vaccination,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+65E.00,,PatientData,CFEXAM.htm
+65E0,,PatientData,~V40017.htm
+65E0.00,First pandemic influenza vaccination,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+65E1,,PatientData,~V40017.htm
+65E1.00,Second Pandemic influenza vaccination,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+65E2,,PatientData,~V40017.htm|~V4003a.htm|~V4063b.htm
+65E2.00,Influenza vacc give by other healthcare providr,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40020.htm
+65E20.00,,PatientData,CFEXAM.htm
+65E2000,Flu Vacc Given by Other HCP,DialogAdd|PatientData,CFEXAM.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+65E2100,1st intranasal seasonal flu vacc given by other health care provider,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65E2200,2nd intranasal seasonal flu vacc given by other health care provider,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65E2300,2nd intramuscular seasonal influenza vaccination given by OHP,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65E2400,1st intramuscular seasonal influenza vaccination given by OHP,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65E3,,PatientData,~V40015.htm|~V40017.htm
+65E3.00,1st pandemic influenza vacc give by other healthcare providr,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm
+65E4,,PatientData,~V40015.htm|~V40017.htm
+65E4.00,2nd pandemic influenza vacc give by other healthcare providr,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm
+65ED,,PatientData,~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+65ED.00,Influenza Vaccination (manual),DialogAdd|PatientData,CFEXAM.htm|~V40020.htm|~V40025.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+65ED000,Seasonal Influenza given by Pharmacist,DialogAdd,~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+65ED100,1st intranasal seasonal influenza vaccination,DialogAdd,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65ED200,Seasonal Influenza given while hospital inpatient (Hx),DialogAdd,~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+65ED300,2nd intranasal seasonal influenza vaccination,DialogAdd,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+65EE,,PatientData,~V4003a.htm|~V4063b.htm
+65EE000,1st Intranasal Influenza,DialogAdd,~V40540.htm
+65EE100,2nd Intranasal Influenza,DialogAdd,~V40540.htm
+65FY,,PatientData,~V40540.htm
+65FY.11,Shingles vaccination,DialogAdd,~V40540.htm
+65I8.00,Pertussis Vacc (Whooping Cough),DialogAdd,CFEXAM.htm
+661F,,PatientData,~V40015.htm
+661M.00,,PatientData,~V40020.htm
+661N.00,Clinical Management Plan - Review,DialogAdd|PatientData,~V40020.htm
+662B.00,,PatientData,~V40018.htm
+662K,,PatientData,~V4003e.htm|~V40638.htm
+662K000,,PatientData,~V40015.htm
+662K100,Angina control - poor,DialogAdd|PatientData,~V40015.htm
+662L.00,,PatientData,~V40018.htm
+662M,,PatientData,~V4003d.htm|~V40627.htm
+662M.00,Stroke Monitoring,DialogAdd,~V4003d.htm|~V40627.htm
+662N,,PatientData,~V4003e.htm|~V40638.htm
+662N.00,CHD Monitoring,DialogAdd,~V4003e.htm|~V40638.htm
+662P,,PatientData,~V4003b.htm|~V40630.htm
+662P.00,Hypertension Monitoring,DialogAdd,~V4003b.htm|~V40630.htm
+662T,,PatientData,~V4003c.htm|~V40631.htm
+662T.00,Congestive Heart Failure Monitoring,DialogAdd,~V4003c.htm|~V40631.htm
+662W,,PatientData,~V4003c.htm|~V40631.htm
+662W.00,HF Annual Review,DialogAdd,NURSE2.htm|~V4003c.htm|~V40631.htm
+662a,,PatientData,~V4003e.htm|~V40638.htm
+662a.00,Pre-treatment serum cholesterol level,DialogAdd|PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+662c,,PatientData,~V4003b.htm|~V40630.htm
+662c.00,6 Month Recall,DialogAdd,~V4003b.htm|~V40630.htm
+662d,,PatientData,~V4003b.htm|~V40630.htm
+662d.00,Hypertension Annual Review,DialogAdd,NURSE2.htm|~V4003b.htm|~V40630.htm
+662e,,PatientData,~V4003d.htm|~V40627.htm
+662e.00,Stroke Annual Review,DialogAdd,NURSE2.htm|~V4003d.htm|~V40627.htm
+662f,,PatientData,~V4003c.htm|~V40631.htm
+662f.00,NYHA Classification I,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+662g,,PatientData,~V4003c.htm|~V40631.htm
+662g.00,NYHA classification II,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+662h,,PatientData,~V4003c.htm|~V40631.htm
+662h.00,NYHA classification III,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+662i,,PatientData,~V4003c.htm|~V40631.htm
+662i.00,NYHA classification IV,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+662k.00,JBS cardiovascular disease risk < 10% over next 10 years,DialogAdd|PatientData,~V40018.htm
+662l.00,JBS cardiovascular disease risk 10-20% over next 10 years,DialogAdd|PatientData,~V40018.htm
+662m,,PatientData,~V40033.htm|~V40612.htm
+662m.00,JBS cardiovascular disease risk,DialogAdd|PatientData,~V40018.htm|~V40033.htm|~V40612.htm
+662n,,PatientData,~V40033.htm|~V40612.htm
+662n.00,JBS cardiovascular disease risk,DialogAdd|PatientData,~V40018.htm|~V40033.htm|~V40612.htm
+662p,,PatientData,~V4003c.htm|~V40631.htm
+662p.00,HF 6 month Review,DialogAdd,~V4003c.htm|~V40631.htm
+663H,,PatientData,~V4001b.htm
+663H.00,Inhaler Technique - Good,DialogAdd,~V4001b.htm
+663I,,PatientData,~V4001b.htm
+663I.00,Inhaler Technique - Poor,DialogAdd,~V4001b.htm
+663J.00,Airways obstruction reversible,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+663N,,PatientData,~V4003a.htm|~V4063b.htm
+663O,,PatientData,~V4003a.htm|~V4063b.htm
+663P,,PatientData,~V4003a.htm|~V4063b.htm
+663P.00,Asthma limiting activities,DialogAdd,~V4003a.htm|~V4063b.htm
+663Q,,PatientData,~V4003a.htm|~V4063b.htm
+663Q.00,Asthma not limiting activities,DialogAdd,~V4003a.htm|~V4063b.htm
+663U,,PatientData,~V4003a.htm|~V4063b.htm
+663U.00,Asthma Management Plan Given (Hx),DialogAdd,~V4003a.htm|~V4063b.htm
+663d,,PatientData,~V4003a.htm|~V4063b.htm
+663e,,PatientData,~V4003a.htm|~V4063b.htm
+663e.00,Asthma restricts exercise,DialogAdd,~V4003a.htm|~V4063b.htm
+663e000,Asthma sometimes restricts exercise,DialogAdd,~V4003a.htm|~V4063b.htm
+663e100,Asthma severely restricts exercise,DialogAdd,~V4003a.htm|~V4063b.htm
+663f,,PatientData,~V4003a.htm|~V4063b.htm
+663f.00,Asthma never restricts exercise,DialogAdd,~V4003a.htm|~V4063b.htm
+663l,,PatientData,~V40039.htm|~V40636.htm
+663l.00,Spacer device in use,DialogAdd,~V40039.htm|~V40636.htm
+663n,,PatientData,~V4003a.htm|~V4063b.htm
+663n.00,Treatment Compliance Satisfactory,DialogAdd,~V4003a.htm|~V4063b.htm
+663p,,PatientData,~V4003a.htm|~V4063b.htm
+663p.00,Treatment Compliance Unsatifactory,DialogAdd,~V4003a.htm|~V4063b.htm
+663q,,PatientData,~V4003a.htm|~V4063b.htm
+663q.00,Asthma daytime symptoms,DialogAdd,~V4003a.htm|~V4063b.htm
+663r,,PatientData,~V4003a.htm|~V4063b.htm
+663r.00,Asthma causes night symptoms 1 to 2 times per month,DialogAdd,~V4003a.htm|~V4063b.htm
+663s,,PatientData,~V4003a.htm|~V4063b.htm
+663s.00,Asthma never causes daytime symptoms,DialogAdd,~V4003a.htm|~V4063b.htm
+663t,,PatientData,~V4003a.htm|~V4063b.htm
+663t.00,Asthma causes daytime symptoms 1 to 2 times per month,DialogAdd,~V4003a.htm|~V4063b.htm
+663u,,PatientData,~V4003a.htm|~V4063b.htm
+663u.00,Asthma causes daytime symptoms 1 to 2 times per week,DialogAdd,~V4003a.htm|~V4063b.htm
+663v,,PatientData,~V4003a.htm|~V4063b.htm
+663v.00,Asthma causes daytime symptoms most days,DialogAdd,~V4003a.htm|~V4063b.htm
+663w,,PatientData,~V4003a.htm|~V4063b.htm
+663w.00,Asthma limits walking up hills or stairs,DialogAdd,~V4003a.htm|~V4063b.htm
+663x,,PatientData,~V4003a.htm|~V4063b.htm
+663x.00,Asthma limits walking on the flat,DialogAdd,~V4003a.htm|~V4063b.htm
+663y,,PatientData,~V4003a.htm|~V4063b.htm
+663y.00,No of asthma exacerbations in last year,DialogAdd,~V4003a.htm|~V4063b.htm
+665A.00,Psych. treatment stopped,DialogAdd|PatientData,~V4001a.htm
+667F,,PatientData,~V4001b.htm
+667F.00,Seizure Free,DialogAdd,~V4001b.htm
+667K,,PatientData,~V4001b.htm
+667K.00,Epilepsy Limits Activities,DialogAdd,~V4001b.htm
+667L,,PatientData,~V4001b.htm
+667L.00,Epilepsy Does Not Limit Activities,DialogAdd,~V4001b.htm
+667Q,,PatientData,~V4001b.htm
+667Q.00,1-12 Seizures/Year,DialogAdd,~V4001b.htm
+667R,,PatientData,~V4001b.htm
+667R.00,2-4 Seizures/Month,DialogAdd,~V4001b.htm
+667S,,PatientData,~V4001b.htm
+667S.00,1-7 Seizures/Week,DialogAdd,~V4001b.htm
+667T,,PatientData,~V4001b.htm
+667T.00,Daily Seizures,DialogAdd,~V4001b.htm
+66A,,PatientData,~V4003f.htm|~V40633.htm
+66A..00,Diabetic Monitoring Consultation,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+66A1,,PatientData,~V4003f.htm|~V40633.htm
+66A2,,PatientData,~V4003f.htm|~V40633.htm
+66A6.00,Last hypoglycaemic attack,DialogAdd|PatientData,~V40018.htm
+66AH000,Conversion to insulin,DialogAdd|PatientData,~V40018.htm
+66AM,,PatientData,~V4003f.htm|~V40633.htm
+66AM.00,Follow up - Status,DialogAdd,~V4003f.htm|~V40633.htm
+66AP,,PatientData,~V4001b.htm
+66AP.00,GP Only Care,DialogAdd,~V4001b.htm
+66AQ,,PatientData,~V4001b.htm
+66AS,,PatientData,~V4001b.htm|~V4003f.htm|~V40633.htm
+66AS.00,Diabetes Annual Review,DialogAdd,NURSE2.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+66AU,,PatientData,~V4001b.htm
+66AU.00,Hospital Only Care,DialogAdd,~V4001b.htm
+66Ac.00,,PatientData,~V40018.htm
+66Ai.00,6 month review - Status,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+66An,,PatientData,~V4003f.htm|~V40633.htm
+66An.00,Type 1 review - Status,DialogAdd,~V4003f.htm|~V40633.htm
+66Ao,,PatientData,~V4003f.htm|~V40633.htm
+66Ao.00,Type 2 review - Status,DialogAdd,~V4003f.htm|~V40633.htm
+66At.00,Diabetic dietary review,DialogAdd,~V4003f.htm|~V40633.htm
+66At000,Type 1 Diabetic deitary review,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+66At100,Type 2 Diabetic deitary review,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+66Au,,PatientData,~V4003f.htm|~V40633.htm
+66Au.00,Diabetic erectile dysfunction review,DialogAdd,~V4003f.htm|~V40633.htm
+66Av,,PatientData,~V4003f.htm|~V40633.htm
+66Av.00,Diabetic assessment of erectile dysfunction,DialogAdd,~V4003f.htm|~V40633.htm
+66B,,PatientData,~V40037.htm|~V4062f.htm
+66B..00,Thyroid Disease Monitoring,DialogAdd,~V40037.htm|~V4062f.htm
+66BB.00,Thyroid Annual Review,DialogAdd,NURSE2.htm|~V40037.htm|~V4062f.htm
+66Q,,PatientData,~V40023.htm
+66S,,PatientData,~V40023.htm
+66Y4,,PatientData,~V4001b.htm
+66Y4.00,Inhaler Technique - Moderate,DialogAdd,~V4001b.htm
+66YB,,PatientData,~V40039.htm|~V40636.htm
+66YB.00,COPD Monitoring,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+66YB000,COPD 3 monthly review,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+66YB100,COPD 6 monthly review,DialogAdd|PatientData,~V40039.htm|~V40636.htm
+66YI,,PatientData,~V40039.htm|~V40636.htm
+66YI.00,COPD Self Management Plan Given,DialogAdd,~V40039.htm|~V40636.htm
+66YJ,,PatientData,~V4003a.htm|~V4063b.htm
+66YJ.00,Asthma Annual Review,DialogAdd,NURSE2.htm|~V4003a.htm|~V4063b.htm
+66YK,,PatientData,~V4003a.htm|~V4063b.htm
+66YK.00,Refer Asthma,DialogAdd,~V40025.htm|~V4003a.htm|~V4063b.htm
+66YL,,PatientData,~V40039.htm|~V40636.htm
+66YM,,PatientData,~V40039.htm|~V40636.htm
+66YM.00,COPD Annual Review,DialogAdd,NURSE2.htm|~V40039.htm|~V40636.htm
+66YP,,PatientData,~V4003a.htm|~V4063b.htm
+66YQ,,PatientData,~V4003a.htm|~V4063b.htm
+66YQ.00,Monitoring by Nurse,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+66YR,,PatientData,~V4003a.htm|~V4063b.htm
+66YR.00,Monitoring by GP,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+66YS,,PatientData,~V40039.htm|~V40636.htm
+66YS.00,Monitored by Nurse,DialogAdd,~V40039.htm|~V40636.htm
+66YT,,PatientData,~V40039.htm|~V40636.htm
+66YT.00,Monitored by GP,DialogAdd,~V40039.htm|~V40636.htm
+66YX,,PatientData,~V4003a.htm|~V4063b.htm
+66YY,,PatientData,~V4003a.htm|~V4063b.htm
+66Yc,,PatientData,~V4003a.htm|~V4063b.htm
+66Yf,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+66Yf.00,Number of COPD Exac in last 12 Months,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+66Yi,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+66Yi.00,COPD Hospital Admissions in last 12 Months,DialogAdd,~V4001b.htm|~V40039.htm|~V40636.htm
+66Yj,,PatientData,~V40020.htm
+66Yj.00,Home Oxygen Supply - Cylinder,DialogAdd,~V40020.htm
+66Yk,,PatientData,~V40020.htm
+66Yk.00,Home Oxygen Supply - Concentrator,DialogAdd,~V40020.htm
+66Yl,,PatientData,~V40020.htm
+66Yl.00,Home Oxygen Supply - Liquid Oxygen,DialogAdd,~V40020.htm
+66Yq,,PatientData,~V4003a.htm|~V4063b.htm
+66Yq.00,Asthma causes night time symptoms 1 to 2 times per week,DialogAdd,~V4003a.htm|~V4063b.htm
+66Yr,,PatientData,~V4003a.htm|~V4063b.htm
+66Yr.00,Asthma causes night time symptoms most nights,DialogAdd,~V4003a.htm|~V4063b.htm
+66Ys,,PatientData,~V4003a.htm|~V4063b.htm
+66Z,,PatientData2,~V4001b.htm
+66Z..00,HOC Recall,DialogAdd,~V4001b.htm
+66a,,PatientData,~V40039.htm|~V40636.htm
+66a6.00,Dietary Advice,DialogAdd,~V40039.htm|~V40636.htm
+66a8.00,Exercise Advice,DialogAdd,~V40039.htm|~V40636.htm
+66f2,,PatientData|PatientData2,~V40033.htm|~V40612.htm
+66i,,PatientData,~V40038.htm|~V40637.htm
+66i..00,CKD Monitoring,DialogAdd|PatientData,~V40038.htm|~V40637.htm
+671D.00,Discussed with next of kin,DialogAdd|PatientData,~V40020.htm
+671E.00,Discussed with Carer,DialogAdd|PatientData,~V40020.htm
+671F.00,Discussed with Patient,DialogAdd|PatientData,~V40020.htm
+677A,,PatientData,~V40018.htm
+677A.00,Psychosexual counselling,DialogAdd,~V40018.htm
+679F,,PatientData,~V40039.htm|~V40636.htm
+679F.00,Health Ed - Osteoporosis,DialogAdd,~V40039.htm|~V40636.htm
+67D1.00,Aware of prognosis,DialogAdd|PatientData,~V4001a.htm
+67D4.00,Heart failure information given to patient,DialogAdd,~V4001a.htm
+67D8,,PatientData,~V4003f.htm|~V40633.htm
+67D8.00,Provision of diabetes care summary,DialogAdd,~V4003f.htm|~V40633.htm
+67E..00,Travel Advice,DialogAdd|PatientData,~V40025.htm
+67H,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+67H..00,Lifestyle Councelling,DialogAdd|PatientData,PPC CVD .htm|~V40033.htm|~V4003d.htm|~V4003e.htm|~V40612.htm|~V40627.htm|~V40638.htm
+67H0,,PatientData,~V40033.htm|~V40612.htm
+67H0.00,Alcohol Lifestyle Advice,DialogAdd,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+67H2,,PatientData,~V40033.htm|~V40612.htm
+67H2.00,Exercise Lifestyle Advise,DialogAdd,~V40033.htm|~V40612.htm
+67H7,,PatientData,~V40033.htm|~V40612.htm
+67H7.00,Diet Advice,DialogAdd,~V40025.htm|~V40033.htm|~V40612.htm
+67H8,,PatientData,~V40033.htm|~V4003b.htm|~V40612.htm|~V40630.htm
+67H8.00,Lifestyle advice regarding hypertension,DialogAdd,~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40638.htm
+67I8,,PatientData,~V4003e.htm|~V40638.htm
+67I8.00,Advice about taking Aspirin,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+67L..00,Care and Support Planning,DialogAdd,~V4001a.htm
+685L.00,Smear Refused,DialogAdd,~V40025.htm
+685R.00,Smear Taken,DialogAdd,~V40025.htm
+687C.00,MUST Score,DialogAdd,~V40017.htm|~V40018.htm|~V4001a.htm
+68A8,,PatientData,~V40018.htm|~V4001b.htm
+68A8.00,Digital retinal screening,DialogAdd,~V40018.htm
+68C3,,PatientData,~V4003a.htm|~V4063b.htm
+68K7.00,Urine chlamydia test,DialogAdd|PatientData,~V40025.htm
+68N5.00,Consent for Immunisation,DialogAdd,~V40540.htm
+68NE,,PatientData,~V40017.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+68NE.00,No Consent Influenza Immunisation,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm
+68NE000,Flu Vacc Refused,DialogAdd,CFEXAM.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+68NI,,PatientData,~V40025.htm
+68NJ,,PatientData,~V40025.htm
+68NV,,PatientData,~V4003a.htm|~V4063b.htm
+68NX,,PatientData,~V40015.htm|~V40020.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V40627.htm|~V40636.htm|~V4063b.htm
+68NX.00,Pneumococcal Immunisation - No Consent,DialogAdd|PatientData,CFEXAM.htm|~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm|~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+68Ne,,PatientData,~V40039.htm|~V4003d.htm|~V40627.htm|~V40636.htm
+68Ne.00,Consent for pneumo,DialogAdd,~V40039.htm|~V40636.htm
+68Nv,,PatientData,~V40540.htm
+68Nv.00,No consent for Shingles,DialogAdd,~V40540.htm
+68R..00,New Patient Screening Done,DialogAdd,~V40024.htm
+68U0.00,Drugs of Abuse Screening Test,DialogAdd,~V4001c.htm
+69D1.00,Geriatric Health Exam,DialogAdd|PatientData,~V40020.htm
+69D9,,PatientData,~V40020.htm
+69D9.00,Frail Elderly Assessment,DialogAdd,~V40020.htm
+6A2,,PatientData,~V4003e.htm|~V40638.htm
+6A2..00,CHD Annual Review,DialogAdd|PatientData,NURSE2.htm|~V4003e.htm|~V40638.htm
+6A4,,PatientData,~V4003e.htm|~V40638.htm
+6A4..00,,PatientData,~V4003e.htm|~V40638.htm
+6A40,,PatientData|PatientData2,~V40033.htm|~V40612.htm
+6A40.00,At Risk of CHD Recall,DialogAdd,~V40033.htm|~V40612.htm
+6A6..00,Mental Health Review,DialogAdd,~V40025.htm
+6AA,,PatientData,~V40038.htm|~V40637.htm
+6AA..00,CKD Annual Review,DialogAdd|PatientData,NURSE2.htm|~V40038.htm|~V40637.htm
+6AB,,PatientData,~V40020.htm
+6AB..00,Dementia Review,DialogAdd,~V40020.htm
+6AK..00,Annual Health Review,DialogAdd|PatientData,~V40020.htm
+6C2,,PatientData,PPC CVD .htm
+6C2..00,Primary Prevention of Cardiovascular Disease,DialogAdd,PPC CVD .htm
+6F...00,Stroke prevention,DialogAdd,~V4003d.htm|~V40627.htm
+745D400,Post bronchodilator spirometry,DialogAdd|PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+745E000,Home Oxygen Support,DialogAdd|PatientData,~V40020.htm
+745H,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+745H.00,Smoking Cessation Therapy,DialogAdd,~V40024.htm
+7A20400,Endarterectomy of Carotid Artery NEC,DialogAdd|PatientData,~V40017.htm
+7B00z00,Transplantation of kidney NOS,DialogAdd|PatientData,~V40018.htm
+7C25E00,Treatment of erectile dysfunction,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+7G22,,PatientData,~V40025.htm
+7G2AG00,Implanon Inserted,DialogAdd,~V40025.htm
+7G2HA00,Implanon Removed,DialogAdd,~V40025.htm
+7L06,,PatientData,~V40018.htm
+7L06200,Amputation above knee,DialogAdd,~V40018.htm
+7L06300,Amputation through knee,DialogAdd,~V40018.htm
+7L06400,Amputation below knee,DialogAdd,~V40018.htm
+7L06z00,Amputation of leg NOS,DialogAdd,~V40018.htm
+7L07,,PatientData,~V40018.htm
+7L07000,Amputation through ankle,DialogAdd,~V40018.htm
+7L07300,Amputation through metatarsal bones,DialogAdd,~V40018.htm
+7L07z00,Amputation of foot NOS,DialogAdd,~V40018.htm
+7L08,,PatientData,~V40018.htm
+7L08.00,Amputation of toe,DialogAdd,~V40018.htm
+7L08100,Amputation of phalanx of toe,DialogAdd,~V40018.htm
+7L172,,PatientData,NURSE2.htm
+7L17200,Phlebotomy,DialogAdd,NURSE2.htm
+7L18.00,Intramuscular Injection,DialogAdd,NURSE2.htm
+7L18100,,PatientData,~V40025.htm
+7L185,,PatientData,NURSE2.htm
+7L18500,B12 Injection,DialogAdd|PatientData,NURSE2.htm|~V40025.htm
+7L1A000,Renal dialysis,DialogAdd|PatientData,~V40018.htm
+7L1A100,Peritoneal dialysis,DialogAdd|PatientData,~V40018.htm
+7P0H.00,,PatientData,~V4003c.htm|~V40631.htm
+7P0H000,,PatientData,~V40015.htm|~V4003c.htm|~V40631.htm
+7P0H100,,PatientData,~V4003c.htm|~V40631.htm
+7P0H400,,PatientData,~V4003c.htm|~V40631.htm
+7P0H600,,PatientData,~V4003c.htm|~V40631.htm
+81H..00,Dressing of Wound,DialogAdd,NURSE2.htm
+8A2,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8A54400,,PatientData,~V4003c.htm|~V40631.htm
+8B2B,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8B2B000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8B2K.00,Anticoagulant prescribed by third party,DialogAdd|PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8B31400,Stroke Medication review,DialogAdd|PatientData,~V40017.htm|~V40020.htm|~V40023.htm
+8B31B00,Polypharmacy Review,DialogAdd|PatientData,~V4001b.htm|~V40020.htm
+8B39.00,Drugs not taken/completed,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+8B39z00,Drug not taken NOS,DialogAdd|PatientData,~V40015.htm|~V40018.htm
+8B3T,,PatientData,~V40017.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8B3T.00,Over the counter Aspirin Therapy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8B3Y,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8B3f,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8B3j,,PatientData,~V4003a.htm|~V4063b.htm
+8B3j.00,Asthma medication review,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+8B3k.00,CHD medication review,DialogAdd|PatientData,~V40015.htm|~V4003e.htm|~V40638.htm
+8B3l.00,Diabetes medication review,DialogAdd|PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8B3z,,PatientData,~V40017.htm
+8B3z.00,Over the counter statin therapy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+8B63,,PatientData,~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8B63.00,Aspirin prophylaxis,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8B63.12,Aspirin Prophylaxis,DialogAdd,~V4003b.htm|~V40630.htm
+8B64000,HRT Review,DialogAdd,~V40025.htm
+8B6A,,PatientData,~V4003b.htm|~V40630.htm
+8B6A.00,Statin Prophylaxis,DialogAdd,~V4003b.htm|~V40630.htm
+8B6F,,PatientData,~V4003b.htm|~V40630.htm
+8B6F.00,Diuretic Prophylactic,DialogAdd,~V4003b.htm|~V40630.htm
+8B6L.00,GTN Use Score,DialogAdd|PatientData,~V40015.htm
+8B6M,,PatientData,~V4003b.htm|~V40630.htm
+8B6M.00,Calcium Channel Blocker Prophylaxis,DialogAdd,~V4003b.htm|~V40630.htm
+8B6P.00,Clopidogrel prophylaxis,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8BA2.00,,PatientData,~V40020.htm
+8BAP.00,,PatientData,~V40020.htm
+8BAS.00,,PatientData,~V40020.htm
+8BAT.00,,PatientData,~V40020.htm
+8BAV.00,Cancer Review,DialogAdd,~V40025.htm
+8BAi,,PatientData,~V4003f.htm|~V40633.htm
+8BAi.00,Insulin Passport Completed,DialogAdd,~V4003f.htm|~V40633.htm
+8BAj,,PatientData,~V4003f.htm|~V40633.htm
+8BAj.00,Informed dissent not to carry insulin passport,DialogAdd,~V4003f.htm|~V40633.htm
+8BAm,,PatientData,~V4003f.htm|~V40633.htm
+8BAm.00,Insulin Passport Checked,DialogAdd,~V4003f.htm|~V40633.htm
+8BAp,,PatientData,~V4003f.htm|~V40633.htm
+8BAp.00,Insulin passport not checked,DialogAdd,~V4003f.htm|~V40633.htm
+8BG5,,PatientData,~V40017.htm
+8BG5.00,Aspirin Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm
+8BG7,,PatientData,~V40017.htm
+8BG7.00,Warfarin indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+8BG9.00,Clopidogrel indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+8BI0.00,,PatientData,~V40015.htm
+8BIF.00,Epilepsy Meds Review,DialogAdd,~V40025.htm
+8BJ1.00,,PatientData,~V40020.htm
+8BL0,,PatientData,~V40018.htm|~V40038.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8BL0.00,Max Antihypertensive Therapy,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V40038.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8BL1,,PatientData,~V40033.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40633.htm|~V40638.htm
+8BL1.00,Patient on maximal tolerated lipid lowering therapy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003d.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40633.htm
+8BL2,,PatientData,~V4003f.htm|~V40633.htm
+8BL2.00,Patient on maximal tolerated therapy for diabetes,DialogAdd|PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8BM5,,PatientData,~V4001c.htm
+8BM5.00,Shared Care Prescribing,DialogAdd,~V4001c.htm
+8BR1,,PatientData|PatientData2,~V40033.htm|~V40612.htm
+8BS1,,PatientData,~V4001c.htm
+8BS1.00,High Risk Drug Monitoring three monthly review,DialogAdd,~V4001c.htm
+8C17.00,,PatientData,~V40025.htm
+8C44,,PatientData,~V40017.htm
+8C44.00,Nasal tube feeding,DialogAdd,~V40017.htm
+8CA..00,General Advice Given,DialogAdd,~V40025.htm
+8CA0.00,Patient advised to inform insurance company,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+8CA4,,PatientData,~V40033.htm|~V4003d.htm|~V4003e.htm|~V40612.htm|~V40627.htm|~V40638.htm
+8CA4.00,Diet Advice,DialogAdd,NURSE2.htm|~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+8CA4000,Diet advice for weight loss,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8CA4600,Advised re low fat diet,DialogAdd,~V4003e.htm|~V40638.htm
+8CA4700,Advised re Low Chol. Diet,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+8CA4800,Advised re low salt diet,DialogAdd,~V4003e.htm|~V40638.htm
+8CA5.00,Exercise Advice,DialogAdd,NURSE2.htm
+8CA8,,PatientData,~V4003f.htm|~V40633.htm
+8CA8.00,Patient advised not to drive,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4003f.htm|~V40633.htm
+8CA9,,PatientData,~V4003f.htm|~V40633.htm
+8CA9.00,Patient advised to inform DVLA,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4003f.htm|~V40633.htm
+8CAJ,,PatientData,~V4003f.htm|~V40633.htm
+8CAJ.00,Patient Advised About Driving,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4003f.htm|~V40633.htm
+8CAK,,PatientData,~V4003a.htm|~V4063b.htm
+8CAK.00,Given Tel Advice OOH,DialogAdd,~V4003a.htm|~V4063b.htm
+8CAL,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+8CAL.00,Smoking cessation advice,DialogAdd|PatientData,NURSE2.htm|~V0.htm|~V40019.htm|~V40020.htm|~V40022.htm|~V40024.htm|~V40025.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V4063b.htm
+8CAM,,PatientData,~V40033.htm|~V40612.htm
+8CAM.00,Alcohol Brief Intervention,DialogAdd,NURSE2.htm|~V40033.htm|~V40612.htm
+8CAw.00,LARC advice,DialogAdd,NURSE2.htm|~V40025.htm
+8CE,,PatientData,~V4001b.htm
+8CE..00,Self Help Advice Leaflet Given,DialogAdd,~V4001b.htm
+8CE0100,Insulin patient information booklet given,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+8CE0200,Insulin Passport Given,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+8CJ2,,PatientData,~V40017.htm
+8CJ2.00,Percutaneous endoscopic gastrostomy feeding,DialogAdd,~V40017.htm
+8CM1.00,On Gold Standard Palliative Care,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+8CMM.00,Has Anticipatory Care Plan,DialogAdd|PatientData,~V40020.htm
+8CMS,,PatientData2,~V4001b.htm
+8CMX,,PatientData,~V4001b.htm
+8CMX.00,Review of Patient Goals,DialogAdd,~V4001b.htm
+8CR4,,PatientData,~V4003b.htm|~V40630.htm
+8CS..00,Agreement of Care Plan,DialogAdd|PatientData,~V40020.htm
+8CS0,,PatientData,~V4003f.htm|~V40633.htm
+8CS0.00,Diabetes care plan agreed,DialogAdd,~V4003f.htm|~V40633.htm
+8Ce,,PatientData,~V40020.htm
+8Ce1.00,Preferred Place of Care - Hospice,DialogAdd,~V40020.htm
+8Ce3.00,Preferred Place of Care - Hospital,DialogAdd,~V40020.htm
+8Ce4.00,Preferred Place of Care - Nursing Home,DialogAdd,~V40020.htm
+8Ce5.00,Preferred Place of Care - Residential Home,DialogAdd,~V40020.htm
+8CeA.00,Unable to Express Preference,DialogAdd,~V40020.htm
+8CeB.00,Declined to Express Preference,DialogAdd,~V40020.htm
+8D92,,PatientData,~V40017.htm
+8D92.00,Self propelled wheel chair,DialogAdd,~V40017.htm
+8D95,,PatientData,~V40017.htm
+8D95.00,Wheelchair unspecified,DialogAdd,~V40017.htm
+8D9A,,PatientData,~V40017.htm
+8D9A.00,Attendant powered wheel chair,DialogAdd,~V40017.htm
+8E...00,Physiotherapy/remedial Therapy,DialogAdd,~V40017.htm
+8F3,,PatientData,~V40017.htm
+8F3..00,Occupational Therapy,DialogAdd,~V40017.htm
+8F9..00,Cardiac Rehabilitation,DialogAdd,~V40015.htm
+8H2..00,,PatientData,~V4003a.htm|~V4063b.htm
+8H23,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8H2P,,PatientData,~V4003a.htm|~V4063b.htm
+8H2P.00,Emergency Admission,DialogAdd,~V4003a.htm|~V4063b.htm
+8H2R,,PatientData,~V4001b.htm|~V40039.htm|~V40636.htm
+8H2R.00,COPD emergency hosp admission,DialogAdd,~V40039.htm|~V40636.htm
+8H33.00,Day Hospital Care,DialogAdd|PatientData,~V40017.htm
+8H34,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8H3Z.00,Other hospital admission NOS,DialogAdd|PatientData,~V4001a.htm
+8H44,,PatientData,~V40015.htm
+8H44.00,Cardiological referral,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+8H49,,PatientData,~V40016.htm
+8H49.00,Psychiatric Referral,DialogAdd,~V40016.htm
+8H4F.00,Referral to diabetologist,DialogAdd|PatientData,~V40018.htm
+8H4R,,PatientData,~V40015.htm
+8H4R.00,,PatientData,~V4003c.htm|~V40631.htm
+8H62.00,Add Refer To GP,DialogAdd,~V40025.htm
+8H6A.00,,PatientData,~V40020.htm
+8H6G,,PatientData,~V4003b.htm|~V40630.htm
+8H6G.00,Refer to GP - ACE inhibitor therapy,DialogAdd,~V4003b.htm|~V40630.htm
+8H72.00,Refer District Nurse,DialogAdd,~V40025.htm
+8H76,,PatientData,~V4001a.htm
+8H76.00,Refer to dietician,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+8H7J.00,Referral OT,DialogAdd,~V40025.htm
+8H7L.00,,PatientData,~V40020.htm
+8H7X.00,Refer Podiatry,DialogAdd,~V40025.htm
+8H7g,,PatientData,~V40039.htm|~V40636.htm
+8H7g.00,Referral to palliative care service,DialogAdd|PatientData,~V40020.htm|~V40039.htm|~V40636.htm
+8H7i,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8H7i.00,Refer Smoking Clinic,DialogAdd,~V40025.htm
+8H7o000,,PatientData,~V4003c.htm|~V40631.htm
+8H7t,,PatientData,~V40015.htm
+8H7t.00,Referral to pharmacist,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+8H84.00,1 week follow-up,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8H85.00,2 week follow-up,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8H86.00,3 week follow-up,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8HBE,,PatientData,~V4003c.htm|~V40631.htm
+8HBE.00,Heart failure follow-up,DialogAdd|PatientData,~V4001a.htm
+8HBG,,PatientData,~V4003f.htm|~V40633.htm
+8HBH,,PatientData,~V4003f.htm|~V40633.htm
+8HBJ,,PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8HBJ.00,Stroke / TIA Referral,DialogAdd,~V40017.htm|~V4003d.htm|~V40627.htm
+8HBM,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8HE..00,Discharged from hospital,DialogAdd,~V40020.htm
+8HG..00,Died in hospital,DialogAdd,~V40020.htm
+8HH7.00,,PatientData,~V40020.htm
+8HHB,,PatientData,~V4001a.htm
+8HHB.00,Referral to Social Services,DialogAdd,~V4001a.htm
+8HHH.00,Referral to Weight Mngt. Prog.,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+8HHP,,PatientData,~V40016.htm
+8HHP.00,Referred to learning disabilities team,DialogAdd,~V40016.htm
+8HHb.00,Referral to heart failure nurse,DialogAdd|PatientData,~V4001a.htm
+8HJ3,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8HK9,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8HM9,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8HQ3,,PatientData,~V4003d.htm|~V40627.htm
+8HQ3.00,Refer for MRI scan,DialogAdd,~V4003d.htm|~V40627.htm
+8HQ4,,PatientData,~V4003d.htm|~V40627.htm
+8HQ4.00,Refer for CAT scan,DialogAdd,~V4003d.htm|~V40627.htm
+8HQ7.00,,PatientData,~V4003c.htm|~V40631.htm
+8HQF,,PatientData,~V4003d.htm|~V40627.htm
+8HQF.00,Refer for open MRI scan,DialogAdd,~V4003d.htm|~V40627.htm
+8HR4.00,Ref for other Lung Function Test,DialogAdd|PatientData,~V4003a.htm|~V4063b.htm
+8HRA.00,Refer Exercise ECG,DialogAdd,~V40025.htm
+8HRC,,PatientData,~V4003a.htm|~V4063b.htm
+8HRC.00,Refer for Spirometry,DialogAdd|PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+8HTJ,,PatientData,~V40015.htm
+8HTK,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8HTL,,PatientData,~V4003c.htm|~V40631.htm
+8HTQ,,PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8HTQ.00,Referral to Stroke Clinic,DialogAdd,~V40017.htm|~V4003d.htm|~V40627.htm
+8HTZ,,PatientData,~V40017.htm
+8HTZ.00,Referral to clinic NOS,DialogAdd|PatientData,~V40017.htm
+8HTc,,PatientData,~V40018.htm
+8HTc.00,Referral to psychosexual clinic,DialogAdd,~V40018.htm
+8HTi.00,Multidisciplinary diabetic clinic referral,DialogAdd|PatientData,~V40018.htm
+8HTj,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8HTj.00,Referral to erectile dysfunction clinic,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+8HVJ,,PatientData,~V40015.htm
+8HVJ.00,,PatientData,~V4003c.htm|~V40631.htm
+8Hd,,PatientData,~V40039.htm|~V40636.htm
+8Hd..00,Admission to hospital,DialogAdd,~V40020.htm
+8Hj0,,PatientData,~V4003f.htm|~V40633.htm
+8Hj0.00,Refer to diabetes structured education programme,DialogAdd,~V4003f.htm|~V40633.htm
+8Hj3,,PatientData,~V4003f.htm|~V40633.htm
+8Hj3.00,Refer to DAFNE diabetes structured education programme,DialogAdd,~V4003f.htm|~V40633.htm
+8Hj4,,PatientData,~V4003f.htm|~V40633.htm
+8Hj4.00,Refer to DESMOND diabetes structured education programme,DialogAdd,~V4003f.htm|~V40633.htm
+8Hj5,,PatientData,~V4003f.htm|~V40633.htm
+8Hj5.00,Refer to XPERT diabetes structured education programme,DialogAdd,~V4003f.htm|~V40633.htm
+8Hk0,,PatientData,~V4001a.htm
+8Hk0.00,Referred to heart failure education group,DialogAdd,~V4001a.htm
+8HkQ,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8Hkk.00,Referral to cardiac rehabilitation programme,DialogAdd,~V40015.htm
+8I23,,PatientData,~V40025.htm
+8I24,,PatientData,~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I24.00,Aspirin contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I25,,PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I25.00,Warfarin Contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I26,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I26.00,Beta Blocker contraindicated,DialogAdd|PatientData|PatientData2,~V40015.htm|~V4001a.htm|~V4003a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm|~V4063b.htm
+8I27,,PatientData,~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I27.00,Statins contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I28,,PatientData,~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I28.00,ACEi contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I2B,,PatientData,~V4003b.htm|~V40630.htm
+8I2B.00,CCB contraindicated,DialogAdd,~V4003b.htm|~V40630.htm
+8I2D,,PatientData,~V4003b.htm|~V40630.htm
+8I2D.00,Diuretic contraindicated,DialogAdd,~V4003b.htm|~V40630.htm
+8I2E,,PatientData,~V40015.htm|~V4001a.htm
+8I2E.00,Pneumococcal Vaccination contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm|~V4003a.htm|~V4063b.htm
+8I2F,,PatientData,~V40017.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+8I2F.00,Influenza vaccination contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm
+8I2F0,,PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+8I2F000,Influenza contraindicated,DialogAdd,~V40020.htm|~V40025.htm|~V40039.htm|~V4003a.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm|~V4063b.htm
+8I2H,,PatientData,~V40015.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I2H.00,Angiotensin II Receptor antagonist contraincated,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I2K,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2K.00,Clopidogrel contraindicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2R,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2R.00,Anticoagulation contraindicated,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2b,,PatientData,~V4003d.htm|~V40627.htm
+8I2b.00,Dipyridamole contraindicated,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8I2g,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I2h,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I2i,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I2j,,PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+8I2j.00,Spirometry contraindicated,DialogAdd|PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+8I2o,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2o.00,Dabigatran contraindicated,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2r,,PatientData,~V40540.htm
+8I2r.00,Shingles vaccination contraindicated,DialogAdd,~V40540.htm
+8I2u,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I2u.00,Novel oral anticoagulant contraindicated,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I36,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I36.00,Beta Blocker Refused,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I37,,PatientData,~V4003e.htm|~V40638.htm
+8I38,,PatientData,~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I38.00,Aspirin prophylaxis Refused,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I3A,,PatientData,~V4001a.htm
+8I3A.00,Referral to dietician declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+8I3C,,PatientData,~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I3C.00,Statin Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I3D,,PatientData,~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3D.00,ACEi Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3E,,PatientData,~V40015.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3E.00,Warfarin declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3I,,PatientData,~V4003b.htm|~V40630.htm
+8I3I.00,CCB declined,DialogAdd,~V4003b.htm|~V40630.htm
+8I3K,,PatientData,~V4003b.htm|~V40630.htm
+8I3K.00,Diuretic declined,DialogAdd,~V4003b.htm|~V40630.htm
+8I3P,,PatientData,~V40015.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3P.00,Angiotensin II receptor antagonist declined,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3Q,,PatientData,~V40015.htm|~V40020.htm
+8I3Q.00,Pneumococcal Vaccination Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm
+8I3R,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3R.00,Clopidogrel Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3V.00,Medication Review Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+8I3W,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8I3W.00,Diabetic foot examination declined,DialogAdd,~V40018.htm
+8I3X.00,Diabetic retinopathy refused,DialogAdd|PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8I3Y,,PatientData,~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3Y.00,BP procedure refused,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I3b,,PatientData,~V4003a.htm|~V4063b.htm
+8I3b.00,Spirometry testing declined,DialogAdd|PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+8I3d,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3d.00,Anticoagulation Declined,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I3n,,PatientData,~V4003d.htm|~V40627.htm
+8I3n.00,Dipyridamole Declined,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8I3w,,PatientData,~V40015.htm|~V4003f.htm|~V40633.htm
+8I3w.00,Cholesterol test declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4003f.htm|~V40633.htm
+8I61100,Dabigatran not indicated,DialogAdd|PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I62,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I62.00,Beta Blocker Not Indicated,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I63,,PatientData,~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I63.00,Statin Not Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I64,,PatientData,~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I64.00,ACEi Not Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I65,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I65.00,Warfarin Not Indicated,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I66,,PatientData,~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I66.00,Aspirin Not Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I68,,PatientData,~V4003b.htm|~V40630.htm
+8I68.00,CCB not indicated,DialogAdd,~V4003b.htm|~V40630.htm
+8I6A,,PatientData,~V4003b.htm|~V40630.htm
+8I6A.00,Diuretic not indicated,DialogAdd,~V4003b.htm|~V40630.htm
+8I6B,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I6B.00,Clopidogrel Not Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I6C,,PatientData,~V40015.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I6C.00,Angiotensin II receptor antagonist not indicated,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I6D,,PatientData,~V40017.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+8I6D.00,Influenza Vaccination Not Indicated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm
+8I6D0,,PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+8I6D000,Influenza not indicated,DialogAdd,~V40020.htm|~V40025.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+8I6F,,PatientData,~V40018.htm
+8I6F.00,Diabetic retinopathy screening not indicated,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+8I6G,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+8I6G.00,Diabetic foot examination not indicated,DialogAdd,~V40018.htm
+8I6H,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+8I6L,,PatientData,~V4003a.htm|~V4063b.htm
+8I6L.00,Spirometry not indicated,DialogAdd|PatientData,~V40039.htm|~V4003a.htm|~V40636.htm|~V4063b.htm
+8I6N,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I6N.00,Anticoagulation Not Indicated,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I6P.00,Pneumococcal Vacc. not Indicated,DialogAdd|PatientData,~V40020.htm
+8I6a,,PatientData,~V4003d.htm|~V40627.htm
+8I6a.00,Dipyridamole Not Indicated,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8I6i,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I6j,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I6k,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I6s,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I6s.00,Novel oral anticoagulant not indicated,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I70,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I70.00,Aspirin Not Tolerated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+8I71,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I71.00,Warfarin Not Tolerated,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I72,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I72.00,Clopidogrel Not Tolerated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I73,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I73.00,Beta Blocker Not Tolerated,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I74,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I74.00,ACEi Not Tolerated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I75,,PatientData,~V40015.htm|~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I75.00,Angiotensin II receptor antagonist not tolerated,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+8I76,,PatientData,~V40033.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40633.htm|~V40638.htm
+8I76.00,Statin not tolerated,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+8I77.00,CCB not tolerated,DialogAdd,~V4003b.htm|~V40630.htm
+8I78.00,Thiazide not tolerated,DialogAdd,~V4003b.htm|~V40630.htm
+8I7A,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I7A.00,Anticoagulation Not Tolerated,DialogAdd|PatientData,~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I7J,,PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8I7J.00,Dipyridamole Not Tolerated,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+8I7K,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I7L,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I7M,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8I7R,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I7R.00,Dabigatran not tolerated,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I7V,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I7V.00,Novel oral anticoagulant not tolerated,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8I94,,PatientData,~V4003f.htm|~V40633.htm
+8I94.00,Diabetes structured education programme not available,DialogAdd,~V4003f.htm|~V40633.htm
+8IA7.00,Alcohol screening test declined,DialogAdd,~V40019.htm
+8IAH,,PatientData,~V40018.htm|~V4001a.htm
+8IAH.00,Body weight measurement declined,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+8IAK.00,CVD High Risk Review Declined,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+8IAS,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8IAT,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8IAV,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+8IAj,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8IAj.00,SCA Declined,DialogAdd,~V40024.htm
+8IAo,,PatientData,~V4003f.htm|~V40633.htm
+8IAs,,PatientData,~V4003f.htm|~V40633.htm
+8IAs.00,Diabetic deitary review refused,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+8IAv,,PatientData,~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+8IAv.00,Brief intervention for physical activity declined,DialogAdd,~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+8IB6,,PatientData,~V4003f.htm|~V40633.htm
+8IBF,,PatientData,~V4003c.htm|~V40631.htm
+8IBF.00,Echocardiography not indicated,DialogAdd,~V4003c.htm|~V40631.htm
+8IE8,,PatientData,~V4003f.htm|~V40633.htm
+8IE8.00,Refer to ED clinic declined,DialogAdd,~V4003f.htm|~V40633.htm
+8IE9,,PatientData,~V4003f.htm|~V40633.htm
+8IE9.00,Referral to DESMOND structured programme declined,DialogAdd,~V4003f.htm|~V40633.htm
+8IEK,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8IEL,,PatientData,~V40033.htm|~V40612.htm
+8IEL.00,QRISK cardiovascular disease risk assessment declined,DialogAdd,~V40033.htm|~V40612.htm
+8IEM,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8IEM.00,SCT Declined,DialogAdd,~V40024.htm
+8IES,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8IES.00,Dabigatran declined,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8IEV,,PatientData,~V40033.htm|~V40612.htm
+8IEV.00,QRISK2 cardiovascular disease risk assessment declined,DialogAdd,~V40033.htm|~V40612.htm
+8IEa,,PatientData,~V4003f.htm|~V40633.htm
+8IEa.00,Referral to DAFNE diabetes structured educn prog declined,DialogAdd,~V4003f.htm|~V40633.htm
+8IEl,,PatientData,~V40540.htm
+8IEl.00,Shingles vaccination declined,DialogAdd,~V40540.htm
+8IEo,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+8IH1,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8IH1.00,Novel oral anticoagulant declined,DialogAdd,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+8L50.00,Renal transplant planned,DialogAdd|PatientData,~V40018.htm
+8OA3,,PatientData,~V4003f.htm|~V40633.htm
+8OA3.00,DVLA Informed,DialogAdd,~V4003f.htm|~V40633.htm
+8T08,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+918A,,PatientData,~V4001b.htm
+918A.00,Carer,DialogAdd,~V40019.htm
+918A000,,PatientData,~V4001b.htm
+918A100,,PatientData,~V4001b.htm
+918A200,,PatientData,~V4001b.htm
+918F,,PatientData,~V4003f.htm|~V40633.htm
+918F.00,Has a carer,DialogAdd,~V40016.htm|~V4003f.htm|~V40633.htm
+918G.00,Is a carer,DialogAdd|PatientData,~V40019.htm|~V4001b.htm|~V4003f.htm|~V40633.htm
+918H,,PatientData,~V4001b.htm
+918J,,PatientData,~V4003f.htm|~V40633.htm
+918J.00,Carer - Home No,DialogAdd,~V4003f.htm|~V40633.htm
+918K,,PatientData,~V4003f.htm|~V40633.htm
+918K.00,Carer - Work No,DialogAdd,~V4003f.htm|~V40633.htm
+918L,,PatientData,~V4003f.htm|~V40633.htm
+918L.00,Carer - Mobile No,DialogAdd,~V4003f.htm|~V40633.htm
+918M,,PatientData,~V4003f.htm|~V40633.htm
+918M.00,Carer - Email,DialogAdd,~V4003f.htm|~V40633.htm
+918W,,PatientData,~V4001b.htm
+918X,,PatientData,~V4001b.htm
+918Y,,PatientData,~V4001b.htm
+918a,,PatientData,~V4001b.htm
+918b,,PatientData,~V4001b.htm
+918c,,PatientData,~V4001b.htm
+918d,,PatientData,~V4001b.htm
+918e.00,On Learning Disability register,DialogAdd,~V40016.htm
+918f.00,Is no longer a carer,DialogAdd|PatientData,~V40019.htm|~V4001b.htm
+918m,,PatientData,~V4001b.htm
+918r.00,Not a Carer,DialogAdd|PatientData,~V4001b.htm
+918x,,PatientData,~V4003f.htm|~V40633.htm
+918x.00,Who to contact in emergency?,DialogAdd,~V4003f.htm|~V40633.htm
+918y,,PatientData,~V4001b.htm
+93Z..00,,PatientData,~V40023.htm
+94G..00,Record if Verification of expected death,DialogAdd,~V40020.htm
+94Z1,,PatientData,~V40020.htm
+94Z1.00,Home,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+94Z2,,PatientData,~V40020.htm
+94Z2.00,Hospice,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+94Z3,,PatientData,~V40020.htm
+94Z3.00,Community hospital,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+94Z4,,PatientData,~V40020.htm
+94Z4.00,Hospital,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+94Z5,,PatientData,~V40020.htm
+94Z5.00,Nursing home,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+987A.00,Minor Surgery - Excision,DialogAdd,~V40025.htm
+987B.00,Minor Surgery - Other,DialogAdd,~V40025.htm
+9DD,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9DD..00,Free Prescriptions,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9EB5.00,,PatientData,~V40020.htm
+9H9,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9HA,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9N03,,PatientData,~V4003b.htm|~V40630.htm
+9N0H,,PatientData,~V40017.htm
+9N0H.00,Seen in dietician clinic,DialogAdd,~V40017.htm
+9N0k,,PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+9N0k.00,Seen in heart failure clinic,DialogAdd,~V4001a.htm
+9N0l,,PatientData,~V4003a.htm|~V4063b.htm
+9N0l.00,Seen in OOH centre,DialogAdd,~V4003a.htm|~V4063b.htm
+9N0m,,PatientData,~V4003f.htm|~V40633.htm
+9N0n,,PatientData,~V4003f.htm|~V40633.htm
+9N0o,,PatientData,~V4003f.htm|~V40633.htm
+9N0p,,PatientData,~V4003d.htm|~V40627.htm
+9N19,,PatientData,~V4003a.htm|~V4063b.htm
+9N19.00,Seen in hospital casualty,DialogAdd,~V40020.htm|~V4003a.htm|~V4063b.htm
+9N1Q,,PatientData,~V4003f.htm|~V40633.htm
+9N1Q.00,Seen in diabetic clinic,DialogAdd|PatientData,~V40018.htm
+9N1d,,PatientData,~V4003a.htm|~V4063b.htm
+9N1m.00,,PatientData,~V40038.htm|~V40637.htm
+9N1t,,PatientData,~V4003a.htm|~V4063b.htm
+9N1t.00,OOH Consultation at Surgery,DialogAdd,~V4003a.htm|~V4063b.htm
+9N1y200,,PatientData,~V4003b.htm|~V40630.htm
+9N21.00,Seen by GP,DialogAdd,~V4001c.htm
+9N26.00,Seen by Social Worker,DialogAdd,~V4001c.htm
+9N2W,,PatientData,~V40017.htm
+9N2W.00,Seen by Psychologist,DialogAdd,~V40017.htm
+9N2a,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9N2k,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+9N2l.00,Seen by Nurse Practitioner,DialogAdd,~V4001c.htm
+9N2p,,PatientData,~V4001a.htm
+9N2p.00,Seen by community heart failure nurse,DialogAdd|PatientData,~V4001a.htm
+9N4I,,PatientData,~V4003f.htm|~V40633.htm
+9N4I.00,Did Not Attend Diabetic Clinic,DialogAdd|PatientData,~V40018.htm
+9N4J.00,Did Not Attend Cardiac Clinic,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+9N4L,,PatientData,~V4003b.htm|~V40630.htm
+9N4M,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9N4M.00,DNA,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9N4Q,,PatientData,~V4003a.htm|~V4063b.htm
+9N4T,,PatientData,~V40037.htm|~V4062f.htm
+9N4X,,PatientData,~V4003d.htm|~V40627.htm
+9N4X.00,Did Not Attend Stroke Clinic,DialogAdd|PatientData,~V40017.htm
+9N4s,,PatientData,~V4003c.htm|~V40631.htm
+9N4w,,PatientData,~V4003c.htm|~V40631.htm
+9N58,,PatientData,~V4003a.htm|~V4063b.htm
+9N58.00,Emergency Appointment,DialogAdd,~V4003a.htm|~V4063b.htm
+9NC3300,Care Plan Given,DialogAdd|PatientData2,~V4001b.htm
+9NF4,,PatientData,~V4003a.htm|~V4063b.htm
+9NF4.00,Visit OOH,DialogAdd,~V4003a.htm|~V4063b.htm
+9NF5,,PatientData,~V4003a.htm|~V4063b.htm
+9NI6,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9NM2.00,Attending cardiology clinic,DialogAdd|PatientData,~V4001a.htm
+9NN3,,PatientData,~V4001c.htm
+9NN3.00,Has Support Worker,DialogAdd,~V4001c.htm
+9NND.00,,PatientData,~V40018.htm
+9NNM,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9NNQ,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9NNV,,PatientData,~V4001a.htm
+9NNV.00,Under Care of Social Services,DialogAdd,~V4001a.htm
+9NSB,,PatientData,~V40033.htm|~V40612.htm
+9NSB.00,Unsuitable for QRISK2 cardiovascular disease risk assessment,DialogAdd,~V40033.htm|~V40612.htm
+9NU,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40025.htm
+9NU0.00,Interpreter Needed,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9NU1,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+9NU1.00,Interpreter Not Needed,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9NUw.00,Using British Sign Language,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9NUx,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+9NUx.00,Makaton Sign Language,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9Ndf,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+9Ndg,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+9Ne,,PatientData,~V40020.htm
+9Ne..00,Single Assessment Process,DialogAdd,~V40020.htm
+9Ne0.00,SSA Summary Care Plan,DialogAdd,~V40020.htm
+9NgX,,PatientData,~V40020.htm
+9NgY,,PatientData,~V40020.htm
+9Ni0.00,Did not attend retinal screening,DialogAdd|PatientData,~V40018.htm
+9Ni9,,PatientData,~V40038.htm|~V40637.htm
+9Nl4,,PatientData,~V4003f.htm|~V40633.htm
+9OI,,PatientData,~V4003b.htm|~V40630.htm
+9OI4.00,1st Letter Sent,DialogAdd,~V4003b.htm|~V40630.htm
+9OI5.00,2nd Letter Sent,DialogAdd,~V4003b.htm|~V40630.htm
+9OI6.00,3rd Letter Sent,DialogAdd,~V4003b.htm|~V40630.htm
+9OI7.00,Verbal Invitation,DialogAdd,~V4003b.htm|~V40630.htm
+9OI8.00,Telephone Invitation,DialogAdd,~V4003b.htm|~V40630.htm
+9OJ,,PatientData,~V4003a.htm|~V4063b.htm
+9OJ2,,PatientData,~V4003a.htm|~V4063b.htm
+9OJ2.00,Refuses asthma monitoring,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJ4.00,1st Letter Sent,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJ5.00,2nd Letter Sent,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJ6.00,3rd Letter Sent,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJ7.00,Advice - Asthma Monitor,DialogAdd,~V40025.htm|~V4003a.htm|~V4063b.htm
+9OJ8.00,Telephone Invitation,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJA,,PatientData,~V4003a.htm|~V4063b.htm
+9OJA.00,Monitoring check done,DialogAdd,~V4003a.htm|~V4063b.htm
+9OJA.11,Asthma monitored,DialogAdd,~V4003a.htm|~V4063b.htm
+9OL,,PatientData,~V4003f.htm|~V40633.htm
+9OL2.00,Refuses Monitoring,DialogAdd,~V4003f.htm|~V40633.htm
+9OL4.00,1st Letter Sent,DialogAdd,~V4003f.htm|~V40633.htm
+9OL5.00,2nd Letter Sent,DialogAdd,~V4003f.htm|~V40633.htm
+9OL6.00,3rd Letter Sent,DialogAdd,~V4003f.htm|~V40633.htm
+9OL7.00,Verbal Invitation,DialogAdd,~V4003f.htm|~V40633.htm
+9OL8.00,Telephone Invitation,DialogAdd,~V4003f.htm|~V40633.htm
+9OLA.00,Monitoring check done,DialogAdd,~V4003f.htm|~V40633.htm
+9OLD,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+9OLD.00,Diabetic patient unsuitable for digital retinal photography,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+9OLM,,PatientData,~V4003f.htm|~V40633.htm
+9OLM.00,Diabetes structured education programme declined,DialogAdd,~V4003f.htm|~V40633.htm
+9OO1,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO2,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO3,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO4,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO4.00,1st Letter Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO5,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO5.00,2nd Letter Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO6,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO6.00,3rd Letter Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO7,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO7.00,Verbal Invitation,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO8,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO8.00,Telephone Invitation,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OO9,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OOA,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OOB,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OOB000,1st SMS Text Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OOB100,2nd SMS Text Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OOB200,3rd SMS Text Sent,DialogAdd,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9OX1,,PatientData,~V40540.htm
+9OX2,,PatientData,~V40540.htm
+9OX3,,PatientData,~V40540.htm
+9OX5,,PatientData,~V40017.htm|~V40020.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+9OX5.00,Influenza Vaccination Declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm
+9OX51,,PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+9OX5100,Flu Vacc declined,DialogAdd,~V40025.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+9OX5400,1st intranasal seasonal influenza vaccination declined,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+9OX5600,2nd intranasal seasonal influenza vaccination declined,DialogAdd|PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+9OX8,,PatientData,~V40540.htm
+9Ob,,PatientData,~V4003e.htm|~V40638.htm
+9Ob3.00,1st Letter Sent,DialogAdd,~V4003e.htm|~V40638.htm
+9Ob4.00,2nd Letter Sent,DialogAdd,~V4003e.htm|~V40638.htm
+9Ob5.00,3rd Letter Sent,DialogAdd,~V4003e.htm|~V40638.htm
+9Ob6.00,Verbal Invitation,DialogAdd,~V4003e.htm|~V40638.htm
+9Ob9.00,Telephone Invitation,DialogAdd,~V4003e.htm|~V40638.htm
+9OdA,,PatientData,~V4003a.htm|~V4063b.htm
+9OdA.00,Osteoporosis risk assessment done,DialogAdd,~V4003a.htm|~V4063b.htm
+9OdB,,PatientData,~V4003a.htm|~V4063b.htm
+9OdB.00,Osteoporosis risk assessment refused,DialogAdd,~V4003a.htm|~V4063b.htm
+9Oh9,,PatientData,~V40018.htm|~V40033.htm|~V40612.htm
+9Oh9.00,CVD Risk Assessment Declined (for PP1 only),DialogAdd,~V40033.htm|~V40612.htm
+9OhA,,PatientData|PatientData2,PPC CVD .htm|~V40033.htm|~V40612.htm
+9OhA.00,CVD Risk Assessment Done,DialogAdd,PPC CVD .htm|~V40033.htm|~V40612.htm
+9Oi,,PatientData,~V40039.htm|~V40636.htm
+9Oi0.00,1st Letter Sent,DialogAdd,~V40039.htm|~V40636.htm
+9Oi1.00,2nd Letter Sent,DialogAdd,~V40039.htm|~V40636.htm
+9Oi2.00,3rd Letter Sent,DialogAdd,~V40039.htm|~V40636.htm
+9Oi3.00,Verbal Invitation,DialogAdd,~V40039.htm|~V40636.htm
+9Oi4.00,Telephone Invitation,DialogAdd,~V40039.htm|~V40636.htm
+9Oj,,PatientData,~V40037.htm|~V4062f.htm
+9Oj0.00,1st Letter Sent,DialogAdd,~V40037.htm|~V4062f.htm
+9Oj1.00,2nd Letter Sent,DialogAdd,~V40037.htm|~V4062f.htm
+9Oj2.00,3rd Letter Sent,DialogAdd,~V40037.htm|~V4062f.htm
+9Oj3.00,Verbal Invitation,DialogAdd,~V40037.htm|~V4062f.htm
+9Oj4.00,Telephone Invitation,DialogAdd,~V40037.htm|~V4062f.htm
+9Om,,PatientData,~V4003d.htm|~V40627.htm
+9Om0.00,1st Letter Sent,DialogAdd,~V4003d.htm|~V40627.htm
+9Om1.00,2nd Letter Sent,DialogAdd,~V4003d.htm|~V40627.htm
+9Om2.00,3rd Letter Sent,DialogAdd,~V4003d.htm|~V40627.htm
+9Om3.00,Verbal Invitation,DialogAdd,~V4003d.htm|~V40627.htm
+9Om4.00,Telephone Invitation,DialogAdd,~V4003d.htm|~V40627.htm
+9Oq3,,PatientData,~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+9Oq3.00,Brief intervention for physical activity completed,DialogAdd,~V4003b.htm|~V4003f.htm|~V40630.htm|~V40633.htm
+9Or,,PatientData,~V4003c.htm|~V40631.htm
+9Or0.00,Heart Failure Review Completed Recall,DialogAdd,~V4003c.htm|~V40631.htm
+9Or1.00,Telephone Invitation,DialogAdd,~V4003c.htm|~V40631.htm
+9Or2.00,Verbal Invitation,DialogAdd,~V4003c.htm|~V40631.htm
+9Or3.00,1st Letter Sent,DialogAdd,~V4003c.htm|~V40631.htm
+9Or4.00,2nd Letter Sent,DialogAdd,~V4003c.htm|~V40631.htm
+9Or5.00,3rd Letter Sent,DialogAdd,~V4003c.htm|~V40631.htm
+9Ot,,PatientData,~V40038.htm|~V40637.htm
+9Ot0.00,1st Letter Sent,DialogAdd,~V40038.htm|~V40637.htm
+9Ot1.00,2nd Letter Sent,DialogAdd,~V40038.htm|~V40637.htm
+9Ot2.00,3rd Letter Sent,DialogAdd,~V40038.htm|~V40637.htm
+9Ot3.00,Verbal Invitation,DialogAdd,~V40038.htm|~V40637.htm
+9Ot4.00,Telephone Invitation,DialogAdd,~V40038.htm|~V40637.htm
+9R4..00,,PatientData,~V40025.htm
+9R43,,PatientData,~V40017.htm
+9R43.00,Wheelchair in need of repair,DialogAdd,~V40017.htm
+9R44,,PatientData,~V40017.htm
+9R44.00,Wheelchair in good repair,DialogAdd,~V40017.htm
+9RA,,PatientData,~V40017.htm
+9RA..00,Wheelchair applied for,DialogAdd,~V40017.htm
+9RX,,PatientData,~V40038.htm|~V40637.htm
+9RX..00,Declines to give urine specimen,DialogAdd|PatientData,~V40038.htm|~V4003f.htm|~V40633.htm|~V40637.htm
+9S10.00,White British,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S11.00,White Irish,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S12.00,Other white ethnic group,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S13.00,White Scottish,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40024.htm
+9S2..00,Black Caribbean,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S3..00,Black African,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S4..00,"Black, other, non-mixed origin",DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S41.00,Black British,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S5..00,"Black - other, mixed",DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S6..00,Indian,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S7..00,Pakistani,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S8..00,Bangladeshi,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9S9..00,Chinese,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9SB..00,"Other ethnic, mixed origin",DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9SD..00,Ethnic group not given - patient refused,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9SH..00,Other Asian ethnic group,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9SJ..00,Other ethnic group,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9T2..00,Traveller - gypsy,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9T3..00,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+9W0..00,Power of Attorney Applied For,DialogAdd,~V40020.htm
+9W2..00,Power of Attorney Held,DialogAdd,~V40020.htm
+9W4..00,Lasting Power of Attorney - Property + Affairs,DialogAdd,~V40020.htm
+9W5..00,Lasting Power of Attorney - Personal Welfare,DialogAdd,~V40020.htm
+9W6..00,Enduring Power of Attorney,DialogAdd,~V40020.htm
+9a...00,,PatientData,~V40023.htm
+9a3,,PatientData,~V4003a.htm|~V4063b.htm
+9b0C,,PatientData,~V4003f.htm|~V40633.htm
+9b0C.00,What to do in an emergency?,DialogAdd,~V4003f.htm|~V40633.htm
+9e02,,PatientData,~V40020.htm
+9e02.00,*ACP / Palliative Care Plan Notified to OOH,DialogAdd,~V40020.htm
+9e2..00,,PatientData,~V40020.htm
+9h0,,PatientData,~V40015.htm|~V4003e.htm|~V40638.htm
+9h01.00,Patient Unsuitable,DialogAdd,~V40015.htm|~V4003e.htm|~V40638.htm
+9h02.00,Informed Dissent,DialogAdd,~V40015.htm|~V4003e.htm|~V40638.htm
+9h1,,PatientData,~V4003e.htm|~V40638.htm
+9h2,,PatientData,~V4003d.htm|~V40627.htm
+9h21,,PatientData,~V40017.htm
+9h21.00,Patient Unsuitable,DialogAdd,~V40017.htm|~V4003d.htm|~V40627.htm
+9h22.00,Informed Dissent,DialogAdd|PatientData,~V40017.htm|~V4003d.htm|~V40627.htm
+9h3,,PatientData,~V4003b.htm|~V40630.htm
+9h31.00,Patient unsuitable,DialogAdd,~V4003b.htm|~V40630.htm
+9h32.00,Informed dissent,DialogAdd,~V4003b.htm|~V40630.htm
+9h4,,PatientData,~V40018.htm|~V4003f.htm|~V40633.htm
+9h41,,PatientData,~V4003f.htm|~V40633.htm
+9h41.00,Patient Unsuitable,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+9h42,,PatientData,~V4003f.htm|~V40633.htm
+9h42.00,Informed Dissent,DialogAdd,~V40018.htm|~V4003f.htm|~V40633.htm
+9h5,,PatientData,~V40039.htm|~V40636.htm
+9h51.00,Patient unsuitable,DialogAdd,~V40039.htm|~V40636.htm
+9h52.00,Informed dissent,DialogAdd,~V40039.htm|~V40636.htm
+9hA,,PatientData,~V4003a.htm|~V4063b.htm
+9hA1.00,Patient unsuitable,DialogAdd,~V4003a.htm|~V4063b.htm
+9hA2.00,Informed dissent,DialogAdd,~V4003a.htm|~V4063b.htm
+9hC0,,PatientData,~V40015.htm|~V40017.htm|~V4001a.htm
+9hC0.00,Excepted from depression quality indicators: Patient unsuitable,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9hC1,,PatientData,~V40015.htm
+9hC1.00,Two questions declined,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+9hE,,PatientData,~V40038.htm|~V40637.htm
+9hE0.00,Patient unsuitable,DialogAdd|PatientData,~V40038.htm|~V40637.htm
+9hE1.00,Informed dissent,DialogAdd|PatientData,~V40038.htm|~V40637.htm
+9hG,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9hG0.00,Smoking Patient unsuitable,DialogAdd|PatientData,~V0.htm|~V40019.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+9hG1.00,Smoking Informed Dissent,DialogAdd|PatientData,~V0.htm|~V40019.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+9hH,,PatientData,~V4003c.htm|~V40631.htm
+9hH0.00,Expected heart failure quality indicators: Patient Unsuitable,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+9hH1.00,Excepted heart failure quality indicators: Patient dissent,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V40631.htm
+9hJ,,PatientData,~V40033.htm|~V40612.htm
+9hJ0.00,Patient Unsuitable,DialogAdd,~V40033.htm|~V40612.htm
+9hJ1.00,Informed Dissent,DialogAdd,~V40033.htm|~V40612.htm
+9hM,,PatientData,~V4003e.htm|~V40638.htm
+9hM0.00,Informed dissent,DialogAdd,~V4003e.htm|~V40638.htm
+9hM1.00,Patient unsuitable,DialogAdd,~V4003e.htm|~V40638.htm
+9i0..00,British or mixed British - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9i00.00,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i1..00,Irish,DialogAdd,~V40033.htm|~V40612.htm
+9i10.00,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i2..00,Any Other White Background,DialogAdd,~V40033.htm|~V40612.htm
+9i20.00,English - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i22.00,Welsh - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i24.00,Northern Irish - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i2E.00,Gypsy/Romany - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i2F.00,Polish - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9i3..00,White && Black Caribbean,DialogAdd,~V40033.htm|~V40612.htm
+9i4..00,White && Black African,DialogAdd,~V40033.htm|~V40612.htm
+9i5..00,White && Asian,DialogAdd,~V40033.htm|~V40612.htm
+9i6..00,Other mixed background - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9i7..00,Indian or British Indian - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9i8..00,Pakistani or British Pakistani - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9i9..00,Bangladeshi or British Bangladeshi - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iA..00,Other Asian background - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iB..00,Caribbean - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iC..00,African - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iD..00,Any Other Black Background,DialogAdd,~V40033.htm|~V40612.htm
+9iD2.00,Black British - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9iD4.00,Other Black or Black unspecified - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9iE..00,Chinese - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iF9.00,Arab - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+9iFK.00,Any other group - ethnic category 2001 census,DialogAdd,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40033.htm|~V40612.htm
+9iG..00,Not Stated,DialogAdd,~V40033.htm|~V40612.htm
+9k...00,Nursing Homes LES Inclusion,DialogAdd,~V40020.htm
+9k1,,PatientData,~V4003d.htm|~V40627.htm
+9k15.00,AUDIT completed,DialogAdd,~V4003d.htm|~V40627.htm
+9k16.00,FAST test completed,DialogAdd,~V40019.htm|~V4003d.htm|~V40627.htm
+9k19.00,Alcohol assesment declined,DialogAdd,~V40019.htm
+9k50.00,Drug Misuse - enhanced service completed,DialogAdd,~V4001c.htm
+9k7,,PatientData,~V40540.htm
+9kc,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9km,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9km..11,Ex-smoker Annual Review,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9kn,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9ko,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9ko..11,Current Smoker Annual Review,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+9m2,,PatientData|PatientData2,~V40033.htm|~V40612.htm
+9m20.00,Telephone Invite,DialogAdd,~V40033.htm|~V40612.htm
+9m21.00,Verbal Invite,DialogAdd,~V40033.htm|~V40612.htm
+9m22.00,1st Recall,DialogAdd,~V40033.htm|~V40612.htm
+9m23.00,2nd Recall,DialogAdd,~V40033.htm|~V40612.htm
+9m24.00,3rd Recall,DialogAdd,~V40033.htm|~V40612.htm
+9m4..00,Healthy lifestyle programme status,DialogAdd,~V40019.htm
+A3B1100,,PatientData,~V40025.htm
+A411000,,PatientData,~V40020.htm
+A90..00,Congenital Syphilis,DialogAdd,~V40016.htm
+B927.00,Neurofibromatosis - Von Reckl,DialogAdd,~V40016.htm
+C03,,PatientData,~V4001b.htm|~V40037.htm|~V4062f.htm
+C04,,PatientData,~V4001b.htm|~V40037.htm|~V4062f.htm
+C10,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001b.htm|~V40039.htm|~V40636.htm
+C10..00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C109J00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C109K00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10C,,PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10C.00,If Type 2 click to enter MODY,DialogAdd,~V40018.htm
+C10D,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10E,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10E.00,Type1 Diabetes Mellitus,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm
+C10EK00,Type 1 DM with persistent proteinuria,DialogAdd|PatientData,~V40018.htm|~V4003e.htm|~V4003f.htm|~V40633.htm|~V40638.htm
+C10EL00,Type 1 DM with persistent microalbuminuria,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+C10F,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10F.00,Type2 Diabetes Mellitus,DialogAdd,~V40015.htm|~V40017.htm|~V40018.htm
+C10FL00,Type 2 DM with persistent proteinuria,DialogAdd|PatientData,~V40018.htm|~V4003e.htm|~V4003f.htm|~V40633.htm|~V40638.htm
+C10FM00,Type 2 DM with persistent microalbuminuria,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+C10G,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10H,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10M,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10N,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C10P,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+C110.00,Hypoglycaemic coma,DialogAdd|PatientData,~V40018.htm
+C112,,PatientData,~V4003f.htm|~V40633.htm
+C116,,PatientData,~V4003f.htm|~V40633.htm
+C11y100,,PatientData,~V4003f.htm|~V40633.htm
+C1zy200,Cerebral gigantism,DialogAdd,~V40016.htm
+C301.00,Phenylketonuria,DialogAdd,~V40016.htm
+C304300,Homocystinuria,DialogAdd,~V40016.htm
+C311.00,Galactosaemia,DialogAdd,~V40016.htm
+C320000,Familial Hypercholesterolemia,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+C320100,,PatientData,~V40033.htm|~V40612.htm
+C320300,,PatientData,~V40033.htm|~V40612.htm
+C320400,Fredrickson's Hypercholesterolemia,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+C320500,Familial defective apolipoprotein B-100,DialogAdd|PatientData,~V40033.htm|~V40612.htm
+C322000,,PatientData,~V40033.htm|~V40612.htm
+C327100,Gaucher's disease,DialogAdd,~V40016.htm
+C327200,Niemann-Pick Disease,DialogAdd,~V40016.htm
+C372300,Lesch-Nyhan syndrome,DialogAdd,~V40016.htm
+C375100,Mucopolysacchairdosis Type1,DialogAdd,~V40016.htm
+C375200,Mucopolysacchairdosis Type2,DialogAdd,~V40016.htm
+Cyu3000,,PatientData,~V4003f.htm|~V40633.htm
+D011100,,PatientData,~V4003e.htm|~V40638.htm
+D214,,PatientData,~V4001b.htm
+D21z,,PatientData,~V4001b.htm
+D21z.00,Anaemia,DialogAdd,~V4001b.htm
+E00,,PatientData,~V4001a.htm|~V40020.htm
+E000.00,Uncomplicated Senile Dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+E001.00,Presenile Dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+E001300,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E002,,PatientData,~V40015.htm|~V40018.htm|~V4001a.htm|~V40020.htm
+E002.00,Sen.dement.-depressed/paranoid features,DialogAdd|PatientData,~V40017.htm
+E002100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E002z00,Sen.dement.-depr./paranoid features NOS,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+E003,,PatientData,~V40020.htm
+E004,,PatientData,~V40020.htm
+E004.00,Arteriosclerotic Dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+E004000,Uncomplicated arteriosclerotic dementia,DialogAdd|PatientData,~V40017.htm|~V4001a.htm
+E00y,,PatientData,~V40020.htm
+E00z,,PatientData,~V40020.htm
+E012,,PatientData,~V4001a.htm|~V40020.htm
+E012.00,Other Alcoholic Dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+E012000,Chronic alcoholic brain syndrome,DialogAdd|PatientData,~V40017.htm
+E02y100,Drug-induced Dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm
+E041,,PatientData,~V4001a.htm|~V40020.htm
+E041.00,Dementia in conditions EC,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+E10,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E110,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E111,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E1124,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E112400,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E1134,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E113400,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E114,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E115,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E116,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E117,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y.00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y1,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y3,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11y300,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11yz,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11yz00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11z,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11z.00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11z0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11z000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11zz,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E11zz00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E12,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E13..00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E13..11,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E130,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E131,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E132,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E133,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E134,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E135,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E13y,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E13z,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E200.00,Anixety States,DialogAdd,~V40018.htm
+E200300,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E202,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E2122,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E212200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E227311,Erectile dysfunction,DialogAdd|PatientData,~V40018.htm
+E291,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E292000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E2B,,PatientData,~V0.htm|~V4001b.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+E2B..00,Depression NEC,DialogAdd,~V4001b.htm
+E2D0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu0,,PatientData,~V40015.htm|~V40018.htm
+Eu00,,PatientData,~V40020.htm
+Eu00.00,[X]Dementia in Alzheimer's disease,DialogAdd|PatientData,~V40017.htm
+Eu00z00,"[X]Dementia in Alzheimer's disease, unspecified",DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+Eu01,,PatientData,~V40020.htm
+Eu01.00,[X]Vascular dementia,DialogAdd|PatientData,~V40017.htm
+Eu02,,PatientData,~V40020.htm
+Eu02z00,[X] Unspecified dementia,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+Eu04100,,PatientData,~V40020.htm
+Eu05200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu05400,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu2,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu20400,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu25100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu3,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu30,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu31,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32,,PatientData,~V4001b.htm
+Eu323,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32300,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu328,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32800,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu329,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32900,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu32A00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu33,,PatientData,~V4001b.htm
+Eu333,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu33300,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu4,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu41200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu62100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu81400,Moderate learning disability,DialogAdd,~V40016.htm
+Eu81500,Severe learning disability,DialogAdd,~V40016.htm
+Eu81600,Mild learning disability,DialogAdd,~V40016.htm
+Eu81700,Profound learning disability,DialogAdd,~V40016.htm
+Eu84200,Rett's syndrome,DialogAdd,~V40016.htm
+Eu92000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Eu93,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+F030400,Encephalitis-herpes simplex,DialogAdd,~V40016.htm
+F035100,Encephalitis-post measles,DialogAdd,~V40016.htm
+F101300,Tay-Sachs Disease,DialogAdd,~V40016.htm
+F110,,PatientData,~V40020.htm
+F110.00,Alzheimer's disease,DialogAdd|PatientData,~V40017.htm
+F111,,PatientData,~V40020.htm
+F115.00,Hydrocephalus,DialogAdd,~V40016.htm
+F116,,PatientData,~V40020.htm
+F130600,Aicardi Goutieres syndrome,DialogAdd,~V40016.htm
+F220,,PatientData,~V40017.htm
+F220.00,Flaccid hemiplegia,DialogAdd,~V40017.htm
+F221,,PatientData,~V40017.htm
+F221.00,Spastic hemiplegia,DialogAdd,~V40017.htm
+F39..00,Muscular dystrophies and other myopathies,DialogAdd|PatientData,~V4001a.htm
+F391000,Duchenne muscular dystrophy,DialogAdd|PatientData,~V4001a.htm
+F391100,Erb's muscular dystrophy,DialogAdd|PatientData,~V4001a.htm
+F391800,Becker muscular dystrophy,DialogAdd|PatientData,~V4001a.htm
+F392000,Dystrophia myotonica,DialogAdd|PatientData,~V4001a.htm
+F39B,,PatientData,~V4001a.htm
+F39B.00,Muscular dystrophy,DialogAdd,~V4001a.htm
+F423100,,PatientData,~V40018.htm
+F4236,,PatientData,~V40017.htm
+F423600,Amaurosis fugax,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+F485.00,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+F486.00,,PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+F49,,PatientData,~V40017.htm
+F49..00,,PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+F59z.00,Deafness NOS,DialogAdd|PatientData,~V40015.htm|~V40016.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+Fyu55,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Fyu5500,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G11z,,PatientData,~V4001a.htm
+G11z.00,Mitral valve disease,DialogAdd,~V4001a.htm
+G13..00,Mitral and Aortic Valve Disease,DialogAdd|PatientData,~V4001a.htm
+G1yz,,PatientData,~V40039.htm|~V40636.htm
+G1yz100,,PatientData,~V4001b.htm|~V4003c.htm|~V40631.htm
+G2...00,Previous Hypertension Diagnosis,DialogAdd|PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G2...11,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G20,,PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G20..00,Essential Hypertension,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G200,,PatientData,~V40018.htm
+G200.00,Malignant essential hypertens,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G201,,PatientData,~V40018.htm
+G201.00,Benign essential hypertension,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G202,,PatientData,~V40018.htm
+G202.00,Systolic Hypertension,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+G20z,,PatientData,~V40018.htm|~V4001a.htm
+G20z.00,Hypertension NOS,DialogAdd,~V40017.htm|~V40018.htm|~V4001a.htm
+G21..00,Hypertensive heart disease,DialogAdd|PatientData,~V4001a.htm
+G24,,PatientData,~V40018.htm|~V40033.htm|~V40612.htm
+G24..00,Secondary hypertension,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G240.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G240z,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G240z00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+G241.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G241z00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G244.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G24z.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G24z0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+G24z000,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G24zz,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+G24zz00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G25,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G250,,PatientData,~V4003b.htm|~V40630.htm
+G250.00,Stage 1 hyperten (NICE 2011) without evidnce end organ damge,DialogAdd,~V4003b.htm|~V40630.htm
+G26,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G28,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G2y,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G2z,,PatientData,~V0.htm|~V40018.htm|~V4001a.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+G2z..00,Hypertensive disease NOS,DialogAdd,~V40017.htm|~V40018.htm|~V4001a.htm
+G3...00,Ischaemic heart disease,DialogAdd|PatientData,~V4001a.htm
+G30,,PatientData,~V4003e.htm|~V40638.htm
+G301z00,Anterior myocardial infarction NOS,DialogAdd|PatientData,~V40015.htm|~V40018.htm
+G304,,PatientData,~V40015.htm
+G304.00,Posterior myocardial infarction NOS,DialogAdd,~V40018.htm
+G305,,PatientData,~V40015.htm
+G305.00,Lateral myocardial infarction NOS,DialogAdd,~V40018.htm
+G307,,PatientData,~V40015.htm
+G307.00,Acute subendocardial infarction,DialogAdd,~V40018.htm
+G307100,,PatientData,~V40015.htm
+G308,,PatientData,~V40015.htm
+G308.00,Inferior myocardial infarction NOS,DialogAdd,~V40018.htm
+G30X000,,PatientData,~V40015.htm
+G30z,,PatientData,~V40015.htm
+G30z.00,Acute myocardial infarction,DialogAdd|PatientData,~V40018.htm|~V4001a.htm
+G311500,Acute Coronary Syndrome,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+G33..00,Angina Pectoris,DialogAdd|PatientData,~V40015.htm|~V40018.htm|~V4001a.htm
+G35,,PatientData,~V4003e.htm|~V40638.htm
+G38,,PatientData,~V4003e.htm|~V40638.htm
+G3z..00,Ischaemic heart disease NOS,DialogAdd|PatientData,~V4001a.htm
+G541.00,Aortic valve disorders,DialogAdd|PatientData,~V4001a.htm
+G541z00,Aortic valve disorders NOS,DialogAdd|PatientData,~V4001a.htm
+G55,,PatientData,~V4001a.htm
+G551.00,Hypertrophic obstructive cardiomyopathy,DialogAdd,~V4001a.htm
+G552.00,Obscure African cardiomyopathy,DialogAdd,~V4001a.htm
+G554.00,Other primary cardiomyopathies,DialogAdd,~V4001a.htm
+G554400,Primary dialted cardiomyopathy,DialogAdd,~V4001a.htm
+G554z00,Other primary cardiomyopathy NOS,DialogAdd,~V4001a.htm
+G555.00,Alcoholic cardiomyopathy,DialogAdd,~V4001a.htm
+G556.00,Cardiomyopathy in Chagas' disease,DialogAdd,~V4001a.htm
+G557.00,Nutritional and metabolic cardiomyopathies,DialogAdd,~V4001a.htm
+G557000,Amyloid heart disease,DialogAdd,~V4001a.htm
+G557100,Beriberi heart disease,DialogAdd,~V4001a.htm
+G557200,Cardiac glycogenosis,DialogAdd,~V4001a.htm
+G557400,Mucopolysaccharidosis cardiomyopathy,DialogAdd,~V4001a.htm
+G558.00,Cardiomyopathy in disease EC,DialogAdd,~V4001a.htm
+G558000,Cardiomyopathy in Friedreich's ataxia,DialogAdd,~V4001a.htm
+G558100,Cardiomyopathy in myotonic dystrophy,DialogAdd,~V4001a.htm
+G558200,Dystrophic cardiomyopathy,DialogAdd,~V4001a.htm
+G558300,Sarcoid heart disease,DialogAdd,~V4001a.htm
+G55z.00,Cardiomyopathy NOS,DialogAdd,~V4001a.htm
+G573,,PatientData,~V4001b.htm
+G573.00,Atrial fibrillation and flutter,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G573000,Atrial Fibrillation,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+G573200,Paroxysmal atrial fibrillation,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G573300,Non-rheumatic atrial fibrillation,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G573400,Permanent atrial fibrillation,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G573500,Persistent atrial fibrillation,DialogAdd|PatientData,~V40017.htm|~V40018.htm|~V4001a.htm
+G573z00,Atrial Fibrillation and flutter NOS,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+G58,,PatientData,~V4001b.htm|~V40039.htm|~V4003c.htm|~V40631.htm|~V40636.htm
+G58..00,Heart failure,DialogAdd|PatientData,~V40015.htm
+G581,,PatientData,~V40018.htm
+G581.00,Left ventricular failure,DialogAdd|PatientData,~V40015.htm
+G581000,Acute left ventricular failure,DialogAdd|PatientData,~V4001a.htm
+G58z.00,Heart failure NOS,DialogAdd|PatientData,~V40015.htm
+G5yy,,PatientData,~V40039.htm|~V40636.htm
+G5yy900,Left ventricular systolic dysfunction,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4001b.htm|~V4003c.htm|~V40631.htm
+G5yyD00,Left ventricular cardiac dysfunction,DialogAdd|PatientData,~V4003c.htm|~V40631.htm
+G60z.00,,PatientData,~V40018.htm
+G61,,PatientData,~V0.htm|~V40017.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G61..00,Intracerebral Haemorrhage,DialogAdd,~V40017.htm|~V40018.htm
+G610,,PatientData,~V40017.htm
+G610.00,Cortical Haemorrhage,DialogAdd,~V40017.htm
+G611,,PatientData,~V40017.htm
+G611.00,Internal capsule haemorrhage,DialogAdd,~V40017.htm
+G612,,PatientData,~V40017.htm
+G612.00,Basal nucleus haemorrhage,DialogAdd,~V40017.htm
+G613,,PatientData,~V40017.htm
+G614,,PatientData,~V40017.htm
+G614.00,Pntine haemorrhage,DialogAdd,~V40017.htm
+G615,,PatientData,~V40017.htm
+G615.00,Bulbar Haemorrhage,DialogAdd,~V40017.htm
+G616,,PatientData,~V40017.htm
+G616.00,External capsule haemorrhage,DialogAdd,~V40017.htm
+G618,,PatientData,~V40017.htm
+G618.00,"Intracerebral haemorrhage, multiple localised",DialogAdd,~V40017.htm
+G61X,,PatientData,~V40017.htm
+G61X.00,Intracerebral haemorrhage in hemisphere,DialogAdd,~V40017.htm
+G61X0,,PatientData,~V40017.htm
+G61X000,Left sided intracerebral haemorrhage,DialogAdd,~V40017.htm
+G61X1,,PatientData,~V40017.htm
+G61X100,Right sided intracerebral haemorrhage,DialogAdd,~V40017.htm
+G61z,,PatientData,~V40017.htm
+G61z.00,Intracerebral haemorrhage NOS,DialogAdd,~V40017.htm
+G634.00,,PatientData,~V40018.htm
+G63y,,PatientData,~V40018.htm
+G63y0,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+G63y000,,PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G63y1,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+G63y100,,PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G64,,PatientData,~V0.htm|~V40017.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G64..00,Cerebral arterial occlusion,DialogAdd,~V40017.htm|~V40018.htm
+G640,,PatientData,~V40017.htm
+G640.00,Cerebral thrombosis,DialogAdd,~V40017.htm
+G6400,,PatientData,~V40017.htm
+G640000,Cerebral infartion due to thrombosis of cerebral arteries,DialogAdd,~V40017.htm
+G641,,PatientData,~V40017.htm
+G641.00,Cerebral embolism,DialogAdd,~V40017.htm
+G6410,,PatientData,~V40017.htm
+G641000,Cerebralinfarction due to embolism of cerebral arteries,DialogAdd,~V40017.htm
+G64z.00,Cerebral infarction NOS,DialogAdd,~V40017.htm|~V40018.htm
+G64z0,,PatientData,~V40017.htm
+G64z1,,PatientData,~V40017.htm
+G64z100,Wallenberg syndrome,DialogAdd,~V40017.htm
+G64z200,Left sided cerebral infarction,DialogAdd,~V40017.htm
+G64z300,Right sided cerebral infarction,DialogAdd,~V40017.htm
+G64z400,Infarction of basla ganglia,DialogAdd,~V40017.htm
+G65,,PatientData,~V0.htm|~V40017.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G65..00,Transisent cerebral ischaemia,DialogAdd,~V40017.htm
+G650.00,Basilar artery syndrome,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+G651.00,Vertebral artery syndrome,DialogAdd,~V40017.htm
+G651000,Vertebro-basilar artery syndrome,DialogAdd,~V40017.htm
+G653.00,Cartiod artery syndrome hemispheric,DialogAdd,~V40017.htm
+G654.00,Multiple and bilateral artey syndromes,DialogAdd,~V40017.htm
+G655.00,Transisent global amensia,DialogAdd,~V40017.htm
+G656.00,Vertebrobasilar insufficiency,DialogAdd,~V40017.htm
+G65y.00,Other transisent cerebral ischaemia,DialogAdd,~V40017.htm
+G65z.00,Transisent cerebral ischaemia NOS,DialogAdd,~V40017.htm
+G65z000,Impending cerebral ischaemia,DialogAdd,~V40017.htm
+G65z100,Intermittent cerebral ischaemia,DialogAdd,~V40017.htm
+G65zz00,Transient cerebral ischaemia NOS,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+G66,,PatientData,~V0.htm|~V40017.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G66..00,Stroke and cerebrovascular accident unspecified,DialogAdd,~V40017.htm|~V40018.htm
+G660.00,Middle cerebral artery syndrome,DialogAdd,~V40017.htm
+G661.00,Anterior cerebral artery syndrome,DialogAdd,~V40017.htm
+G662.00,Posterior cerebral artery syndrome,DialogAdd,~V40017.htm
+G663.00,Brain stem stroke syndrome,DialogAdd,~V40017.htm
+G664.00,Cerebellar stroke syndrome,DialogAdd,~V40017.htm
+G665,,PatientData,~V4003d.htm|~V40627.htm
+G665.00,Pure motor lacunar syndrome,DialogAdd,~V40017.htm
+G666,,PatientData,~V4003d.htm|~V40627.htm
+G666.00,Pure sensory lacunar syndrome,DialogAdd,~V40017.htm
+G667.00,Left sided CVA,DialogAdd,~V40017.htm
+G668.00,Right sided CVA,DialogAdd,~V40017.htm
+G67,,PatientData,~V40018.htm
+G670.00,Cerebral stheroscelerosis,DialogAdd,~V40017.htm
+G6760,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+G676000,,PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G6W,,PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G6W..00,Cerebral infaraction due to unsp occuls/stenos precerebr arteries,DialogAdd|PatientData,~V40017.htm|~V40018.htm
+G6X,,PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+G6X..00,,PatientData,~V40018.htm
+G73,,PatientData,~V40039.htm|~V40636.htm
+G73..00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73..11,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73..12,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73..13,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G734,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73y.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73z,,PatientData,~V40018.htm
+G73z.00,PVD NOS,DialogAdd|PatientData,~V0.htm|~V40018.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73z0,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G73zz,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+G87..00,Hypotension,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+G8y0,,PatientData,~V40017.htm
+G8y0.00,Haemorrhage NOS,DialogAdd,~V40017.htm
+Gyu2,,PatientData,~V40033.htm|~V40612.htm
+Gyu2.00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+Gyu20,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+Gyu2000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Gyu3,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4003e.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40636.htm|~V40638.htm
+Gyu3400,,PatientData,~V4003e.htm|~V40638.htm
+Gyu3600,,PatientData,~V4003e.htm|~V40638.htm
+Gyu6,,PatientData,~V40017.htm|~V40018.htm|~V40039.htm|~V40636.htm
+Gyu6200,Other intracerebral haemorrhage,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+Gyu63,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Gyu6300,Cerebral infarct due to unspcf occlusn or sten/cerebrl artrs,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+Gyu64,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Gyu6400,Other cerebral infarction,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+Gyu65,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Gyu6500,Occlussion and stenosis of precerebral arteries,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+Gyu66,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Gyu6600,Occlusion and stenosis of other cerebral arteries,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+Gyu6F,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+Gyu6F00,"Intracerebral haemorrhage in hemisphere , unspec",DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+Gyu6G,,PatientData,~V4003d.htm|~V40627.htm
+Gyu6G00,Cereb infarct due unspec occlus/stenos precerebr arteries,DialogAdd|PatientData,~V0.htm|~V40017.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+Gyu7,,PatientData,~V40039.htm|~V40636.htm
+Gyu74,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm
+H00,,PatientData,~V4003a.htm|~V4063b.htm
+H00..16,Acute Rhinitis,DialogAdd,~V4003a.htm|~V4063b.htm
+H3...00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3...11,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H31..00,Chronic bronchitis,DialogAdd|PatientData,~V0.htm|~V40015.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H310.00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H310000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H310z00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H311,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H312.00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H312000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm|~V4063b.htm
+H312100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3123,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H312z00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H313,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H31y.00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H31y100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H31yz,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H31z,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H32,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H32..00,Emphysema,DialogAdd|PatientData,~V40015.htm
+H33,,PatientData,~V0.htm|~V40017.htm|~V4001a.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+H33..00,Asthma,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003a.htm|~V4063b.htm
+H330.00,Extrinsic (atopic) asthma,DialogAdd,~V40017.htm|~V4001a.htm
+H330000,Extrinsic asthma - no status,DialogAdd,~V40017.htm|~V4001a.htm
+H330100,Extrinsic asthma + status,DialogAdd,~V40017.htm|~V4001a.htm
+H330z00,Extrinsic asthma NOS,DialogAdd,~V40017.htm|~V4001a.htm
+H331.00,Intrinsic asthma,DialogAdd,~V40017.htm|~V4001a.htm
+H331000,Intrinsic asthma - no status,DialogAdd,~V40017.htm|~V4001a.htm
+H331100,Intrinsic asthma + status,DialogAdd,~V40017.htm|~V4001a.htm
+H331z00,Intrinsic asthma NOS,DialogAdd,~V40017.htm|~V4001a.htm
+H332.00,Mixed asthma,DialogAdd,~V40017.htm|~V4001a.htm
+H333.00,,PatientData,~V4003a.htm|~V4063b.htm
+H334.00,Brittle asthma,DialogAdd,~V40017.htm|~V4001a.htm
+H33z.00,Asthma unspecified,DialogAdd,~V40017.htm|~V4001a.htm
+H33z000,Status asthmaticus NOS,DialogAdd,~V40017.htm|~V4001a.htm
+H33z100,Asthma attack,DialogAdd,~V40017.htm
+H33z200,Late-onset asthma,DialogAdd,~V40017.htm|~V4001a.htm
+H33zz00,Asthma NOS,DialogAdd,~V40017.htm|~V4001a.htm
+H36,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H37,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H38,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H39,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3A,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3A..00,,PatientData,~V40039.htm|~V40636.htm
+H3B,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm|~V4063b.htm
+H3y..00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3z,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H3z..00,Chronic obstructive airways disease NOS,DialogAdd|PatientData,~V40015.htm
+H464000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H464100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+H583200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+Hyu3000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+Hyu3100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V40039.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40636.htm
+J101100,Reflux Oesophagitis,DialogAdd,~V40016.htm
+J10y400,Oesophagus reflux no Oesophagitis,DialogAdd,~V40016.htm
+J130,,PatientData,~V40017.htm
+J130.00,Acute Peptic Ulcer,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+J16y400,Dyspepsia,DialogAdd|PatientData,~V40015.htm|~V40017.htm
+J503100,Faecal impaction,DialogAdd,~V40016.htm
+J520z00,Constipation NOS,DialogAdd,~V40016.htm
+K032100,,PatientData,~V4003e.htm|~V40638.htm
+K043000,Acute renal failure due to ACE inhibitor,DialogAdd|PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+K05,,PatientData,~V0.htm|~V4001b.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V40038.htm|~V4003b.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40630.htm|~V40637.htm
+K051,,PatientData,~V4001b.htm|~V40038.htm|~V40637.htm
+K051.00,,PatientData,~V40033.htm|~V40612.htm
+K052,,PatientData,~V4001b.htm|~V40038.htm|~V40637.htm
+K052.00,,PatientData,~V40033.htm|~V40612.htm
+K053,,PatientData,~V4001b.htm
+K054,,PatientData,~V4001b.htm
+K055,,PatientData,~V4001b.htm
+K08yA00,Proteinuric diabetic nephropathy,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+K0A2,,PatientData,~V4003b.htm|~V4003e.htm|~V40630.htm|~V40638.htm
+K0A4,,PatientData,~V4003e.htm|~V40638.htm
+K136,,PatientData,~V4003e.htm|~V40638.htm
+K190X00,,PatientData,~V4003b.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40633.htm|~V40638.htm
+K197,,PatientData,~V4003b.htm|~V4003e.htm|~V40630.htm|~V40638.htm
+K197.00,Haematuria,DialogAdd,~V4003e.htm|~V40638.htm
+Kyu0D00,,PatientData,~V4003e.htm|~V40638.htm
+Kyu0E00,,PatientData,~V4003e.htm|~V40638.htm
+Kyu5G00,,PatientData,~V4003b.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40633.htm|~V40638.htm
+L180900,,PatientData,~V40018.htm
+M124100,Plaster Allergy,DialogAdd,~V40024.htm
+N097,,PatientData,~V40017.htm
+N097.00,Click to record new/worsening walking problem,DialogAdd,~V40017.htm
+N238.00,Muscle contracture,DialogAdd,~V40016.htm
+N241100,Myositis Unspecified,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+N2457,,PatientData,~V40017.htm
+N245700,Shoulder pain,DialogAdd,~V40017.htm
+N330z00,Osteoporosis NOS,DialogAdd,~V40016.htm
+P769.00,,PatientData,~V4001a.htm
+P769000,Renal Artery Stenosis,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm
+PF55000,Acrocephalosyndactyly,DialogAdd,~V40016.htm
+PJ0..00,Down's syndrome - Trisomy 21,DialogAdd,~V40016.htm
+PJ00.00,"Trisomy 21, Meiotic Nondisjunct",DialogAdd,~V40016.htm
+PJ01.00,Mosaicism,DialogAdd,~V40016.htm
+PJ02.00,"Trisomy 21, Translocation",DialogAdd,~V40016.htm
+PJ0z.00,Downs syndrome NOS,DialogAdd,~V40016.htm
+PJ1z.00,Patau's syndrome NOS,DialogAdd,~V40016.htm
+PJ2z.00,Edwards syndrome NOS,DialogAdd,~V40016.htm
+PJ31.00,Cri-Du-Chat syndrome,DialogAdd,~V40016.htm
+PJ33300,Smith-Magenis syndrome,DialogAdd,~V40016.htm
+PJ3y000,Sphrintzen syndrome,DialogAdd,~V40016.htm
+PJ63z00,Turners syndrome NOS,DialogAdd,~V40016.htm
+PJ7z.00,Klinefelters syndrome NOS,DialogAdd,~V40016.htm
+PJX..00,"Sex Chromosome Abnormality, male phenotype, unspecified",DialogAdd,~V40016.htm
+PJyy400,Fragile X syndrome,DialogAdd,~V40016.htm
+PJyyz00,Other sex chromosome abnormality NOS,DialogAdd,~V40016.htm
+PJz..00,Chromosomal anomalies NOS,DialogAdd,~V40016.htm
+PK5..00,Tuberous Sclerosis,DialogAdd,~V40016.htm
+PK61.00,Sturge-Weber syndrome,DialogAdd,~V40016.htm
+PK80.00,Fetal Alcohol syndrome,DialogAdd,~V40016.htm
+PKy4.00,William syndrome,DialogAdd,~V40016.htm
+PKy5C00,Treacher Collins syndrome,DialogAdd,~V40016.htm
+PKy6000,Amsterdam dwarf,DialogAdd,~V40016.htm
+PKy6300,Smith - Lemli - Opitz syndrome,DialogAdd,~V40016.htm
+PKy6400,Seckel syndrome,DialogAdd,~V40016.htm
+PKy6500,Aarskog syndrome,DialogAdd,~V40016.htm
+PKy8000,Noonans syndrome,DialogAdd,~V40016.htm
+PKy9400,Zellwegers syndrome,DialogAdd,~V40016.htm
+PKyP,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003f.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40633.htm
+PKyz500,Happy puppet syndrome,DialogAdd,~V40016.htm
+Q01..00,Fetus+Maternal pregnancy complication,DialogAdd,~V40016.htm
+Q03z.00,Fetus+Complicated labour/delivery NOS,DialogAdd,~V40016.htm
+Q112.00,Extreme immaturity,DialogAdd,~V40016.htm
+Q116.00,Extremely low birth weight infant,DialogAdd,~V40016.htm
+Q20z.00,Birth injury NOS,DialogAdd,~V40016.htm
+Q400.00,Congenital Rubella,DialogAdd,~V40016.htm
+Q401.00,Congenital Cytomegalovirus infection,DialogAdd,~V40016.htm
+Q402300,Congenital Toxoplasmosis,DialogAdd,~V40016.htm
+Q411.00,Perinatal Intraventric Haemorhage,DialogAdd,~V40016.htm
+Q42..00,Haemolytic disease of new born,DialogAdd,~V40016.htm
+R023400,Swelling,DialogAdd,~V4001b.htm
+R032.00,[D]Abnormal loss of weight,DialogAdd|PatientData,~V40017.htm|~V4001a.htm
+R035.00,[D]Polydipsia,DialogAdd|PatientData,~V40018.htm
+R072.00,Dysphagia,DialogAdd,~V40016.htm
+R072000,Difficulty in swallowing,DialogAdd|PatientData,~V40016.htm|~V40017.htm
+R110,,PatientData,~V40018.htm|~V4003b.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40633.htm|~V40638.htm
+R110.00,Proteinuria,DialogAdd|PatientData,~V40018.htm|~V40038.htm|~V4003f.htm|~V40633.htm|~V40637.htm
+R110000,Albuminuria,DialogAdd|PatientData,~V40018.htm|~V40038.htm|~V4003f.htm|~V40633.htm|~V40637.htm
+R110300,Microalbuminuria,DialogAdd|PatientData,~V40018.htm|~V40038.htm|~V4003f.htm|~V40633.htm|~V40637.htm
+R110z00,Proteinuria NOS,DialogAdd|PatientData,~V40038.htm|~V4003f.htm|~V40633.htm|~V40637.htm
+R132000,,PatientData,~V4003c.htm|~V40631.htm
+R132200,,PatientData,~V4003c.htm|~V40631.htm
+R148.00,[D]Abnormal Liver Function Test,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm
+R1y2,,PatientData,~V40018.htm
+SN58000,Egg Allergy,DialogAdd|PatientData,~V40024.htm|~V40540.htm
+SP25800,,PatientData,~V40025.htm
+TJ0..00,Antibiotics,DialogAdd,~V40024.htm
+TJ00.00,Penicillin,DialogAdd,~V40024.htm
+TJ00200,Flucloxacillin,DialogAdd,~V40024.htm
+TJ00300,Amoxicillin,DialogAdd,~V40024.htm
+TJ00400,Ampicillin,DialogAdd,~V40024.htm
+TJ03.00,Erythromycin,DialogAdd,~V40024.htm
+TJ05.00,Cephalosporins,DialogAdd,~V40024.htm
+TJ0yC00,Trimethoprim,DialogAdd,~V40024.htm
+TJ0yD00,Cotrimoxazole,DialogAdd,~V40024.htm
+TJ10300,Sulphamethoxazole,DialogAdd,~V40024.htm
+TJ1z000,Ciprofloxacin,DialogAdd,~V40024.htm
+TJ20100,,PatientData,~V4003e.htm|~V40638.htm
+TJ28100,Iodine Allergy,DialogAdd,~V40024.htm
+TJ30300,Metoclopramide,DialogAdd,~V40024.htm
+TJ42,,PatientData,~V4003e.htm|~V40638.htm
+TJ42.00,Adverse Reaction to Anticoagulants,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ42000,Heparin,DialogAdd,~V40024.htm
+TJ42100,Adverse reaction to Warfarin Sodium.,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V40024.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ42200,Adverse reaction to Nicoumalone,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ42300,Adverse reaction to Phenindione,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ42z00,Adverse reaction to anticoagulants NOS,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ52000,Morphine,DialogAdd,~V40024.htm
+TJ52200,Codeine,DialogAdd,~V40024.htm
+TJ52400,Dihydrocodeine,DialogAdd,~V40024.htm
+TJ53,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+TJ53.00,Adverse Reaction to Salicylates,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40024.htm
+TJ53.11,Adverse reaction to Aspirin,DialogAdd,~V4003b.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40630.htm|~V40638.htm
+TJ54000,Paracetamol,DialogAdd,~V40024.htm
+TJ56.00,Antirheumatics,DialogAdd,~V40024.htm
+TJ56000,Ibuprofen,DialogAdd,~V40024.htm
+TJ56200,Fenbrufen,DialogAdd,~V40024.htm
+TJ56500,Indometacin,DialogAdd,~V40024.htm
+TJ56700,Naproxen,DialogAdd,~V40024.htm
+TJ56800,Piroxicam,DialogAdd,~V40024.htm
+TJ5y100,Mefenamic acid,DialogAdd,~V40024.htm
+TJ61.00,Adverse reaction to hydrantoin derivatives,DialogAdd,~V4001a.htm
+TJ63200,Carbamazepine,DialogAdd,~V40024.htm
+TJ83z00,IV anaesthetics,DialogAdd,~V40024.htm
+TJ85100,Lignocaine,DialogAdd,~V40024.htm
+TJC0000,Adverse reaction to practolol,DialogAdd|PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+TJC0200,Adverse reaction to propranolol,DialogAdd|PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+TJC2400,Adverse reaction to simvastatin,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40024.htm|~V40033.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40633.htm|~V40638.htm
+TJC2500,Adverse reaction to pravastatin,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40024.htm|~V40033.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40633.htm|~V40638.htm
+TJC4400,Adverse reaction to dipyridamole,DialogAdd|PatientData,~V40017.htm|~V40024.htm|~V4003d.htm|~V40627.htm
+TJC6,,PatientData,~V40015.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+TJC6.00,Adverse Reaction to Beta Blockers,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V40024.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+TJC6100,Adverse Reaction to Acebutolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6200,Adverse Reaction to Atenolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6300,Adverse Reaction to Labetalol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6400,Adverse Reaction to Metoprolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6500,Adverse Reaction to Nadolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6600,Adverse Reaction to Oxprenolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6700,Adverse Reaction to Sotalol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6800,Adverse Reaction to Timolol,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC6z00,Adverse Reaction to Beta Blockers NOS,DialogAdd|PatientData,~V40015.htm|~V4001a.htm
+TJC7700,Adverse reaction to captopril,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+TJC7800,Adverse reaction to enalapril,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40024.htm|~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+TJC7900,Adverse reaction to ramipril,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+TJF7100,Ipratropium,DialogAdd,~V40024.htm
+TJHyx00,Contract media,DialogAdd,~V40024.htm
+TJJ4.00,Tetanus Vacc,DialogAdd,~V40024.htm
+U604200,Anticoagulant causing adverse effects in therapeutic use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+U604800,[X] Clopidogrel causing adverse effects in therapeutic use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+U605100,[X] Salicylates causing adverse effects in therapeutic use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+U60B700,[X] Adverse reaction to betablockers,DialogAdd|PatientData,~V40015.htm|~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+U60B900,Adverse reaction to bisoprolol,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+U60BA00,Adverse reaction to carvedilol,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+U60BB00,Adverse reaction to nebivolol,DialogAdd|PatientData,~V4001a.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+U60C100,CCB - Adverse effect,DialogAdd,~V4003b.htm|~V40630.htm
+U60C300,,PatientData,~V4003d.htm|~V40627.htm
+U60C400,[X] ACEi Causing Adverse Effect in Therapeutic Use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+U60CA00,[X]Statin causing adverse effect in therapeutic use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V40033.htm|~V4003b.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40612.htm|~V40627.htm|~V40630.htm|~V40633.htm|~V40638.htm
+U60CB00,A II adverse effect in therapeutic use,DialogAdd|PatientData|PatientData2,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40038.htm|~V4003b.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40630.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+U60E312,Bendroflumethiazide - Adverse effect,DialogAdd,~V4003b.htm|~V40630.htm
+U60J800,A/R Pneumo. Vacc,DialogAdd|PatientData,~V40025.htm
+U60K400,[X]Influenza Vaccine causing adverse effects in therapeutic use,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40540.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+Z1K1300,Suture Removal,DialogAdd,NURSE2.htm
+Z228,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Z4F,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+Z4I7,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Z4L1,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Z774,,PatientData,~V4001b.htm
+Z774.11,Goal Setting,DialogAdd,~V4001b.htm
+Z792500,Motivation to stop,DialogAdd|PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+Z92,,PatientData,~V4001b.htm
+Z92..00,Actions,DialogAdd,~V4001b.htm
+ZA3..00,Cryotherapy to Wart,DialogAdd,~V40025.htm
+ZC2,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZC2CN00,Diet advice for weight gain,DialogAdd,~V4003d.htm|~V40627.htm
+ZC4,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZC5,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZG16.00,Exercise Advice,DialogAdd,~V40025.htm
+ZGB6,,PatientData,~V40023.htm
+ZL22E00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZL23100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZL62500,Refer Diabetes Nurse,DialogAdd,~V40025.htm
+ZL62E00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZL82.11,Refer Dietician,DialogAdd,~V40025.htm
+ZL85.00,Refer Physiotherapist,DialogAdd,~V40025.htm
+ZL91,,PatientData,~V4003a.htm|~V4063b.htm
+ZLA2E00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZLD7C00,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZLD8100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZN27D00,Drives a Car,DialogAdd|PatientData,~V4003f.htm|~V40633.htm
+ZN27I00,,PatientData,~V4003f.htm|~V40633.htm
+ZN27I11,Rides a motorbike,DialogAdd,~V4003f.htm|~V40633.htm
+ZQ02,,PatientData,~V40015.htm
+ZQ04,,PatientData,~V40018.htm
+ZV04800,,PatientData,~V40015.htm|~V40020.htm|~V40025.htm
+ZV11000,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZV12D,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V40627.htm
+ZV12D00,,PatientData,~V0.htm|~V40032.htm|~V40033.htm|~V40034.htm|~V40036.htm|~V4003d.htm|~V4060f.htm|~V40611.htm|~V40612.htm|~V40624.htm|~V40627.htm
+ZV14800,PH of aspirin allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZV14A00,Personal history of warfarin allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZV14B00,,PatientData,~V40015.htm|~V40017.htm|~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+ZV14C00,,PatientData,~V40015.htm|~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+ZV14D00,PH of ACE Inhibitor Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V4001a.htm|~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+ZV14E00,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+ZV14F00,[V]PH of Influenza Vaccine Allergy,DialogAdd|PatientData,~V40015.htm|~V40017.htm|~V40018.htm|~V4001a.htm|~V40020.htm|~V40025.htm|~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
+ZV14G00,,PatientData,~V40025.htm
+ZV40100,Problems with communications,DialogAdd|PatientData,~V40016.htm|~V40017.htm
+ZV53800,Fitting or adjustment of wheelchair,DialogAdd|PatientData,~V40017.htm
+ZV57300,Speech and Language Therapist,DialogAdd|PatientData,~V40017.htm
+ZV57C00,Palliative Care,DialogAdd|PatientData,~V4001a.htm|~V40020.htm
+ZV69,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZV70100,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZV70200,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4060f.htm|~V40611.htm|~V40624.htm
+ZVu5C00,Life management difficulty,DialogAdd,~V40018.htm|~V40019.htm
+ZVu6i00,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+ZVu6o00,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+ZVu6q00,,PatientData,~V4003c.htm|~V4003e.htm|~V40631.htm|~V40638.htm
+b211,,PatientData,~V4003b.htm|~V40630.htm
+b212,,PatientData,~V4003b.htm|~V40630.htm
+b91h,,PatientData,~V4003b.htm|~V40630.htm
+bdf,,PatientData,~V4003c.htm|~V40631.htm
+bdl,,PatientData,~V4003c.htm|~V40631.htm
+bdm,,PatientData,~V4003c.htm|~V40631.htm
+bk3,,PatientData,~V40038.htm|~V40637.htm
+bk4,,PatientData,~V40038.htm|~V40637.htm
+bk5,,PatientData,~V40038.htm|~V40637.htm
+bk6,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bk7,,PatientData,~V40038.htm|~V40637.htm
+bk8,,PatientData,~V40038.htm|~V40637.htm
+bk9,,PatientData,~V40038.htm|~V40637.htm
+bkB,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bkC,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bkD,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bkH,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bkI,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+bkJ,,PatientData,~V40038.htm|~V4003c.htm|~V4003e.htm|~V4003f.htm|~V40631.htm|~V40633.htm|~V40637.htm|~V40638.htm
+blm,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+bu1,,PatientData,~V4003d.htm|~V40627.htm
+bu2,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+bu23,,PatientData,~V4003b.htm|~V40630.htm
+bu25,,PatientData,~V4003b.htm|~V40630.htm
+bu2B,,PatientData,~V4003b.htm|~V40630.htm
+bu4,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+bu5,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+bxd,,PatientData,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+bxe,,PatientData,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+bxg,,PatientData,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+bxi,,PatientData,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+bxk,,PatientData,~V40033.htm|~V4003e.htm|~V40612.htm|~V40638.htm
+c19,,PatientData,~V4003a.htm|~V4063b.htm
+c1b,,PatientData,~V4003a.htm|~V4063b.htm
+c25,,PatientData,~V4003a.htm|~V4063b.htm
+c33,,PatientData,~V4003a.htm|~V4063b.htm
+c35,,PatientData,~V4003a.htm|~V4063b.htm
+c43,,PatientData,~V4003a.htm|~V4063b.htm
+c53,,PatientData,~V4003a.htm|~V4063b.htm
+ck1,,PatientData,~V4003a.htm|~V4063b.htm
+di1,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+di1f,,PatientData,~V4003b.htm|~V40630.htm
+di1n,,PatientData,~V4003b.htm|~V40630.htm
+di1o,,PatientData,~V4003b.htm|~V40630.htm
+du3,,PatientData,~V0.htm|~V40024.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+du6,,PatientData,~V40024.htm
+du7,,PatientData,~V40024.htm
+du8,,PatientData,~V40024.htm
+duB,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+duB1,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+duBz,,PatientData,~V0.htm|~V40032.htm|~V40034.htm|~V40036.htm|~V4003a.htm|~V4060f.htm|~V40611.htm|~V40624.htm|~V4063b.htm
+j11,,PatientData,~V4003d.htm|~V4003e.htm|~V40627.htm|~V40638.htm
+j111,,PatientData,~V4003b.htm|~V40630.htm
+j112,,PatientData,~V4003b.htm|~V40630.htm
+n47,,PatientData,~V40540.htm
+n47C,,PatientData,~V40039.htm|~V4003d.htm|~V4003e.htm|~V4003f.htm|~V40627.htm|~V40633.htm|~V40636.htm|~V40638.htm
