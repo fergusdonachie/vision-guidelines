@@ -54,12 +54,30 @@
     border: none;
   }
   button.btn.btn-white:hover { background: #ebf8ff; }
+  button.btn.btn-danger {
+    background: #e53e3e;
+    color: #fff;
+  }
+  button.btn.btn-danger:hover { background: #c53030; }
+  button.btn.btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  button.btn.btn-ghost {
+    background: transparent;
+    border: 1px solid #cbd5e0;
+    color: #4a5568;
+  }
+  button.btn.btn-ghost:hover { background: #edf2f7; }
 
   /* ---- Drop zone / landing ---- */
   #landing {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 16px;
     min-height: calc(100vh - 56px);
   }
   #drop-zone {
@@ -71,6 +89,7 @@
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s;
     max-width: 480px;
+    width: 100%;
   }
   #drop-zone.drag-over { border-color: #2b6cb0; background: #ebf8ff; }
   #drop-zone svg { color: #90cdf4; margin-bottom: 16px; }
@@ -80,6 +99,78 @@
     color: #2b6cb0; text-decoration: underline; cursor: pointer; font-weight: 500;
   }
   #file-input { display: none; }
+  .landing-or {
+    color: #a0aec0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  #btn-new-guideline {
+    background: #fff;
+    border: 2px solid #2b6cb0;
+    color: #2b6cb0;
+    border-radius: 10px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    max-width: 480px;
+    width: 100%;
+  }
+  #btn-new-guideline:hover { background: #ebf8ff; }
+
+  /* ---- Modal ---- */
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    max-width: 460px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  .modal-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: #2b6cb0; }
+  .modal-field { margin-bottom: 14px; }
+  .modal-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .modal-field input, .modal-field select {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #2d3748;
+    background: #f9fafb;
+  }
+  .modal-field input:focus, .modal-field select:focus {
+    outline: none;
+    border-color: #90cdf4;
+    background: #fff;
+  }
+  .modal-field .hint-text {
+    font-size: 11px;
+    color: #a0aec0;
+    margin-top: 3px;
+  }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
 
   /* ---- Editor layout ---- */
   #editor { display: none; max-width: 960px; margin: 24px auto; padding: 0 16px 60px; }
@@ -121,7 +212,9 @@
   }
   .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .meta-field label {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 12px;
     font-weight: 600;
     color: #718096;
@@ -162,17 +255,18 @@
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
     margin-bottom: 16px;
-    overflow: hidden;
+    overflow: visible;
   }
   .section-header {
     background: #2b6cb0;
     color: #fff;
-    padding: 12px 18px;
+    padding: 11px 14px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     user-select: none;
+    border-radius: 10px 10px 0 0;
   }
   .section-header:hover { background: #2c5282; }
   .section-toggle {
@@ -195,8 +289,24 @@
     outline: none;
     min-width: 0;
   }
-  .section-title-input::placeholder { color: rgba(255,255,255,0.6); }
-  .section-body { padding: 12px 16px; display: none; }
+  .section-title-input::placeholder { color: rgba(255,255,255,0.5); }
+  .section-del-btn {
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  .section-del-btn:hover { background: rgba(229,62,62,0.7); }
+  .section-body { padding: 12px 16px; display: none; border-radius: 0 0 10px 10px; }
   .section-body.open { display: block; }
 
   /* ---- Item rows ---- */
@@ -206,21 +316,38 @@
     margin-bottom: 8px;
     background: #f9fafb;
     border: 1px solid #e2e8f0;
+    position: relative;
   }
   .item-row.drug-item { background: #ebf8ff; border-color: #bee3f8; }
   .item-row.advice-item { background: #f0fff4; border-color: #c6f6d5; }
   .item-row.readonly-item { background: #f7fafc; border-color: #e2e8f0; }
 
+  .item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
   .item-type-label {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.6px;
     color: #718096;
-    margin-bottom: 6px;
   }
   .item-row.drug-item .item-type-label { color: #2b6cb0; }
   .item-row.advice-item .item-type-label { color: #276749; }
+  .item-del-btn {
+    background: none;
+    border: none;
+    color: #a0aec0;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    padding: 0 2px;
+    transition: color 0.15s;
+  }
+  .item-del-btn:hover { color: #e53e3e; }
 
   .item-row input[type="text"], .item-row input[type="number"], .item-row textarea, .item-row select {
     width: 100%;
@@ -243,6 +370,9 @@
   .field-group > * { flex: 1; min-width: 80px; }
 
   .field-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     font-size: 11px;
     color: #718096;
     font-weight: 600;
@@ -274,7 +404,66 @@
   .chip.blue { background: #bee3f8; color: #2b6cb0; }
   .chip.green { background: #c6f6d5; color: #276749; }
   .chip.grey { background: #e2e8f0; color: #4a5568; }
-  .chip.red { background: #fed7d7; color: #c53030; }
+
+  /* ---- Add item bar ---- */
+  .add-item-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px 0 4px;
+    border-top: 1px dashed #e2e8f0;
+    margin-top: 4px;
+  }
+  .add-item-bar span { font-size: 11px; color: #a0aec0; font-weight: 600; align-self: center; text-transform: uppercase; letter-spacing: 0.4px; }
+
+  /* ---- Add section button ---- */
+  .add-section-btn {
+    width: 100%;
+    border: 2px dashed #90cdf4;
+    background: transparent;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 14px;
+    color: #4a90d9;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    margin-top: 4px;
+  }
+  .add-section-btn:hover { border-color: #2b6cb0; background: #ebf8ff; }
+
+  /* ---- Hint icon ---- */
+  .hint-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    background: #90cdf4;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 800;
+    cursor: help;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  /* ---- Tooltip ---- */
+  #tooltip {
+    position: fixed;
+    z-index: 9000;
+    background: #2d3748;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 260px;
+    pointer-events: none;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
 
   /* ---- Autocomplete ---- */
   .autocomplete-wrapper { position: relative; }
@@ -331,31 +520,74 @@
 </head>
 <body>
 
+<!-- Tooltip -->
+<div id="tooltip"></div>
+
 <!-- Header -->
 <header id="app-header">
   <h1>Vision Guideline Editor</h1>
   <div class="header-actions" id="header-actions" style="display:none">
-    <button class="btn btn-secondary" id="btn-open-new">Open Another</button>
+    <button class="btn btn-secondary" id="btn-open-new">Open File</button>
     <button class="btn btn-white" id="btn-export">Export .htm</button>
   </div>
 </header>
 
-<!-- Landing / drop zone -->
+<!-- Landing -->
 <div id="landing">
   <div id="drop-zone">
-    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
     </svg>
     <h2>Open a Guideline File</h2>
     <p>Drag and drop a Vision <strong>.htm</strong> guideline file here, or<br>
     <span class="choose-link" id="choose-link">click to browse</span>.</p>
   </div>
+  <div class="landing-or">— or —</div>
+  <button id="btn-new-guideline">＋ Create New Guideline</button>
   <input type="file" id="file-input" accept=".htm,.html">
+</div>
+
+<!-- New Guideline Modal -->
+<div class="modal-backdrop" id="new-modal">
+  <div class="modal-card">
+    <h2>New Guideline</h2>
+    <div class="modal-field">
+      <label>Title</label>
+      <input type="text" id="new-title" placeholder="e.g. Hypertension Management">
+    </div>
+    <div class="modal-field">
+      <label>Mnemonic <span class="hint-icon" data-tip="A short unique code (up to 8 characters) used to identify and cross-link this guideline within Vision. e.g. HYPMAN">i</span></label>
+      <input type="text" id="new-mnemonic" placeholder="e.g. HYPMAN" maxlength="8" style="text-transform:uppercase">
+      <div class="hint-text">Unique identifier — no spaces</div>
+    </div>
+    <div class="modal-field">
+      <label>Guideline Type</label>
+      <select id="new-type">
+        <option value="prescribing">Prescribing — sections contain drug entries</option>
+        <option value="data_entry">Data Entry — sections contain advice and patient data</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Sex Filter <span class="hint-icon" data-tip="Restricts which patients this guideline appears for based on their registered sex.">i</span></label>
+      <select id="new-sex">
+        <option value="GEN003: Both Sexes">Both Sexes</option>
+        <option value="GEN001: Male">Male only</option>
+        <option value="GEN002: Female">Female only</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Trigger <span class="hint-icon" data-tip="A READ or SNOMED code that causes this guideline to appear automatically during a consultation. Leave blank for manually-opened guidelines.">i</span></label>
+      <input type="text" id="new-trigger" placeholder="e.g. READ:G20 (optional)">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeNewModal()">Cancel</button>
+      <button class="btn" onclick="createGuideline()">Create Guideline</button>
+    </div>
+  </div>
 </div>
 
 <!-- Editor -->
 <div id="editor">
-  <!-- Metadata panel -->
   <div id="metadata-panel">
     <h3>Guideline Metadata</h3>
     <div class="meta-grid">
@@ -364,7 +596,7 @@
         <input type="text" id="meta-title" placeholder="Guideline title">
       </div>
       <div class="meta-field">
-        <label>Mnemonic</label>
+        <label>Mnemonic <span class="hint-icon" data-tip="Unique short code that identifies this guideline within Vision. Used for cross-linking between guidelines. Do not change once a guideline is in use.">i</span></label>
         <input type="text" id="meta-mnemonic" readonly>
       </div>
       <div class="meta-field">
@@ -372,7 +604,7 @@
         <div id="meta-type-badge" class="meta-badge"></div>
       </div>
       <div class="meta-field">
-        <label>Sex Filter</label>
+        <label>Sex Filter <span class="hint-icon" data-tip="Restricts which patients this guideline appears for based on their registered sex.">i</span></label>
         <select id="meta-sex">
           <option value="GEN003: Both Sexes">Both Sexes</option>
           <option value="GEN001: Male">Male only</option>
@@ -380,19 +612,18 @@
         </select>
       </div>
       <div class="meta-field">
-        <label>Trigger</label>
-        <input type="text" id="meta-trigger" placeholder="e.g. READ:C10">
+        <label>Trigger <span class="hint-icon" data-tip="A READ or SNOMED code that causes this guideline to pop up automatically during a consultation. Leave blank for guidelines opened manually.">i</span></label>
+        <input type="text" id="meta-trigger" placeholder="e.g. READ:G20">
       </div>
     </div>
   </div>
 
-  <!-- Sections list -->
   <div id="sections-list"></div>
+  <button class="add-section-btn" id="add-section-btn">＋ Add Section</button>
 </div>
 
 <!-- Toast -->
 <div id="toast"></div>
-
 <!-- Loading overlay -->
 <div id="loading-overlay"><div class="spinner"></div></div>
 
@@ -401,6 +632,7 @@
 
 // ---- State ----
 let guidelineData = null;
+let openSections = new Set();
 
 // ---- Utility ----
 function $(id) { return document.getElementById(id); }
@@ -418,7 +650,55 @@ function setLoading(on) {
   $('loading-overlay').className = on ? 'show' : '';
 }
 
-// ---- Drop zone setup ----
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function generateUUID() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16).toUpperCase();
+  });
+}
+
+// ---- Tooltip ----
+const tooltipEl = $('tooltip');
+document.addEventListener('mouseover', e => {
+  const el = e.target.closest('[data-tip]');
+  if (!el) { tooltipEl.style.display = 'none'; return; }
+  tooltipEl.textContent = el.dataset.tip;
+  tooltipEl.style.display = 'block';
+});
+document.addEventListener('mousemove', e => {
+  if (tooltipEl.style.display === 'none') return;
+  const x = e.clientX + 12;
+  const y = e.clientY + 12;
+  tooltipEl.style.left = Math.min(x, window.innerWidth - 280) + 'px';
+  tooltipEl.style.top = Math.min(y, window.innerHeight - 80) + 'px';
+});
+document.addEventListener('mouseout', e => {
+  if (e.target.closest('[data-tip]')) tooltipEl.style.display = 'none';
+});
+
+// ---- Hint icon helper ----
+function hintIcon(tip) {
+  const span = document.createElement('span');
+  span.className = 'hint-icon';
+  span.textContent = 'i';
+  span.dataset.tip = tip;
+  return span;
+}
+
+// ---- Field label helper ----
+function fieldLabel(text, tip) {
+  const div = document.createElement('div');
+  div.className = 'field-label';
+  div.appendChild(document.createTextNode(text));
+  if (tip) div.appendChild(hintIcon(tip));
+  return div;
+}
+
+// ---- Drop zone / file loading ----
 const dropZone = $('drop-zone');
 const fileInput = $('file-input');
 
@@ -435,14 +715,12 @@ $('choose-link').addEventListener('click', e => { e.stopPropagation(); fileInput
 fileInput.addEventListener('change', () => { if (fileInput.files[0]) loadFile(fileInput.files[0]); });
 $('btn-open-new').addEventListener('click', () => { fileInput.value = ''; fileInput.click(); });
 $('btn-export').addEventListener('click', exportGuideline);
+$('btn-new-guideline').addEventListener('click', () => $('new-modal').classList.add('open'));
+$('add-section-btn').addEventListener('click', addSection);
 
-// ---- Load and parse file ----
 function loadFile(file) {
   const reader = new FileReader();
-  reader.onload = async e => {
-    const text = e.target.result;
-    await parseGuideline(text);
-  };
+  reader.onload = async e => await parseGuideline(e.target.result);
   reader.readAsText(file, 'windows-1252');
 }
 
@@ -455,15 +733,11 @@ async function parseGuideline(text) {
       body: text,
     });
     const data = await resp.json();
-    if (!resp.ok) {
-      showToast('Parse error: ' + (data.error || resp.statusText));
-      return;
-    }
+    if (!resp.ok) { showToast('Parse error: ' + (data.error || resp.statusText)); return; }
     guidelineData = data;
+    openSections = new Set();
     renderEditor();
-    $('landing').style.display = 'none';
-    $('editor').style.display = 'block';
-    $('header-actions').style.display = 'flex';
+    showEditor();
   } catch (err) {
     showToast('Network error: ' + err.message);
   } finally {
@@ -504,7 +778,122 @@ async function exportGuideline() {
   }
 }
 
-// ---- Render editor ----
+function showEditor() {
+  $('landing').style.display = 'none';
+  $('editor').style.display = 'block';
+  $('header-actions').style.display = 'flex';
+}
+
+// ---- New guideline modal ----
+function closeNewModal() {
+  $('new-modal').classList.remove('open');
+}
+
+function createGuideline() {
+  const title = $('new-title').value.trim();
+  const mnemonic = $('new-mnemonic').value.trim().toUpperCase();
+  if (!title) { $('new-title').focus(); return; }
+  if (!mnemonic) { $('new-mnemonic').focus(); return; }
+
+  const type = $('new-type').value;
+  guidelineData = {
+    _type: 'Guideline',
+    metadata: {
+      _type: 'GuidelineMetadata',
+      title,
+      mnemonic,
+      guid: generateUUID(),
+      type_: 'PLT003:Local',
+      trigger: $('new-trigger').value.trim(),
+      sex_filter: $('new-sex').value,
+      line_count: 0,
+    },
+    guideline_type: type,
+    has_blockquote: true,
+    blockquote_label: mnemonic,
+    triggered_from_parent: false,
+    intro_block: null,
+    top_level_items: [],
+    sections: [],
+  };
+  closeNewModal();
+  openSections = new Set();
+  renderEditor();
+  showEditor();
+  // Clear modal fields
+  $('new-title').value = ''; $('new-mnemonic').value = ''; $('new-trigger').value = '';
+}
+
+// ---- Section management ----
+function addSection() {
+  const si = guidelineData.sections.length;
+  const mnemonic = guidelineData.metadata.mnemonic || 'GL';
+  const isPrescribing = guidelineData.guideline_type === 'prescribing';
+  guidelineData.sections.push({
+    _type: 'Section',
+    title: 'New Section',
+    h_level: 1,
+    properties_raw: 'Color=16777215:Size=14:Bold=Yes',
+    is_snapcard: false,
+    regime: isPrescribing ? (mnemonic + (si > 0 ? si + 1 : '')) : null,
+    items: [],
+  });
+  openSections.add(si);
+  renderSections();
+}
+
+function deleteSection(si) {
+  const sec = guidelineData.sections[si];
+  if (sec.items.length > 0 && !confirm(`Delete section "${sec.title}" and its ${sec.items.length} item(s)?`)) return;
+  guidelineData.sections.splice(si, 1);
+  // Remap open section indices
+  const newOpen = new Set();
+  openSections.forEach(i => { if (i < si) newOpen.add(i); else if (i > si) newOpen.add(i - 1); });
+  openSections = newOpen;
+  renderSections();
+}
+
+// ---- Item management ----
+function addItemToSection(si, type) {
+  let item;
+  if (type === 'DrugEntry') {
+    item = {
+      _type: 'DrugEntry',
+      label: 'New Drug',
+      label_properties_raw: 'Color=16777215:Size=12:Bold=No',
+      drug_code: '',
+      drug_name: '',
+      drug_age_filter: 'All Ages',
+      dosage: '',
+      qty: 28,
+      daily: 1,
+      days: 28,
+      pack_size: 'Tablet',
+      max_issues: 6,
+      repeat_for: '',
+      min_days: 0,
+      max_days: 0,
+      authorise: 'Repeat',
+      display_properties_raw: 'Color=0:Size=10:Bold=No',
+    };
+  } else if (type === 'AdviceText') {
+    item = { _type: 'AdviceText', text: '', properties_raw: 'Color=0:Size=11:Bold=No' };
+  } else if (type === 'H2Block') {
+    item = { _type: 'H2Block', title: '', properties_raw: 'Color=16777215:Size=12:Bold=Yes', h_level: 2 };
+  } else if (type === 'SubGuidelineLink') {
+    item = { _type: 'SubGuidelineLink', href: '', label: '', properties_raw: '' };
+  }
+  guidelineData.sections[si].items.push(item);
+  openSections.add(si);
+  renderSections();
+}
+
+function deleteItem(si, ii) {
+  guidelineData.sections[si].items.splice(ii, 1);
+  renderSections();
+}
+
+// ---- Render ----
 function renderEditor() {
   const g = guidelineData;
   const meta = g.metadata;
@@ -515,15 +904,17 @@ function renderEditor() {
   $('meta-sex').value = meta.sex_filter || 'GEN003: Both Sexes';
   $('meta-trigger').value = meta.trigger || '';
 
-  // Bind metadata changes
   $('meta-title').oninput = e => { guidelineData.metadata.title = e.target.value; };
   $('meta-sex').onchange = e => { guidelineData.metadata.sex_filter = e.target.value; };
   $('meta-trigger').oninput = e => { guidelineData.metadata.trigger = e.target.value; };
 
-  // Render sections
+  renderSections();
+}
+
+function renderSections() {
   const list = $('sections-list');
   list.innerHTML = '';
-  (g.sections || []).forEach((sec, si) => {
+  (guidelineData.sections || []).forEach((sec, si) => {
     list.appendChild(renderSection(sec, si));
   });
 }
@@ -532,11 +923,12 @@ function renderSection(sec, si) {
   const card = document.createElement('div');
   card.className = 'section-card';
 
+  // Header
   const header = document.createElement('div');
   header.className = 'section-header';
 
   const toggle = document.createElement('span');
-  toggle.className = 'section-toggle';
+  toggle.className = 'section-toggle' + (openSections.has(si) ? ' open' : '');
   toggle.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>';
 
   const titleInput = document.createElement('input');
@@ -544,27 +936,56 @@ function renderSection(sec, si) {
   titleInput.type = 'text';
   titleInput.value = sec.title || '';
   titleInput.placeholder = 'Section title';
-  titleInput.addEventListener('input', e => {
-    guidelineData.sections[si].title = e.target.value;
-  });
+  titleInput.addEventListener('input', e => { guidelineData.sections[si].title = e.target.value; });
   titleInput.addEventListener('click', e => e.stopPropagation());
+
+  const delBtn = document.createElement('button');
+  delBtn.className = 'section-del-btn';
+  delBtn.title = 'Delete section';
+  delBtn.textContent = '×';
+  delBtn.addEventListener('click', e => { e.stopPropagation(); deleteSection(si); });
 
   header.appendChild(toggle);
   header.appendChild(titleInput);
+  header.appendChild(delBtn);
 
+  // Body
   const body = document.createElement('div');
-  body.className = 'section-body';
+  body.className = 'section-body' + (openSections.has(si) ? ' open' : '');
 
   header.addEventListener('click', () => {
-    const open = body.classList.toggle('open');
-    toggle.classList.toggle('open', open);
+    const isOpen = body.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    if (isOpen) openSections.add(si); else openSections.delete(si);
   });
 
-  // Render items
+  // Items
   (sec.items || []).forEach((item, ii) => {
     const row = renderItem(item, si, ii);
     if (row) body.appendChild(row);
   });
+
+  // Add item bar
+  const bar = document.createElement('div');
+  bar.className = 'add-item-bar';
+  const addLabel = document.createElement('span');
+  addLabel.textContent = 'Add:';
+  bar.appendChild(addLabel);
+
+  const addTypes = [
+    ['DrugEntry', 'Drug Entry'],
+    ['AdviceText', 'Advice Text'],
+    ['H2Block', 'Sub-heading'],
+    ['SubGuidelineLink', 'Link'],
+  ];
+  addTypes.forEach(([type, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-ghost btn-sm';
+    btn.textContent = '＋ ' + label;
+    btn.addEventListener('click', () => addItemToSection(si, type));
+    bar.appendChild(btn);
+  });
+  body.appendChild(bar);
 
   card.appendChild(header);
   card.appendChild(body);
@@ -573,7 +994,6 @@ function renderSection(sec, si) {
 
 function renderItem(item, si, ii) {
   const t = item._type;
-
   if (t === 'Cell') return renderCell(item, si, ii);
   if (t === 'DrugEntry') return renderDrugEntry(item, si, ii);
   if (t === 'AdviceText') return renderAdviceText(item, si, ii);
@@ -589,14 +1009,29 @@ function renderItem(item, si, ii) {
   return null;
 }
 
+function itemHeader(label, si, ii, tipText) {
+  const div = document.createElement('div');
+  div.className = 'item-header';
+  const lbl = document.createElement('div');
+  lbl.className = 'item-type-label';
+  lbl.textContent = label;
+  if (tipText) lbl.appendChild(document.createTextNode(' ')); // spacing handled by gap
+  div.appendChild(lbl);
+  if (si !== undefined) {
+    const del = document.createElement('button');
+    del.className = 'item-del-btn';
+    del.title = 'Remove item';
+    del.textContent = '×';
+    del.addEventListener('click', () => deleteItem(si, ii));
+    div.appendChild(del);
+  }
+  return div;
+}
+
 function renderCell(item, si, ii) {
   const row = document.createElement('div');
   row.className = 'item-row';
-
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = 'Cell (' + (item.cell_type || 'text') + ')';
-  row.appendChild(typeLabel);
+  row.appendChild(itemHeader('Cell (' + (item.cell_type || 'text') + ')', si, ii));
 
   if (item.cell_type === 'image') {
     const chip = document.createElement('span');
@@ -607,142 +1042,101 @@ function renderCell(item, si, ii) {
   }
 
   if (item.cell_type === 'button' || item.command_raw) {
-    // Editable: text, label; read-only: command_raw
-    const textWrap = document.createElement('div');
-    textWrap.style.marginBottom = '6px';
-    const lbl1 = document.createElement('div');
-    lbl1.className = 'field-label';
-    lbl1.textContent = 'Button Label';
+    const f1 = document.createElement('div');
+    f1.style.marginBottom = '6px';
+    f1.appendChild(fieldLabel('Button Label'));
     const inp1 = document.createElement('input');
-    inp1.type = 'text';
-    inp1.value = item.text || '';
-    inp1.addEventListener('input', e => {
-      item.text = e.target.value;
-      updateCellRawText(item, e.target.value);
-    });
-    textWrap.appendChild(lbl1);
-    textWrap.appendChild(inp1);
-    row.appendChild(textWrap);
+    inp1.type = 'text'; inp1.value = item.text || '';
+    inp1.addEventListener('input', e => { item.text = e.target.value; updateCellRawText(item, e.target.value); });
+    f1.appendChild(inp1);
+    row.appendChild(f1);
 
-    const labelWrap = document.createElement('div');
-    labelWrap.style.marginBottom = '6px';
-    const lbl2 = document.createElement('div');
-    lbl2.className = 'field-label';
-    lbl2.textContent = 'Cite Label';
+    const f2 = document.createElement('div');
+    f2.style.marginBottom = '6px';
+    f2.appendChild(fieldLabel('Cite Label'));
     const inp2 = document.createElement('input');
-    inp2.type = 'text';
-    inp2.value = item.label || '';
-    inp2.addEventListener('input', e => {
-      item.label = e.target.value;
-      updateCellCiteLabel(item, e.target.value);
-    });
-    labelWrap.appendChild(lbl2);
-    labelWrap.appendChild(inp2);
-    row.appendChild(labelWrap);
+    inp2.type = 'text'; inp2.value = item.label || '';
+    inp2.addEventListener('input', e => { item.label = e.target.value; updateCellCiteLabel(item, e.target.value); });
+    f2.appendChild(inp2);
+    row.appendChild(f2);
 
     if (item.command_raw) {
-      const cmdDiv = document.createElement('div');
-      const lbl3 = document.createElement('div');
-      lbl3.className = 'field-label';
-      lbl3.textContent = 'Command (read-only)';
+      const f3 = document.createElement('div');
+      f3.appendChild(fieldLabel('Command (read-only)'));
       const code = document.createElement('div');
-      code.className = 'monospace';
-      code.textContent = item.command_raw;
-      cmdDiv.appendChild(lbl3);
-      cmdDiv.appendChild(code);
-      row.appendChild(cmdDiv);
+      code.className = 'monospace'; code.textContent = item.command_raw;
+      f3.appendChild(code);
+      row.appendChild(f3);
     }
     return row;
   }
 
-  // Text cell
   const fg = document.createElement('div');
-  const lbl = document.createElement('div');
-  lbl.className = 'field-label';
-  lbl.textContent = 'Text';
+  fg.appendChild(fieldLabel('Text'));
   const inp = document.createElement('textarea');
   inp.value = item.text || '';
   inp.rows = Math.max(2, (item.text || '').split('\n').length);
-  inp.addEventListener('input', e => {
-    item.text = e.target.value;
-    updateCellRawText(item, e.target.value);
-  });
-  fg.appendChild(lbl);
+  inp.addEventListener('input', e => { item.text = e.target.value; updateCellRawText(item, e.target.value); });
   fg.appendChild(inp);
   row.appendChild(fg);
-
   if (item.font_raw) {
-    const fontNote = document.createElement('small');
-    fontNote.style.cssText = 'color:#718096;font-size:11px;margin-top:4px;display:block;';
-    fontNote.textContent = 'Font: ' + item.font_raw;
-    row.appendChild(fontNote);
+    const note = document.createElement('small');
+    note.style.cssText = 'color:#718096;font-size:11px;margin-top:4px;display:block;';
+    note.textContent = 'Font: ' + item.font_raw;
+    row.appendChild(note);
   }
   return row;
 }
 
 function updateCellRawText(item, newText) {
-  // Replace the non-directive text line in raw_lines
   const lines = item.raw_lines;
-  let found = false;
   for (let i = 0; i < lines.length; i++) {
-    if (!lines[i].startsWith('<') && !lines[i].startsWith('<!')) {
-      lines[i] = newText;
-      found = true;
-      break;
-    }
+    if (!lines[i].startsWith('<') && !lines[i].startsWith('<!')) { lines[i] = newText; return; }
   }
-  if (!found) lines.push(newText);
+  lines.push(newText);
 }
 
 function updateCellCiteLabel(item, newLabel) {
   const lines = item.raw_lines;
   for (let i = 0; i < lines.length; i++) {
     if (lines[i].startsWith('<CITE>') && lines[i].endsWith('</CITE>')) {
-      lines[i] = '<CITE>' + newLabel + '</CITE>';
-      return;
+      lines[i] = '<CITE>' + newLabel + '</CITE>'; return;
     }
   }
-  // Not found — insert after last directive
   lines.push('<CITE>' + newLabel + '</CITE>');
 }
 
 function renderDrugEntry(item, si, ii) {
   const row = document.createElement('div');
   row.className = 'item-row drug-item';
+  row.appendChild(itemHeader('Drug Entry', si, ii));
 
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = 'Drug Entry';
-  row.appendChild(typeLabel);
+  // Label field
+  const fLabel = document.createElement('div');
+  fLabel.style.marginBottom = '6px';
+  fLabel.appendChild(fieldLabel('Display Label', 'The heading text shown above this drug in Vision, e.g. the drug name or a brief description. Appears in bold above the prescribing button.'));
+  const labelInp = document.createElement('input');
+  labelInp.type = 'text'; labelInp.value = item.label || '';
+  labelInp.addEventListener('input', e => { item.label = e.target.value; });
+  fLabel.appendChild(labelInp);
+  row.appendChild(fLabel);
 
   // Drug name with autocomplete
   const nameWrap = document.createElement('div');
   nameWrap.className = 'autocomplete-wrapper';
   nameWrap.style.marginBottom = '8px';
-
-  const nameLbl = document.createElement('div');
-  nameLbl.className = 'field-label';
-  nameLbl.textContent = 'Drug Name';
-  nameWrap.appendChild(nameLbl);
+  nameWrap.appendChild(fieldLabel('Drug Name', 'Search the NHS dm+d database. Selecting a result sets the drug name and its unique VPID code used for prescribing.'));
 
   const nameRow = document.createElement('div');
-  nameRow.style.display = 'flex';
-  nameRow.style.gap = '8px';
-  nameRow.style.alignItems = 'center';
-
+  nameRow.style.cssText = 'display:flex;gap:8px;align-items:center;';
   const nameInp = document.createElement('input');
-  nameInp.type = 'text';
-  nameInp.value = item.drug_name || '';
-  nameInp.style.flex = '1';
-
+  nameInp.type = 'text'; nameInp.value = item.drug_name || ''; nameInp.style.flex = '1';
   const codeChip = document.createElement('span');
   codeChip.className = 'chip blue';
-  codeChip.textContent = item.drug_code || '';
-  codeChip.style.flexShrink = '0';
-  codeChip.style.fontFamily = 'monospace';
-
-  nameRow.appendChild(nameInp);
-  nameRow.appendChild(codeChip);
+  codeChip.textContent = item.drug_code || '—';
+  codeChip.style.cssText = 'flex-shrink:0;font-family:monospace;font-size:11px;';
+  codeChip.title = 'VPID — NHS dm+d Virtual Product ID';
+  nameRow.appendChild(nameInp); nameRow.appendChild(codeChip);
   nameWrap.appendChild(nameRow);
 
   const dropdown = document.createElement('div');
@@ -756,49 +1150,47 @@ function renderDrugEntry(item, si, ii) {
     nameInp.value = result.nm;
     codeChip.textContent = result.vpid;
   });
-
   row.appendChild(nameWrap);
 
   // Fields grid
   const grid = document.createElement('div');
   grid.className = 'field-group';
 
-  function addField(label, key, type = 'text') {
+  function addField(labelText, key, type, tip) {
     const wrap = document.createElement('div');
-    const lbl = document.createElement('div');
-    lbl.className = 'field-label';
-    lbl.textContent = label;
+    wrap.appendChild(fieldLabel(labelText, tip));
     const inp = document.createElement('input');
-    inp.type = type;
+    inp.type = type || 'text';
     inp.value = item[key] !== undefined ? item[key] : '';
     inp.addEventListener('input', e => {
       item[key] = type === 'number' ? (parseInt(e.target.value) || 0) : e.target.value;
     });
-    wrap.appendChild(lbl);
     wrap.appendChild(inp);
     grid.appendChild(wrap);
   }
 
-  addField('Dosage', 'dosage');
-  addField('Qty', 'qty', 'number');
-  addField('Days', 'days', 'number');
+  addField('Dosage', 'dosage', 'text', 'The dose string shown to the GP and printed on the label, e.g. "5mg once daily". Appears after the drug name in the prescribing display.');
+  addField('Qty', 'qty', 'number', 'Number of units (tablets, capsules, ml, etc.) to dispense per issue.');
+  addField('Days', 'days', 'number', 'Number of days supply to dispense. Used to calculate the supply quantity and displayed on the prescription.');
 
+  // Authorise select
   const authWrap = document.createElement('div');
-  const authLbl = document.createElement('div');
-  authLbl.className = 'field-label';
-  authLbl.textContent = 'Authorise';
+  authWrap.appendChild(fieldLabel('Authorise',
+    'Issue — single acute prescription; requires a GP to authorise each time.\n' +
+    'Repeat — added to the patient\'s repeat list; can be dispensed without the GP seeing the patient each time.\n' +
+    'Hospital — medication initiated by hospital; prescribed in primary care on behalf of the hospital.'));
   const authSel = document.createElement('select');
   ['', 'Issue', 'Repeat', 'Hospital'].forEach(val => {
     const opt = document.createElement('option');
-    opt.value = val;
-    opt.textContent = val || '(none)';
-    opt.selected = item.authorise === val;
+    opt.value = val; opt.textContent = val || '(none)'; opt.selected = item.authorise === val;
     authSel.appendChild(opt);
   });
   authSel.addEventListener('change', e => { item.authorise = e.target.value; });
-  authWrap.appendChild(authLbl);
   authWrap.appendChild(authSel);
   grid.appendChild(authWrap);
+
+  addField('Max Issues', 'max_issues', 'number', 'Maximum number of repeat issues before the repeat authorisation expires and a GP must review and re-authorise the prescription.');
+  addField('Pack Size', 'pack_size', 'text', 'Unit type for the quantity, e.g. Tablet, Capsule, ml, Patch. Printed on the prescription label.');
 
   row.appendChild(grid);
   return row;
@@ -807,12 +1199,7 @@ function renderDrugEntry(item, si, ii) {
 function renderAdviceText(item, si, ii) {
   const row = document.createElement('div');
   row.className = 'item-row advice-item';
-
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = 'Advice Text';
-  row.appendChild(typeLabel);
-
+  row.appendChild(itemHeader('Advice Text', si, ii));
   const ta = document.createElement('textarea');
   ta.value = item.text || '';
   ta.rows = Math.max(2, (item.text || '').split('\n').length);
@@ -824,38 +1211,21 @@ function renderAdviceText(item, si, ii) {
 function renderSubGuidelineLink(item, si, ii) {
   const row = document.createElement('div');
   row.className = 'item-row';
-
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = 'Sub-Guideline Link';
-  row.appendChild(typeLabel);
-
+  row.appendChild(itemHeader('Sub-Guideline Link', si, ii));
   const grid = document.createElement('div');
   grid.className = 'field-group';
 
-  const labelWrap = document.createElement('div');
-  const labelLbl = document.createElement('div');
-  labelLbl.className = 'field-label';
-  labelLbl.textContent = 'Label';
-  const labelInp = document.createElement('input');
-  labelInp.type = 'text';
-  labelInp.value = item.label || '';
-  labelInp.addEventListener('input', e => { item.label = e.target.value; });
-  labelWrap.appendChild(labelLbl);
-  labelWrap.appendChild(labelInp);
-  grid.appendChild(labelWrap);
+  const lw = document.createElement('div');
+  lw.appendChild(fieldLabel('Label', 'The text shown as a clickable link in the guideline.'));
+  const li = document.createElement('input'); li.type = 'text'; li.value = item.label || '';
+  li.addEventListener('input', e => { item.label = e.target.value; });
+  lw.appendChild(li); grid.appendChild(lw);
 
-  const hrefWrap = document.createElement('div');
-  const hrefLbl = document.createElement('div');
-  hrefLbl.className = 'field-label';
-  hrefLbl.textContent = 'Href';
-  const hrefInp = document.createElement('input');
-  hrefInp.type = 'text';
-  hrefInp.value = item.href || '';
-  hrefInp.addEventListener('input', e => { item.href = e.target.value; });
-  hrefWrap.appendChild(hrefLbl);
-  hrefWrap.appendChild(hrefInp);
-  grid.appendChild(hrefWrap);
+  const hw = document.createElement('div');
+  hw.appendChild(fieldLabel('Href', 'The filename (without path) of the linked Vision guideline, e.g. HYPMAN.htm'));
+  const hi = document.createElement('input'); hi.type = 'text'; hi.value = item.href || '';
+  hi.addEventListener('input', e => { item.href = e.target.value; });
+  hw.appendChild(hi); grid.appendChild(hw);
 
   row.appendChild(grid);
   return row;
@@ -864,15 +1234,9 @@ function renderSubGuidelineLink(item, si, ii) {
 function renderH2Block(item, si, ii) {
   const row = document.createElement('div');
   row.className = 'item-row';
-
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = 'Heading (H' + (item.h_level || 2) + ')';
-  row.appendChild(typeLabel);
-
+  row.appendChild(itemHeader('Heading (H' + (item.h_level || 2) + ')', si, ii));
   const inp = document.createElement('input');
-  inp.type = 'text';
-  inp.value = item.title || '';
+  inp.type = 'text'; inp.value = item.title || '';
   inp.addEventListener('input', e => { item.title = e.target.value; });
   row.appendChild(inp);
   return row;
@@ -892,10 +1256,7 @@ function renderBadge(text, cls) {
 function renderReadOnly(label, text) {
   const row = document.createElement('div');
   row.className = 'item-row readonly-item';
-  const typeLabel = document.createElement('div');
-  typeLabel.className = 'item-type-label';
-  typeLabel.textContent = label;
-  row.appendChild(typeLabel);
+  row.appendChild(itemHeader(label));
   const val = document.createElement('div');
   val.style.cssText = 'font-size:13px;color:#4a5568;word-break:break-word;';
   val.textContent = text || '';
@@ -905,37 +1266,26 @@ function renderReadOnly(label, text) {
 
 // ---- Autocomplete ----
 function setupAutocomplete(input, dropdown, onSelect) {
-  let timer = null;
-  let activeIdx = -1;
-  let results = [];
+  let timer = null, activeIdx = -1, results = [];
 
   function showDropdown(items) {
-    results = items;
-    activeIdx = -1;
+    results = items; activeIdx = -1;
     dropdown.innerHTML = '';
     if (!items.length) { dropdown.style.display = 'none'; return; }
     items.forEach((r, i) => {
       const el = document.createElement('div');
       el.className = 'autocomplete-item';
-      el.innerHTML = `<div>${escHtml(r.nm)}</div><div class="drug-vpid">${escHtml(r.vpid)}${r.abbrevnm ? ' · ' + escHtml(r.abbrevnm) : ''}</div>`;
-      el.addEventListener('mousedown', e => {
-        e.preventDefault();
-        selectItem(r);
-      });
+      el.innerHTML = `<div>${escHtml(r.nm)}</div><div class="drug-vpid">${escHtml(r.vpid)}${r.abbrevnm ? ' &middot; ' + escHtml(r.abbrevnm) : ''}</div>`;
+      el.addEventListener('mousedown', e => { e.preventDefault(); selectItem(r); });
       dropdown.appendChild(el);
     });
     dropdown.style.display = 'block';
   }
 
-  function selectItem(r) {
-    onSelect(r);
-    dropdown.style.display = 'none';
-    activeIdx = -1;
-  }
+  function selectItem(r) { onSelect(r); dropdown.style.display = 'none'; activeIdx = -1; }
 
   function setActive(idx) {
-    const items = dropdown.querySelectorAll('.autocomplete-item');
-    items.forEach((el, i) => el.classList.toggle('active', i === idx));
+    dropdown.querySelectorAll('.autocomplete-item').forEach((el, i) => el.classList.toggle('active', i === idx));
     activeIdx = idx;
   }
 
@@ -954,27 +1304,13 @@ function setupAutocomplete(input, dropdown, onSelect) {
 
   input.addEventListener('keydown', e => {
     const items = dropdown.querySelectorAll('.autocomplete-item');
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      setActive(Math.min(activeIdx + 1, items.length - 1));
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      setActive(Math.max(activeIdx - 1, 0));
-    } else if (e.key === 'Enter' && activeIdx >= 0) {
-      e.preventDefault();
-      selectItem(results[activeIdx]);
-    } else if (e.key === 'Escape') {
-      dropdown.style.display = 'none';
-    }
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(activeIdx + 1, items.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
+    else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); selectItem(results[activeIdx]); }
+    else if (e.key === 'Escape') { dropdown.style.display = 'none'; }
   });
 
-  input.addEventListener('blur', () => {
-    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
-  });
-}
-
-function escHtml(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  input.addEventListener('blur', () => { setTimeout(() => { dropdown.style.display = 'none'; }, 150); });
 }
 </script>
 </body>
