@@ -576,8 +576,11 @@
       </select>
     </div>
     <div class="modal-field">
-      <label>Trigger <span class="hint-icon" data-tip="A READ or SNOMED code that causes this guideline to appear automatically during a consultation. Leave blank for manually-opened guidelines.">i</span></label>
-      <input type="text" id="new-trigger" placeholder="e.g. READ:G20 (optional)">
+      <label>Trigger <span class="hint-icon" data-tip="A READ code that causes this guideline to appear automatically during a consultation. Leave blank for manually-opened guidelines.">i</span></label>
+      <div class="autocomplete-wrapper">
+        <input type="text" id="new-trigger" placeholder="Type to search READ codes (optional)" autocomplete="off">
+        <div class="autocomplete-dropdown" id="new-trigger-dd" style="display:none"></div>
+      </div>
     </div>
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeNewModal()">Cancel</button>
@@ -612,8 +615,11 @@
         </select>
       </div>
       <div class="meta-field">
-        <label>Trigger <span class="hint-icon" data-tip="A READ or SNOMED code that causes this guideline to pop up automatically during a consultation. Leave blank for guidelines opened manually.">i</span></label>
-        <input type="text" id="meta-trigger" placeholder="e.g. READ:G20">
+        <label>Trigger <span class="hint-icon" data-tip="A READ code that causes this guideline to pop up automatically during a consultation. Leave blank for guidelines opened manually.">i</span></label>
+        <div class="autocomplete-wrapper">
+          <input type="text" id="meta-trigger" placeholder="Type to search READ codes" autocomplete="off">
+          <div class="autocomplete-dropdown" id="meta-trigger-dd" style="display:none"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1312,6 +1318,62 @@ function setupAutocomplete(input, dropdown, onSelect) {
 
   input.addEventListener('blur', () => { setTimeout(() => { dropdown.style.display = 'none'; }, 150); });
 }
+
+// ---- READ code autocomplete ----
+function setupReadCodeAutocomplete(input, dropdown, onSelect) {
+  let timer = null, activeIdx = -1, results = [];
+
+  function showDropdown(items) {
+    results = items; activeIdx = -1;
+    dropdown.innerHTML = '';
+    if (!items.length) { dropdown.style.display = 'none'; return; }
+    items.forEach(r => {
+      const el = document.createElement('div');
+      el.className = 'autocomplete-item';
+      el.innerHTML = `<strong>${escHtml(r.code)}</strong> <span style="color:#4a5568">${escHtml(r.label)}</span>`;
+      el.addEventListener('mousedown', e => { e.preventDefault(); onSelect(r.code); dropdown.style.display = 'none'; });
+      dropdown.appendChild(el);
+    });
+    dropdown.style.display = 'block';
+  }
+
+  function setActive(idx) {
+    dropdown.querySelectorAll('.autocomplete-item').forEach((el, i) => el.classList.toggle('active', i === idx));
+    activeIdx = idx;
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    const q = input.value.trim();
+    if (!q) { dropdown.style.display = 'none'; return; }
+    timer = setTimeout(async () => {
+      try {
+        const resp = await fetch('/api/readcodes?q=' + encodeURIComponent(q) + '&limit=15');
+        const data = await resp.json();
+        showDropdown(Array.isArray(data) ? data : []);
+      } catch { dropdown.style.display = 'none'; }
+    }, 250);
+  });
+
+  input.addEventListener('keydown', e => {
+    const items = dropdown.querySelectorAll('.autocomplete-item');
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(activeIdx + 1, items.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
+    else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); onSelect(results[activeIdx].code); dropdown.style.display = 'none'; }
+    else if (e.key === 'Escape') { dropdown.style.display = 'none'; }
+  });
+
+  input.addEventListener('blur', () => { setTimeout(() => { dropdown.style.display = 'none'; }, 150); });
+}
+
+// Wire up READ code autocomplete on trigger inputs
+setupReadCodeAutocomplete($('new-trigger'), $('new-trigger-dd'), code => {
+  $('new-trigger').value = code;
+});
+setupReadCodeAutocomplete($('meta-trigger'), $('meta-trigger-dd'), code => {
+  $('meta-trigger').value = code;
+  if (guidelineData) guidelineData.metadata.trigger = code;
+});
 </script>
 </body>
 </html>

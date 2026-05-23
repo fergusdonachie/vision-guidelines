@@ -8,6 +8,9 @@
     },
     "api/export.py": {
       "includeFiles": "guideline_format.py"
+    },
+    "api/readcodes.py": {
+      "includeFiles": "read_codes_extracted.csv"
     }
   }
 }
