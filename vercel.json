@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/search.py": {
+      "includeFiles": "drugs.db"
+    },
+    "api/parse.py": {
+      "includeFiles": "guideline_format.py"
+    },
+    "api/export.py": {
+      "includeFiles": "guideline_format.py"
+    }
+  }
+}

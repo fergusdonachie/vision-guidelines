@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision GP Guideline Editor</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f7fa;
+    color: #2d3748;
+    min-height: 100vh;
+  }
+
+  /* ---- Header ---- */
+  #app-header {
+    background: #2b6cb0;
+    color: #fff;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  #app-header h1 { font-size: 18px; font-weight: 600; letter-spacing: 0.3px; }
+  #app-header .header-actions { display: flex; gap: 10px; }
+
+  button.btn {
+    background: #2b6cb0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-weight: 500;
+  }
+  button.btn:hover { background: #2c5282; }
+  button.btn.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: #fff;
+  }
+  button.btn.btn-secondary:hover { background: rgba(255,255,255,0.12); }
+  button.btn.btn-white {
+    background: #fff;
+    color: #2b6cb0;
+    border: none;
+  }
+  button.btn.btn-white:hover { background: #ebf8ff; }
+
+  /* ---- Drop zone / landing ---- */
+  #landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
+  }
+  #drop-zone {
+    border: 2px dashed #90cdf4;
+    border-radius: 16px;
+    padding: 60px 80px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    max-width: 480px;
+  }
+  #drop-zone.drag-over { border-color: #2b6cb0; background: #ebf8ff; }
+  #drop-zone svg { color: #90cdf4; margin-bottom: 16px; }
+  #drop-zone h2 { font-size: 20px; color: #2d3748; margin-bottom: 8px; }
+  #drop-zone p { color: #718096; font-size: 14px; }
+  #drop-zone .choose-link {
+    color: #2b6cb0; text-decoration: underline; cursor: pointer; font-weight: 500;
+  }
+  #file-input { display: none; }
+
+  /* ---- Editor layout ---- */
+  #editor { display: none; max-width: 960px; margin: 24px auto; padding: 0 16px 60px; }
+
+  /* ---- Toast ---- */
+  #toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e53e3e;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    max-width: 480px;
+    text-align: center;
+  }
+  #toast.success { background: #38a169; }
+
+  /* ---- Metadata panel ---- */
+  #metadata-panel {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  #metadata-panel h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #718096;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .meta-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #718096;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-field input, .meta-field select {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 14px;
+    color: #2d3748;
+    background: #f9fafb;
+    transition: border-color 0.15s;
+  }
+  .meta-field input:focus, .meta-field select:focus {
+    outline: none;
+    border-color: #90cdf4;
+    background: #fff;
+  }
+  .meta-field input[readonly] { color: #718096; cursor: default; }
+  .meta-badge {
+    display: inline-block;
+    background: #ebf8ff;
+    color: #2b6cb0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #bee3f8;
+  }
+
+  /* ---- Section cards ---- */
+  .section-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: #2b6cb0;
+    color: #fff;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .section-header:hover { background: #2c5282; }
+  .section-toggle {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .section-toggle.open { transform: rotate(90deg); }
+  .section-title-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    min-width: 0;
+  }
+  .section-title-input::placeholder { color: rgba(255,255,255,0.6); }
+  .section-body { padding: 12px 16px; display: none; }
+  .section-body.open { display: block; }
+
+  /* ---- Item rows ---- */
+  .item-row {
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #f9fafb;
+    border: 1px solid #e2e8f0;
+  }
+  .item-row.drug-item { background: #ebf8ff; border-color: #bee3f8; }
+  .item-row.advice-item { background: #f0fff4; border-color: #c6f6d5; }
+  .item-row.readonly-item { background: #f7fafc; border-color: #e2e8f0; }
+
+  .item-type-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #718096;
+    margin-bottom: 6px;
+  }
+  .item-row.drug-item .item-type-label { color: #2b6cb0; }
+  .item-row.advice-item .item-type-label { color: #276749; }
+
+  .item-row input[type="text"], .item-row input[type="number"], .item-row textarea, .item-row select {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 6px 9px;
+    font-size: 13px;
+    color: #2d3748;
+    background: #fff;
+    font-family: inherit;
+    transition: border-color 0.15s;
+  }
+  .item-row input:focus, .item-row textarea:focus, .item-row select:focus {
+    outline: none;
+    border-color: #90cdf4;
+  }
+  .item-row textarea { resize: vertical; min-height: 60px; }
+
+  .field-group { display: flex; gap: 10px; flex-wrap: wrap; }
+  .field-group > * { flex: 1; min-width: 80px; }
+
+  .field-label {
+    font-size: 11px;
+    color: #718096;
+    font-weight: 600;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  .monospace {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    color: #4a5568;
+    background: #edf2f7;
+    border-radius: 4px;
+    padding: 3px 7px;
+    word-break: break-all;
+  }
+
+  .chip {
+    display: inline-block;
+    background: #e2e8f0;
+    color: #4a5568;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .chip.blue { background: #bee3f8; color: #2b6cb0; }
+  .chip.green { background: #c6f6d5; color: #276749; }
+  .chip.grey { background: #e2e8f0; color: #4a5568; }
+  .chip.red { background: #fed7d7; color: #c53030; }
+
+  /* ---- Autocomplete ---- */
+  .autocomplete-wrapper { position: relative; }
+  .autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #90cdf4;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    z-index: 200;
+    max-height: 220px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .autocomplete-item {
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f4f8;
+  }
+  .autocomplete-item:last-child { border-bottom: none; }
+  .autocomplete-item:hover, .autocomplete-item.active { background: #ebf8ff; }
+  .autocomplete-item .drug-vpid { font-size: 11px; color: #718096; }
+
+  /* ---- Spinner ---- */
+  #loading-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.7);
+    z-index: 9000;
+    align-items: center;
+    justify-content: center;
+  }
+  #loading-overlay.show { display: flex; }
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #bee3f8;
+    border-top-color: #2b6cb0;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 600px) {
+    .meta-grid { grid-template-columns: 1fr; }
+    #drop-zone { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="app-header">
+  <h1>Vision Guideline Editor</h1>
+  <div class="header-actions" id="header-actions" style="display:none">
+    <button class="btn btn-secondary" id="btn-open-new">Open Another</button>
+    <button class="btn btn-white" id="btn-export">Export .htm</button>
+  </div>
+</header>
+
+<!-- Landing / drop zone -->
+<div id="landing">
+  <div id="drop-zone">
+    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+    </svg>
+    <h2>Open a Guideline File</h2>
+    <p>Drag and drop a Vision <strong>.htm</strong> guideline file here, or<br>
+    <span class="choose-link" id="choose-link">click to browse</span>.</p>
+  </div>
+  <input type="file" id="file-input" accept=".htm,.html">
+</div>
+
+<!-- Editor -->
+<div id="editor">
+  <!-- Metadata panel -->
+  <div id="metadata-panel">
+    <h3>Guideline Metadata</h3>
+    <div class="meta-grid">
+      <div class="meta-field" style="grid-column: 1 / -1">
+        <label>Title</label>
+        <input type="text" id="meta-title" placeholder="Guideline title">
+      </div>
+      <div class="meta-field">
+        <label>Mnemonic</label>
+        <input type="text" id="meta-mnemonic" readonly>
+      </div>
+      <div class="meta-field">
+        <label>Type</label>
+        <div id="meta-type-badge" class="meta-badge"></div>
+      </div>
+      <div class="meta-field">
+        <label>Sex Filter</label>
+        <select id="meta-sex">
+          <option value="GEN003: Both Sexes">Both Sexes</option>
+          <option value="GEN001: Male">Male only</option>
+          <option value="GEN002: Female">Female only</option>
+        </select>
+      </div>
+      <div class="meta-field">
+        <label>Trigger</label>
+        <input type="text" id="meta-trigger" placeholder="e.g. READ:C10">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sections list -->
+  <div id="sections-list"></div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Loading overlay -->
+<div id="loading-overlay"><div class="spinner"></div></div>
+
+<script>
+'use strict';
+
+// ---- State ----
+let guidelineData = null;
+
+// ---- Utility ----
+function $(id) { return document.getElementById(id); }
+
+function showToast(msg, type = 'error') {
+  const t = $('toast');
+  t.textContent = msg;
+  t.className = type === 'success' ? 'success' : '';
+  t.style.display = 'block';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.display = 'none'; }, 4000);
+}
+
+function setLoading(on) {
+  $('loading-overlay').className = on ? 'show' : '';
+}
+
+// ---- Drop zone setup ----
+const dropZone = $('drop-zone');
+const fileInput = $('file-input');
+
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) loadFile(file);
+});
+dropZone.addEventListener('click', () => fileInput.click());
+$('choose-link').addEventListener('click', e => { e.stopPropagation(); fileInput.click(); });
+fileInput.addEventListener('change', () => { if (fileInput.files[0]) loadFile(fileInput.files[0]); });
+$('btn-open-new').addEventListener('click', () => { fileInput.value = ''; fileInput.click(); });
+$('btn-export').addEventListener('click', exportGuideline);
+
+// ---- Load and parse file ----
+function loadFile(file) {
+  const reader = new FileReader();
+  reader.onload = async e => {
+    const text = e.target.result;
+    await parseGuideline(text);
+  };
+  reader.readAsText(file, 'windows-1252');
+}
+
+async function parseGuideline(text) {
+  setLoading(true);
+  try {
+    const resp = await fetch('/api/parse', {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      body: text,
+    });
+    const data = await resp.json();
+    if (!resp.ok) {
+      showToast('Parse error: ' + (data.error || resp.statusText));
+      return;
+    }
+    guidelineData = data;
+    renderEditor();
+    $('landing').style.display = 'none';
+    $('editor').style.display = 'block';
+    $('header-actions').style.display = 'flex';
+  } catch (err) {
+    showToast('Network error: ' + err.message);
+  } finally {
+    setLoading(false);
+  }
+}
+
+async function exportGuideline() {
+  if (!guidelineData) return;
+  setLoading(true);
+  try {
+    const resp = await fetch('/api/export', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(guidelineData),
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      showToast('Export error: ' + (err.error || resp.statusText));
+      return;
+    }
+    const blob = await resp.blob();
+    const cd = resp.headers.get('Content-Disposition') || '';
+    let filename = 'guideline.htm';
+    const m = cd.match(/filename="([^"]+)"/);
+    if (m) filename = m[1];
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('Exported ' + filename, 'success');
+  } catch (err) {
+    showToast('Network error: ' + err.message);
+  } finally {
+    setLoading(false);
+  }
+}
+
+// ---- Render editor ----
+function renderEditor() {
+  const g = guidelineData;
+  const meta = g.metadata;
+
+  $('meta-title').value = meta.title || '';
+  $('meta-mnemonic').value = meta.mnemonic || '';
+  $('meta-type-badge').textContent = g.guideline_type || 'unknown';
+  $('meta-sex').value = meta.sex_filter || 'GEN003: Both Sexes';
+  $('meta-trigger').value = meta.trigger || '';
+
+  // Bind metadata changes
+  $('meta-title').oninput = e => { guidelineData.metadata.title = e.target.value; };
+  $('meta-sex').onchange = e => { guidelineData.metadata.sex_filter = e.target.value; };
+  $('meta-trigger').oninput = e => { guidelineData.metadata.trigger = e.target.value; };
+
+  // Render sections
+  const list = $('sections-list');
+  list.innerHTML = '';
+  (g.sections || []).forEach((sec, si) => {
+    list.appendChild(renderSection(sec, si));
+  });
+}
+
+function renderSection(sec, si) {
+  const card = document.createElement('div');
+  card.className = 'section-card';
+
+  const header = document.createElement('div');
+  header.className = 'section-header';
+
+  const toggle = document.createElement('span');
+  toggle.className = 'section-toggle';
+  toggle.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>';
+
+  const titleInput = document.createElement('input');
+  titleInput.className = 'section-title-input';
+  titleInput.type = 'text';
+  titleInput.value = sec.title || '';
+  titleInput.placeholder = 'Section title';
+  titleInput.addEventListener('input', e => {
+    guidelineData.sections[si].title = e.target.value;
+  });
+  titleInput.addEventListener('click', e => e.stopPropagation());
+
+  header.appendChild(toggle);
+  header.appendChild(titleInput);
+
+  const body = document.createElement('div');
+  body.className = 'section-body';
+
+  header.addEventListener('click', () => {
+    const open = body.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+  });
+
+  // Render items
+  (sec.items || []).forEach((item, ii) => {
+    const row = renderItem(item, si, ii);
+    if (row) body.appendChild(row);
+  });
+
+  card.appendChild(header);
+  card.appendChild(body);
+  return card;
+}
+
+function renderItem(item, si, ii) {
+  const t = item._type;
+
+  if (t === 'Cell') return renderCell(item, si, ii);
+  if (t === 'DrugEntry') return renderDrugEntry(item, si, ii);
+  if (t === 'AdviceText') return renderAdviceText(item, si, ii);
+  if (t === 'SubGuidelineLink') return renderSubGuidelineLink(item, si, ii);
+  if (t === 'H2Block') return renderH2Block(item, si, ii);
+  if (t === 'SnapcardMarker') return renderBadge('Snapcard', 'blue');
+  if (t === 'RegimeMarker') return renderBadge('Regime: ' + (item.name || ''), 'grey');
+  if (t === 'FilterBlock') return renderReadOnly('Filter', item.description || item.filter_raw || '');
+  if (t === 'PatientDataQuery') return renderReadOnly('Patient Data', item.description || item.data_code || '');
+  if (t === 'MultimediaBlock') return renderReadOnly('Multimedia', '[Multimedia content]');
+  if (t === 'SnapcardRow') return renderReadOnly('Snapcard Row', item.label || item.raw_line || '');
+  if (t === 'DataRecord') return renderReadOnly('Data Record', item.content || '');
+  return null;
+}
+
+function renderCell(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = 'Cell (' + (item.cell_type || 'text') + ')';
+  row.appendChild(typeLabel);
+
+  if (item.cell_type === 'image') {
+    const chip = document.createElement('span');
+    chip.className = 'chip grey';
+    chip.textContent = 'Image: ' + (item.img_src || '');
+    row.appendChild(chip);
+    return row;
+  }
+
+  if (item.cell_type === 'button' || item.command_raw) {
+    // Editable: text, label; read-only: command_raw
+    const textWrap = document.createElement('div');
+    textWrap.style.marginBottom = '6px';
+    const lbl1 = document.createElement('div');
+    lbl1.className = 'field-label';
+    lbl1.textContent = 'Button Label';
+    const inp1 = document.createElement('input');
+    inp1.type = 'text';
+    inp1.value = item.text || '';
+    inp1.addEventListener('input', e => {
+      item.text = e.target.value;
+      updateCellRawText(item, e.target.value);
+    });
+    textWrap.appendChild(lbl1);
+    textWrap.appendChild(inp1);
+    row.appendChild(textWrap);
+
+    const labelWrap = document.createElement('div');
+    labelWrap.style.marginBottom = '6px';
+    const lbl2 = document.createElement('div');
+    lbl2.className = 'field-label';
+    lbl2.textContent = 'Cite Label';
+    const inp2 = document.createElement('input');
+    inp2.type = 'text';
+    inp2.value = item.label || '';
+    inp2.addEventListener('input', e => {
+      item.label = e.target.value;
+      updateCellCiteLabel(item, e.target.value);
+    });
+    labelWrap.appendChild(lbl2);
+    labelWrap.appendChild(inp2);
+    row.appendChild(labelWrap);
+
+    if (item.command_raw) {
+      const cmdDiv = document.createElement('div');
+      const lbl3 = document.createElement('div');
+      lbl3.className = 'field-label';
+      lbl3.textContent = 'Command (read-only)';
+      const code = document.createElement('div');
+      code.className = 'monospace';
+      code.textContent = item.command_raw;
+      cmdDiv.appendChild(lbl3);
+      cmdDiv.appendChild(code);
+      row.appendChild(cmdDiv);
+    }
+    return row;
+  }
+
+  // Text cell
+  const fg = document.createElement('div');
+  const lbl = document.createElement('div');
+  lbl.className = 'field-label';
+  lbl.textContent = 'Text';
+  const inp = document.createElement('textarea');
+  inp.value = item.text || '';
+  inp.rows = Math.max(2, (item.text || '').split('\n').length);
+  inp.addEventListener('input', e => {
+    item.text = e.target.value;
+    updateCellRawText(item, e.target.value);
+  });
+  fg.appendChild(lbl);
+  fg.appendChild(inp);
+  row.appendChild(fg);
+
+  if (item.font_raw) {
+    const fontNote = document.createElement('small');
+    fontNote.style.cssText = 'color:#718096;font-size:11px;margin-top:4px;display:block;';
+    fontNote.textContent = 'Font: ' + item.font_raw;
+    row.appendChild(fontNote);
+  }
+  return row;
+}
+
+function updateCellRawText(item, newText) {
+  // Replace the non-directive text line in raw_lines
+  const lines = item.raw_lines;
+  let found = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (!lines[i].startsWith('<') && !lines[i].startsWith('<!')) {
+      lines[i] = newText;
+      found = true;
+      break;
+    }
+  }
+  if (!found) lines.push(newText);
+}
+
+function updateCellCiteLabel(item, newLabel) {
+  const lines = item.raw_lines;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith('<CITE>') && lines[i].endsWith('</CITE>')) {
+      lines[i] = '<CITE>' + newLabel + '</CITE>';
+      return;
+    }
+  }
+  // Not found — insert after last directive
+  lines.push('<CITE>' + newLabel + '</CITE>');
+}
+
+function renderDrugEntry(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row drug-item';
+
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = 'Drug Entry';
+  row.appendChild(typeLabel);
+
+  // Drug name with autocomplete
+  const nameWrap = document.createElement('div');
+  nameWrap.className = 'autocomplete-wrapper';
+  nameWrap.style.marginBottom = '8px';
+
+  const nameLbl = document.createElement('div');
+  nameLbl.className = 'field-label';
+  nameLbl.textContent = 'Drug Name';
+  nameWrap.appendChild(nameLbl);
+
+  const nameRow = document.createElement('div');
+  nameRow.style.display = 'flex';
+  nameRow.style.gap = '8px';
+  nameRow.style.alignItems = 'center';
+
+  const nameInp = document.createElement('input');
+  nameInp.type = 'text';
+  nameInp.value = item.drug_name || '';
+  nameInp.style.flex = '1';
+
+  const codeChip = document.createElement('span');
+  codeChip.className = 'chip blue';
+  codeChip.textContent = item.drug_code || '';
+  codeChip.style.flexShrink = '0';
+  codeChip.style.fontFamily = 'monospace';
+
+  nameRow.appendChild(nameInp);
+  nameRow.appendChild(codeChip);
+  nameWrap.appendChild(nameRow);
+
+  const dropdown = document.createElement('div');
+  dropdown.className = 'autocomplete-dropdown';
+  dropdown.style.display = 'none';
+  nameWrap.appendChild(dropdown);
+
+  setupAutocomplete(nameInp, dropdown, result => {
+    item.drug_name = result.nm;
+    item.drug_code = result.vpid;
+    nameInp.value = result.nm;
+    codeChip.textContent = result.vpid;
+  });
+
+  row.appendChild(nameWrap);
+
+  // Fields grid
+  const grid = document.createElement('div');
+  grid.className = 'field-group';
+
+  function addField(label, key, type = 'text') {
+    const wrap = document.createElement('div');
+    const lbl = document.createElement('div');
+    lbl.className = 'field-label';
+    lbl.textContent = label;
+    const inp = document.createElement('input');
+    inp.type = type;
+    inp.value = item[key] !== undefined ? item[key] : '';
+    inp.addEventListener('input', e => {
+      item[key] = type === 'number' ? (parseInt(e.target.value) || 0) : e.target.value;
+    });
+    wrap.appendChild(lbl);
+    wrap.appendChild(inp);
+    grid.appendChild(wrap);
+  }
+
+  addField('Dosage', 'dosage');
+  addField('Qty', 'qty', 'number');
+  addField('Days', 'days', 'number');
+
+  const authWrap = document.createElement('div');
+  const authLbl = document.createElement('div');
+  authLbl.className = 'field-label';
+  authLbl.textContent = 'Authorise';
+  const authSel = document.createElement('select');
+  ['', 'Issue', 'Repeat', 'Hospital'].forEach(val => {
+    const opt = document.createElement('option');
+    opt.value = val;
+    opt.textContent = val || '(none)';
+    opt.selected = item.authorise === val;
+    authSel.appendChild(opt);
+  });
+  authSel.addEventListener('change', e => { item.authorise = e.target.value; });
+  authWrap.appendChild(authLbl);
+  authWrap.appendChild(authSel);
+  grid.appendChild(authWrap);
+
+  row.appendChild(grid);
+  return row;
+}
+
+function renderAdviceText(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row advice-item';
+
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = 'Advice Text';
+  row.appendChild(typeLabel);
+
+  const ta = document.createElement('textarea');
+  ta.value = item.text || '';
+  ta.rows = Math.max(2, (item.text || '').split('\n').length);
+  ta.addEventListener('input', e => { item.text = e.target.value; });
+  row.appendChild(ta);
+  return row;
+}
+
+function renderSubGuidelineLink(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = 'Sub-Guideline Link';
+  row.appendChild(typeLabel);
+
+  const grid = document.createElement('div');
+  grid.className = 'field-group';
+
+  const labelWrap = document.createElement('div');
+  const labelLbl = document.createElement('div');
+  labelLbl.className = 'field-label';
+  labelLbl.textContent = 'Label';
+  const labelInp = document.createElement('input');
+  labelInp.type = 'text';
+  labelInp.value = item.label || '';
+  labelInp.addEventListener('input', e => { item.label = e.target.value; });
+  labelWrap.appendChild(labelLbl);
+  labelWrap.appendChild(labelInp);
+  grid.appendChild(labelWrap);
+
+  const hrefWrap = document.createElement('div');
+  const hrefLbl = document.createElement('div');
+  hrefLbl.className = 'field-label';
+  hrefLbl.textContent = 'Href';
+  const hrefInp = document.createElement('input');
+  hrefInp.type = 'text';
+  hrefInp.value = item.href || '';
+  hrefInp.addEventListener('input', e => { item.href = e.target.value; });
+  hrefWrap.appendChild(hrefLbl);
+  hrefWrap.appendChild(hrefInp);
+  grid.appendChild(hrefWrap);
+
+  row.appendChild(grid);
+  return row;
+}
+
+function renderH2Block(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = 'Heading (H' + (item.h_level || 2) + ')';
+  row.appendChild(typeLabel);
+
+  const inp = document.createElement('input');
+  inp.type = 'text';
+  inp.value = item.title || '';
+  inp.addEventListener('input', e => { item.title = e.target.value; });
+  row.appendChild(inp);
+  return row;
+}
+
+function renderBadge(text, cls) {
+  const row = document.createElement('div');
+  row.className = 'item-row readonly-item';
+  row.style.padding = '8px 14px';
+  const chip = document.createElement('span');
+  chip.className = 'chip ' + (cls || 'grey');
+  chip.textContent = text;
+  row.appendChild(chip);
+  return row;
+}
+
+function renderReadOnly(label, text) {
+  const row = document.createElement('div');
+  row.className = 'item-row readonly-item';
+  const typeLabel = document.createElement('div');
+  typeLabel.className = 'item-type-label';
+  typeLabel.textContent = label;
+  row.appendChild(typeLabel);
+  const val = document.createElement('div');
+  val.style.cssText = 'font-size:13px;color:#4a5568;word-break:break-word;';
+  val.textContent = text || '';
+  row.appendChild(val);
+  return row;
+}
+
+// ---- Autocomplete ----
+function setupAutocomplete(input, dropdown, onSelect) {
+  let timer = null;
+  let activeIdx = -1;
+  let results = [];
+
+  function showDropdown(items) {
+    results = items;
+    activeIdx = -1;
+    dropdown.innerHTML = '';
+    if (!items.length) { dropdown.style.display = 'none'; return; }
+    items.forEach((r, i) => {
+      const el = document.createElement('div');
+      el.className = 'autocomplete-item';
+      el.innerHTML = `<div>${escHtml(r.nm)}</div><div class="drug-vpid">${escHtml(r.vpid)}${r.abbrevnm ? ' · ' + escHtml(r.abbrevnm) : ''}</div>`;
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        selectItem(r);
+      });
+      dropdown.appendChild(el);
+    });
+    dropdown.style.display = 'block';
+  }
+
+  function selectItem(r) {
+    onSelect(r);
+    dropdown.style.display = 'none';
+    activeIdx = -1;
+  }
+
+  function setActive(idx) {
+    const items = dropdown.querySelectorAll('.autocomplete-item');
+    items.forEach((el, i) => el.classList.toggle('active', i === idx));
+    activeIdx = idx;
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    const q = input.value.trim();
+    if (!q) { dropdown.style.display = 'none'; return; }
+    timer = setTimeout(async () => {
+      try {
+        const resp = await fetch('/api/search?q=' + encodeURIComponent(q) + '&limit=10');
+        const data = await resp.json();
+        showDropdown(Array.isArray(data) ? data : []);
+      } catch { dropdown.style.display = 'none'; }
+    }, 300);
+  });
+
+  input.addEventListener('keydown', e => {
+    const items = dropdown.querySelectorAll('.autocomplete-item');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive(Math.min(activeIdx + 1, items.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive(Math.max(activeIdx - 1, 0));
+    } else if (e.key === 'Enter' && activeIdx >= 0) {
+      e.preventDefault();
+      selectItem(results[activeIdx]);
+    } else if (e.key === 'Escape') {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  input.addEventListener('blur', () => {
+    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
+  });
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+</script>
+</body>
+</html>
