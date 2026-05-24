@@ -141,6 +141,29 @@ class DataRecord:
 
 
 @dataclass
+class Button:
+    """One button cell inside a ButtonRow."""
+    dialog_id: str = "272"
+    read_code: str = ""
+    label: str = ""
+    width: str = ""
+    indent: int = 10
+    newline_after: bool = False
+    # Trailing whitespace inside the original <!Command=...> directive, after
+    # the code (or after the dialog id when there's no code).  Preserved for
+    # round-trip; the editor clears it when dialog_id / read_code is edited.
+    cmd_pad: str = ""
+
+
+@dataclass
+class ButtonRow:
+    """A row of buttons (one <!Multimedia Line> with one <TABLE> and N <TD>s).
+    Promoted from a MultimediaBlock when every cell is a DialogAdd button."""
+    buttons: List[Button] = field(default_factory=list)
+    properties_raw: str = "2;;;40;;0;"
+
+
+@dataclass
 class DataEntryButton:
     """A clickable button that opens a Vision data-entry dialog (e.g. record a
     clinical event with associated comment).  Exported as a minimal single-cell
@@ -406,7 +429,7 @@ class _BodyParser:
                     intro_block = mb
                     intro_done = True
                 else:
-                    add_item(mb)
+                    add_item(_maybe_promote_button_row(mb))
                 continue
 
             # H1
@@ -934,6 +957,9 @@ def _emit_item(item: Any, lines: List[str]) -> None:
     elif isinstance(item, DataEntryButton):
         _emit_data_entry_button(item, lines)
 
+    elif isinstance(item, ButtonRow):
+        _emit_button_row(item, lines)
+
     elif isinstance(item, DataRecord):
         lines.append('<!DataRecord>')
         lines.append(f'<!Properties={item.properties_raw}>')
@@ -946,8 +972,74 @@ def _emit_item(item: Any, lines: List[str]) -> None:
         lines.append('<!Snapcard>')
 
 
+_BUTTON_CMD_RE = re.compile(r'^DialogAdd:#(\w+)(?:\\(\S+?))?(\s*)$')
+
+
+def _maybe_promote_button_row(mb: MultimediaBlock):
+    """If `mb` is one TABLE of pure DialogAdd buttons, return a ButtonRow;
+    otherwise return `mb` unchanged so the editor falls back to read-only."""
+    if len(mb.tables) != 1:
+        return mb
+    cells = mb.tables[0]
+    if not cells:
+        return mb
+    buttons: List[Button] = []
+    for c in cells:
+        if c.cell_type != 'button' or c.hotspot:
+            return mb
+        m = _BUTTON_CMD_RE.match(c.command_raw)
+        if not m:
+            return mb
+        dialog_id = m.group(1)
+        read_code = (m.group(2) or '').rstrip()
+        cmd_pad = m.group(3) or ''
+        # The CITE content is `&lt;LABEL&gt;` where LABEL may contain literal
+        # Vision-encoded sequences (e.g. `<!vision>&lt;` for a `<` in the
+        # displayed text).  Strip ONLY the outer brackets — anything else is
+        # opaque and must round-trip verbatim.
+        label = c.label or ''
+        if label.startswith('&lt;') and label.endswith('&gt;'):
+            label = label[4:-4]
+        buttons.append(Button(
+            dialog_id=dialog_id,
+            read_code=read_code,
+            label=label,
+            width=c.width or '',
+            indent=c.indent if c.indent is not None else 10,
+            newline_after=c.newline_after,
+            cmd_pad=cmd_pad,
+        ))
+    return ButtonRow(properties_raw=mb.properties_raw, buttons=buttons)
+
+
+def _emit_button_row(br: ButtonRow, lines: List[str]) -> None:
+    lines.append(f'<!Properties={br.properties_raw}>')
+    lines.append('<!Multimedia Line>')
+    lines.append('<TABLE>')
+    for b in br.buttons:
+        # Label is stored verbatim (post-strip of outer &lt;…&gt;); re-wrap
+        # without further escaping so Vision's `<!vision>&lt;` markers round-
+        # trip exactly.
+        label_esc = b.label
+        cmd = f'DialogAdd:#{b.dialog_id}'
+        if b.read_code:
+            cmd += '\\' + b.read_code
+        cmd += (b.cmd_pad or '')
+        lines.append('<TD>')
+        lines.append(f'<!Indent={b.indent}>')
+        if b.newline_after:
+            lines.append('<!Newline After>')
+        if b.width:
+            lines.append(f'<!Width={b.width}>')
+        lines.append(f'<!Command={cmd}>')
+        lines.append(f'<CITE>&lt;{label_esc}&gt;</CITE>')
+        lines.append('</TD>')
+    lines.append('</TABLE>')
+    lines.append('<!End Line>')
+
+
 def _emit_data_entry_button(btn: DataEntryButton, lines: List[str]) -> None:
-    label_escaped = btn.label.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    label_escaped = btn.label  # stored verbatim — see _emit_button_row note
     cmd = f'DialogAdd:#{btn.dialog_id}'
     if btn.read_code:
         cmd += f'\\{btn.read_code}'

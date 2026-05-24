@@ -906,6 +906,14 @@ function addItemToSection(si, type) {
       description: 'All Medical History Records in Descending order',
       properties_raw: '2;;;;;;;;;;-13;',
     };
+  } else if (type === 'ButtonRow') {
+    item = {
+      _type: 'ButtonRow',
+      properties_raw: '2;;;40;;0;',
+      buttons: [
+        { _type: 'Button', dialog_id: '272', read_code: '', label: '', width: '160', indent: 10, newline_after: false, cmd_pad: '' },
+      ],
+    };
   }
   guidelineData.sections[si].items.push(item);
   openSections.add(si);
@@ -999,6 +1007,7 @@ function renderSection(sec, si) {
   const addTypes = [
     ['DrugEntry', 'Drug Entry'],
     ['DataEntryButton', 'Data Entry'],
+    ['ButtonRow', 'Button Row'],
     ['PatientDataQuery', 'Patient Data'],
     ['AdviceText', 'Advice Text'],
     ['H2Block', 'Sub-heading'],
@@ -1026,6 +1035,7 @@ function renderItem(item, si, ii) {
   if (t === 'SubGuidelineLink') return renderSubGuidelineLink(item, si, ii);
   if (t === 'H2Block') return renderH2Block(item, si, ii);
   if (t === 'DataEntryButton') return renderDataEntryButton(item, si, ii);
+  if (t === 'ButtonRow') return renderButtonRow(item, si, ii);
   if (t === 'SnapcardMarker') return renderBadge('Snapcard', 'blue');
   if (t === 'RegimeMarker') return renderBadge('Regime: ' + (item.name || ''), 'grey');
   if (t === 'FilterBlock') return renderReadOnly('Filter', item.description || item.filter_raw || '');
@@ -1343,6 +1353,146 @@ function renderDataEntryButton(item, si, ii) {
   const dt0 = DIALOG_TYPES.find(d => d.id === item.dialog_id);
   if (dt0 && !dt0.needsCode) codeWrap.style.display = 'none';
 
+  return row;
+}
+
+// ===== Button Row (multi-button horizontal layout) =====
+function renderButtonRow(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+  row.style.background = '#fffaf0';
+  row.style.borderColor = '#fbd38d';
+  row.appendChild(itemHeader('Button Row (' + (item.buttons || []).length + ' button' + (item.buttons.length === 1 ? '' : 's') + ')', si, ii));
+
+  const list = document.createElement('div');
+  row.appendChild(list);
+
+  function rerender() {
+    list.innerHTML = '';
+    (item.buttons || []).forEach((btn, bi) => list.appendChild(renderOneButton(btn, bi)));
+    const addBtn = document.createElement('button');
+    addBtn.className = 'btn btn-ghost btn-sm';
+    addBtn.textContent = '+ Add button';
+    addBtn.style.marginTop = '4px';
+    addBtn.addEventListener('click', () => {
+      item.buttons.push({ _type: 'Button', dialog_id: '272', read_code: '', label: '', width: '160', indent: 10, newline_after: false, cmd_pad: '' });
+      rerender();
+    });
+    list.appendChild(addBtn);
+  }
+
+  function renderOneButton(btn, bi) {
+    const card = document.createElement('div');
+    card.style.cssText = 'border:1px solid #e2e8f0;border-radius:4px;padding:8px;margin-bottom:6px;background:#fff;';
+
+    const top = document.createElement('div');
+    top.style.cssText = 'display:flex;gap:6px;align-items:center;margin-bottom:6px;';
+    const idx = document.createElement('span');
+    idx.textContent = '#' + (bi + 1);
+    idx.style.cssText = 'font-size:11px;color:#718096;font-weight:600;flex:0 0 auto;';
+    top.appendChild(idx);
+
+    const dlgSel = document.createElement('select');
+    dlgSel.style.flex = '1';
+    DIALOG_TYPES.forEach(dt => {
+      const o = document.createElement('option');
+      o.value = dt.id; o.textContent = `${dt.label} (#${dt.id})`;
+      if (btn.dialog_id === dt.id) o.selected = true;
+      dlgSel.appendChild(o);
+    });
+    if (!DIALOG_TYPES.find(d => d.id === btn.dialog_id)) {
+      const o = document.createElement('option');
+      o.value = btn.dialog_id; o.textContent = `(custom) #${btn.dialog_id}`;
+      o.selected = true; dlgSel.insertBefore(o, dlgSel.firstChild);
+    }
+    dlgSel.addEventListener('change', e => {
+      btn.dialog_id = e.target.value;
+      btn.cmd_pad = '';  // edit invalidates original padding
+      const dt = DIALOG_TYPES.find(d => d.id === e.target.value);
+      if (dt && !dt.needsCode) btn.read_code = '';
+      rerender();
+    });
+    top.appendChild(dlgSel);
+
+    const del = document.createElement('button');
+    del.className = 'btn btn-ghost btn-sm';
+    del.textContent = '×'; del.title = 'Remove button';
+    del.addEventListener('click', () => {
+      if (item.buttons.length <= 1) { alert('A Button Row needs at least one button. Delete the whole row instead.'); return; }
+      item.buttons.splice(bi, 1);
+      rerender();
+    });
+    top.appendChild(del);
+    card.appendChild(top);
+
+    // READ code (autocomplete) — hidden for code-less dialogs
+    const dt = DIALOG_TYPES.find(d => d.id === btn.dialog_id);
+    if (!dt || dt.needsCode) {
+      const codeWrap = document.createElement('div');
+      codeWrap.className = 'autocomplete-wrapper';
+      codeWrap.style.marginBottom = '6px';
+      codeWrap.appendChild(fieldLabel('READ Code', 'Optional — the specific code Vision will record when this button is clicked.'));
+      const codeInp = document.createElement('input');
+      codeInp.type = 'text'; codeInp.value = btn.read_code || '';
+      codeInp.placeholder = 'Search READ codes…';
+      codeInp.addEventListener('input', e => { btn.read_code = e.target.value; btn.cmd_pad = ''; });
+      codeWrap.appendChild(codeInp);
+      const dd = document.createElement('div');
+      dd.className = 'autocomplete-dropdown'; dd.style.display = 'none';
+      codeWrap.appendChild(dd);
+      setupReadCodeAutocomplete(codeInp, dd, r => {
+        btn.read_code = r.code.trim();
+        codeInp.value = btn.read_code;
+        btn.cmd_pad = '';
+        if (!btn.label || !btn.label.trim()) { btn.label = r.label; labelInp.value = r.label; }
+      });
+      card.appendChild(codeWrap);
+    }
+
+    // Label
+    const labelWrap = document.createElement('div');
+    labelWrap.style.marginBottom = '6px';
+    labelWrap.appendChild(fieldLabel('Button Label', 'Text shown on the button in Vision.'));
+    const labelInp = document.createElement('input');
+    labelInp.type = 'text'; labelInp.value = btn.label || '';
+    labelInp.placeholder = 'e.g. Add BP';
+    labelInp.addEventListener('input', e => { btn.label = e.target.value; });
+    labelWrap.appendChild(labelInp);
+    card.appendChild(labelWrap);
+
+    // Width + indent + newline (compact)
+    const grid = document.createElement('div');
+    grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:end;';
+
+    const wWrap = document.createElement('div');
+    wWrap.appendChild(fieldLabel('Width (px)', 'Button width in pixels. Adjust if buttons in the row don\'t fit nicely.'));
+    const wInp = document.createElement('input');
+    wInp.type = 'text'; wInp.value = btn.width || ''; wInp.placeholder = '160';
+    wInp.addEventListener('input', e => { btn.width = e.target.value; });
+    wWrap.appendChild(wInp); grid.appendChild(wWrap);
+
+    const iWrap = document.createElement('div');
+    iWrap.appendChild(fieldLabel('Indent', 'Left indent in pixels. Usually 10.'));
+    const iInp = document.createElement('input');
+    iInp.type = 'number'; iInp.value = btn.indent != null ? btn.indent : 10;
+    iInp.addEventListener('input', e => { btn.indent = parseInt(e.target.value, 10) || 0; });
+    iWrap.appendChild(iInp); grid.appendChild(iWrap);
+
+    const nlWrap = document.createElement('label');
+    nlWrap.style.cssText = 'display:flex;align-items:center;gap:4px;font-size:12px;padding-bottom:6px;';
+    const nlChk = document.createElement('input');
+    nlChk.type = 'checkbox'; nlChk.checked = !!btn.newline_after;
+    nlChk.addEventListener('change', e => { btn.newline_after = e.target.checked; });
+    nlWrap.appendChild(nlChk);
+    nlWrap.appendChild(document.createTextNode('Newline after'));
+    nlWrap.title = 'Force a line break after this button instead of continuing horizontally.';
+    grid.appendChild(nlWrap);
+
+    card.appendChild(grid);
+    return card;
+  }
+
+  rerender();
   return row;
 }
 
