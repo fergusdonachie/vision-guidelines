@@ -141,6 +141,19 @@ class DataRecord:
 
 
 @dataclass
+class DataEntryButton:
+    """A clickable button that opens a Vision data-entry dialog (e.g. record a
+    clinical event with associated comment).  Exported as a minimal single-cell
+    multimedia block."""
+    read_code: str
+    label: str
+    properties_raw: str = "3;;;40;;0;;;;;;;;;;;16777202;"
+    width: str = "490"
+    indent: int = 10
+    dialog_id: str = "272"  # 272 = clinical event entry; 62 = recall
+
+
+@dataclass
 class _RegimeMarker:
     """Internal: <!Regime=...> between drug entries in a section."""
     name: str
@@ -918,6 +931,9 @@ def _emit_item(item: Any, lines: List[str]) -> None:
     elif isinstance(item, DrugEntry):
         _emit_drug_entry(item, lines)
 
+    elif isinstance(item, DataEntryButton):
+        _emit_data_entry_button(item, lines)
+
     elif isinstance(item, DataRecord):
         lines.append('<!DataRecord>')
         lines.append(f'<!Properties={item.properties_raw}>')
@@ -928,6 +944,21 @@ def _emit_item(item: Any, lines: List[str]) -> None:
 
     elif isinstance(item, _SnapcardMarker):
         lines.append('<!Snapcard>')
+
+
+def _emit_data_entry_button(btn: DataEntryButton, lines: List[str]) -> None:
+    label_escaped = btn.label.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    lines.append(f'<!Properties={btn.properties_raw}>')
+    lines.append('<!Multimedia Line>')
+    lines.append('<TABLE>')
+    lines.append('<TD>')
+    lines.append(f'<!Indent={btn.indent}>')
+    lines.append(f'<!Width={btn.width}>')
+    lines.append(f'<!Command=DialogAdd:#{btn.dialog_id}\\{btn.read_code}>')
+    lines.append(f'<CITE>&lt;{label_escaped}&gt;</CITE>')
+    lines.append('</TD>')
+    lines.append('</TABLE>')
+    lines.append('<!End Line>')
 
 
 def _emit_drug_entry(entry: DrugEntry, lines: List[str]) -> None:

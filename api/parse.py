@@ -26,6 +26,7 @@ from guideline_format import (
     SnapcardRow,
     SnapcardField,
     DataRecord,
+    DataEntryButton,
     PatientDataQuery,
     _RegimeMarker,
     _SnapcardMarker,

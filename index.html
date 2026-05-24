@@ -888,6 +888,16 @@ function addItemToSection(si, type) {
     item = { _type: 'H2Block', title: '', properties_raw: 'Color=16777215:Size=12:Bold=Yes', h_level: 2 };
   } else if (type === 'SubGuidelineLink') {
     item = { _type: 'SubGuidelineLink', href: '', label: '', properties_raw: '' };
+  } else if (type === 'DataEntryButton') {
+    item = {
+      _type: 'DataEntryButton',
+      read_code: '',
+      label: '',
+      properties_raw: '3;;;40;;0;;;;;;;;;;;16777202;',
+      width: '490',
+      indent: 10,
+      dialog_id: '272',
+    };
   }
   guidelineData.sections[si].items.push(item);
   openSections.add(si);
@@ -980,6 +990,7 @@ function renderSection(sec, si) {
 
   const addTypes = [
     ['DrugEntry', 'Drug Entry'],
+    ['DataEntryButton', 'Data Entry'],
     ['AdviceText', 'Advice Text'],
     ['H2Block', 'Sub-heading'],
     ['SubGuidelineLink', 'Link'],
@@ -1005,6 +1016,7 @@ function renderItem(item, si, ii) {
   if (t === 'AdviceText') return renderAdviceText(item, si, ii);
   if (t === 'SubGuidelineLink') return renderSubGuidelineLink(item, si, ii);
   if (t === 'H2Block') return renderH2Block(item, si, ii);
+  if (t === 'DataEntryButton') return renderDataEntryButton(item, si, ii);
   if (t === 'SnapcardMarker') return renderBadge('Snapcard', 'blue');
   if (t === 'RegimeMarker') return renderBadge('Regime: ' + (item.name || ''), 'grey');
   if (t === 'FilterBlock') return renderReadOnly('Filter', item.description || item.filter_raw || '');
@@ -1248,6 +1260,54 @@ function renderH2Block(item, si, ii) {
   return row;
 }
 
+function renderDataEntryButton(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+  row.appendChild(itemHeader('Data Entry', si, ii));
+
+  // READ code with autocomplete
+  const codeWrap = document.createElement('div');
+  codeWrap.className = 'autocomplete-wrapper';
+  codeWrap.style.marginBottom = '8px';
+  codeWrap.appendChild(fieldLabel('READ Code', 'Type to search. The selected code is what Vision records when the GP clicks the button at consultation. The GP can add a free-text comment in the dialog at that point.'));
+
+  const codeRow = document.createElement('div');
+  codeRow.style.cssText = 'display:flex;gap:8px;align-items:center;';
+  const codeInp = document.createElement('input');
+  codeInp.type = 'text'; codeInp.value = item.read_code || ''; codeInp.style.flex = '1';
+  codeInp.placeholder = 'Search READ codes…';
+  codeInp.addEventListener('input', e => { item.read_code = e.target.value; });
+  codeRow.appendChild(codeInp);
+  codeWrap.appendChild(codeRow);
+
+  const dd = document.createElement('div');
+  dd.className = 'autocomplete-dropdown';
+  dd.style.display = 'none';
+  codeWrap.appendChild(dd);
+  row.appendChild(codeWrap);
+
+  // Button label
+  const labelWrap = document.createElement('div');
+  labelWrap.appendChild(fieldLabel('Button Label', 'Text shown on the clickable button in Vision. Auto-fills from the READ term when you pick a code; edit freely.'));
+  const labelInp = document.createElement('input');
+  labelInp.type = 'text'; labelInp.value = item.label || '';
+  labelInp.placeholder = 'e.g. Record smoking status';
+  labelInp.addEventListener('input', e => { item.label = e.target.value; });
+  labelWrap.appendChild(labelInp);
+  row.appendChild(labelWrap);
+
+  setupReadCodeAutocomplete(codeInp, dd, r => {
+    item.read_code = r.code;
+    codeInp.value = r.code;
+    if (!item.label || !item.label.trim()) {
+      item.label = r.label;
+      labelInp.value = r.label;
+    }
+  });
+
+  return row;
+}
+
 function renderBadge(text, cls) {
   const row = document.createElement('div');
   row.className = 'item-row readonly-item';
@@ -1331,7 +1391,7 @@ function setupReadCodeAutocomplete(input, dropdown, onSelect) {
       const el = document.createElement('div');
       el.className = 'autocomplete-item';
       el.innerHTML = `<strong>${escHtml(r.code)}</strong> <span style="color:#4a5568">${escHtml(r.label)}</span>`;
-      el.addEventListener('mousedown', e => { e.preventDefault(); onSelect(r.code); dropdown.style.display = 'none'; });
+      el.addEventListener('mousedown', e => { e.preventDefault(); onSelect(r); dropdown.style.display = 'none'; });
       dropdown.appendChild(el);
     });
     dropdown.style.display = 'block';
@@ -1359,7 +1419,7 @@ function setupReadCodeAutocomplete(input, dropdown, onSelect) {
     const items = dropdown.querySelectorAll('.autocomplete-item');
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(activeIdx + 1, items.length - 1)); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
-    else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); onSelect(results[activeIdx].code); dropdown.style.display = 'none'; }
+    else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); onSelect(results[activeIdx]); dropdown.style.display = 'none'; }
     else if (e.key === 'Escape') { dropdown.style.display = 'none'; }
   });
 
@@ -1367,12 +1427,12 @@ function setupReadCodeAutocomplete(input, dropdown, onSelect) {
 }
 
 // Wire up READ code autocomplete on trigger inputs
-setupReadCodeAutocomplete($('new-trigger'), $('new-trigger-dd'), code => {
-  $('new-trigger').value = code;
+setupReadCodeAutocomplete($('new-trigger'), $('new-trigger-dd'), r => {
+  $('new-trigger').value = r.code;
 });
-setupReadCodeAutocomplete($('meta-trigger'), $('meta-trigger-dd'), code => {
-  $('meta-trigger').value = code;
-  if (guidelineData) guidelineData.metadata.trigger = code;
+setupReadCodeAutocomplete($('meta-trigger'), $('meta-trigger-dd'), r => {
+  $('meta-trigger').value = r.code;
+  if (guidelineData) guidelineData.metadata.trigger = r.code;
 });
 </script>
 </body>
