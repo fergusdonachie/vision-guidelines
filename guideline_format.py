@@ -948,13 +948,16 @@ def _emit_item(item: Any, lines: List[str]) -> None:
 
 def _emit_data_entry_button(btn: DataEntryButton, lines: List[str]) -> None:
     label_escaped = btn.label.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    cmd = f'DialogAdd:#{btn.dialog_id}'
+    if btn.read_code:
+        cmd += f'\\{btn.read_code}'
     lines.append(f'<!Properties={btn.properties_raw}>')
     lines.append('<!Multimedia Line>')
     lines.append('<TABLE>')
     lines.append('<TD>')
     lines.append(f'<!Indent={btn.indent}>')
     lines.append(f'<!Width={btn.width}>')
-    lines.append(f'<!Command=DialogAdd:#{btn.dialog_id}\\{btn.read_code}>')
+    lines.append(f'<!Command={cmd}>')
     lines.append(f'<CITE>&lt;{label_escaped}&gt;</CITE>')
     lines.append('</TD>')
     lines.append('</TABLE>')

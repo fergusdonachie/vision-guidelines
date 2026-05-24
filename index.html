@@ -898,6 +898,14 @@ function addItemToSection(si, type) {
       indent: 10,
       dialog_id: '272',
     };
+  } else if (type === 'PatientDataQuery') {
+    item = {
+      _type: 'PatientDataQuery',
+      data_code: '000zD0',
+      filter_expr: '',
+      description: 'All Medical History Records in Descending order',
+      properties_raw: '2;;;;;;;;;;-13;',
+    };
   }
   guidelineData.sections[si].items.push(item);
   openSections.add(si);
@@ -991,6 +999,7 @@ function renderSection(sec, si) {
   const addTypes = [
     ['DrugEntry', 'Drug Entry'],
     ['DataEntryButton', 'Data Entry'],
+    ['PatientDataQuery', 'Patient Data'],
     ['AdviceText', 'Advice Text'],
     ['H2Block', 'Sub-heading'],
     ['SubGuidelineLink', 'Link'],
@@ -1020,7 +1029,7 @@ function renderItem(item, si, ii) {
   if (t === 'SnapcardMarker') return renderBadge('Snapcard', 'blue');
   if (t === 'RegimeMarker') return renderBadge('Regime: ' + (item.name || ''), 'grey');
   if (t === 'FilterBlock') return renderReadOnly('Filter', item.description || item.filter_raw || '');
-  if (t === 'PatientDataQuery') return renderReadOnly('Patient Data', item.description || item.data_code || '');
+  if (t === 'PatientDataQuery') return renderPatientDataQuery(item, si, ii);
   if (t === 'MultimediaBlock') return renderReadOnly('Multimedia', '[Multimedia content]');
   if (t === 'SnapcardRow') return renderReadOnly('Snapcard Row', item.label || item.raw_line || '');
   if (t === 'DataRecord') return renderReadOnly('Data Record', item.content || '');
@@ -1265,6 +1274,31 @@ function renderDataEntryButton(item, si, ii) {
   row.className = 'item-row';
   row.appendChild(itemHeader('Data Entry', si, ii));
 
+  // Dialog type
+  const dlgWrap = document.createElement('div');
+  dlgWrap.style.marginBottom = '8px';
+  dlgWrap.appendChild(fieldLabel('Dialog Type', 'Which Vision data-entry dialog opens when the button is clicked. Most types accept an optional READ code; a few (BP, Height, Weight, Prescriptions) ignore it.'));
+  const dlgSel = document.createElement('select');
+  DIALOG_TYPES.forEach(dt => {
+    const opt = document.createElement('option');
+    opt.value = dt.id; opt.textContent = `${dt.label}  (#${dt.id})`;
+    if (item.dialog_id === dt.id) opt.selected = true;
+    dlgSel.appendChild(opt);
+  });
+  if (!DIALOG_TYPES.find(d => d.id === item.dialog_id)) {
+    const opt = document.createElement('option');
+    opt.value = item.dialog_id; opt.textContent = `(custom) #${item.dialog_id}`;
+    opt.selected = true; dlgSel.insertBefore(opt, dlgSel.firstChild);
+  }
+  dlgSel.addEventListener('change', e => {
+    item.dialog_id = e.target.value;
+    const dt = DIALOG_TYPES.find(d => d.id === e.target.value);
+    if (dt && !dt.needsCode) { item.read_code = ''; codeInp.value = ''; }
+    codeWrap.style.display = (dt && !dt.needsCode) ? 'none' : '';
+  });
+  dlgWrap.appendChild(dlgSel);
+  row.appendChild(dlgWrap);
+
   // READ code with autocomplete
   const codeWrap = document.createElement('div');
   codeWrap.className = 'autocomplete-wrapper';
@@ -1304,6 +1338,413 @@ function renderDataEntryButton(item, si, ii) {
       labelInp.value = r.label;
     }
   });
+
+  // Initial visibility based on dialog type
+  const dt0 = DIALOG_TYPES.find(d => d.id === item.dialog_id);
+  if (dt0 && !dt0.needsCode) codeWrap.style.display = 'none';
+
+  return row;
+}
+
+// ===== Patient Data Query =====
+// 4-char code → record-type name (compiled from the resources corpus).
+// Sorted: most-used first; LOCUM-essentials interleaved.
+const RECORD_TYPES = [
+  { code: '000z', name: 'Medical History' },
+  { code: '000i', name: 'Consultation' },
+  { code: '000y', name: 'Recall' },
+  { code: '000s', name: 'Blood pressure' },
+  { code: '001D', name: 'Weight' },
+  { code: '001M', name: 'Allergy and Intolerance' },
+  { code: '006h', name: 'Allergy and Intolerance non drug' },
+  { code: '0011', name: 'Smoking' },
+  { code: '0012', name: 'Alcohol' },
+  { code: '001P', name: 'Immunisations' },
+  { code: '004h', name: 'Immunisation consent' },
+  { code: '004w', name: 'Immunisation contraindicated' },
+  { code: '000b', name: 'Acute and Repeat Issue Therapy' },
+  { code: '000c', name: 'Repeat Masters' },
+  { code: '000v', name: 'Referrals' },
+  { code: '004E', name: 'Advice Given' },
+  { code: '007O', name: 'All other Clinical Data' },
+  { code: '006p', name: 'Problems' },
+  { code: '008L', name: 'Correspondence' },
+  { code: '000r', name: 'Address' },
+  { code: '000e', name: 'Communication numbers' },
+  { code: '000?', name: 'Other identifiers' },
+  { code: '001K', name: 'Contraception' },
+  { code: '0010', name: 'Cervical Cytology' },
+  { code: '0017', name: 'Health Promotion - Smoking' },
+  { code: '001F', name: 'Hypertension register' },
+  { code: '001G', name: 'Coronary heart disease register' },
+  { code: '001J', name: 'Asthma register' },
+  { code: '004L', name: 'Current asthma status' },
+  { code: '004N', name: 'Asthma diagnosis' },
+  { code: '006I', name: 'Asthma last attack' },
+  { code: '0055', name: 'Asthma consultation' },
+  { code: '005B', name: 'Diabetic Consultation' },
+  { code: '0047', name: 'Hb A1C - Diabetic control' },
+  { code: '0022', name: 'Serum cholesterol' },
+  { code: '0024', name: 'Serum creatinine' },
+  { code: '007L', name: 'Pulmonary function tests' },
+  { code: '009H', name: 'Scoring Test Result' },
+  { code: '005h', name: 'Family History' },
+  { code: '0053', name: 'Ante-natal booking' },
+  { code: '006J', name: 'Pregnancy Outcome - Mother' },
+  { code: '0061', name: 'Foot care' },
+  { code: '004t', name: 'Toxicology' },
+  { code: '0032', name: 'Electrocardiogram' },
+  { code: '008p', name: 'Echocardiogram' },
+  { code: '003a', name: 'Other Diagnostic Imaging' },
+  { code: '001f', name: 'Test results - All' },
+  { code: '009u', name: 'Requests' },
+];
+
+// Dialog catalog for DataEntryButton. needsCode=false means the dialog
+// opens a general entry form; needsCode=true means it records a specific
+// READ code.
+const DIALOG_TYPES = [
+  { id: '272', label: 'Clinical event (general)', needsCode: true },
+  { id: '63',  label: 'Medical history',          needsCode: false },
+  { id: '65',  label: 'Lifestyle (smoking, etc.)',needsCode: true  },
+  { id: '56',  label: 'Blood pressure',           needsCode: false },
+  { id: '79',  label: 'Weight',                   needsCode: false },
+  { id: '80',  label: 'Height',                   needsCode: false },
+  { id: '479', label: 'Numeric / peak flow',      needsCode: true  },
+  { id: '39',  label: 'Acute prescription',       needsCode: false },
+  { id: '40',  label: 'Repeat prescription',      needsCode: false },
+  { id: '62',  label: 'Recall',                   needsCode: true  },
+];
+
+// ----- Vision operator encoding (the .htm file encodes < and > as <!vision>&lt; / <!vision>&gt;)
+function decodeVisionOps(s) {
+  return (s || '')
+    .replace(/<!vision>&lt;<!vision>&gt;/g, '<>')
+    .replace(/<!vision>&gt;=/g, '>=')
+    .replace(/<!vision>&lt;=/g, '<=')
+    .replace(/<!vision>&gt;/g, '>')
+    .replace(/<!vision>&lt;/g, '<');
+}
+function encodeVisionOps(s) {
+  // Order matters: encode compound operators before single ones.
+  return (s || '')
+    .replace(/<>/g, '<!vision>&lt;<!vision>&gt;')
+    .replace(/>=/g, '<!vision>&gt;=')
+    .replace(/<=/g, '<!vision>&lt;=')
+    .replace(/>/g, '<!vision>&gt;')
+    .replace(/</g, '<!vision>&lt;');
+}
+
+// Parse a stored data_code like "000zD1" → { code4, sort, limit }
+function parseDataCode(dc) {
+  dc = dc || '';
+  return {
+    code4: dc.length >= 4 ? dc.slice(0, 4) : '000z',
+    sort:  dc.length >= 5 ? dc[4] : 'D',
+    limit: dc.length >= 6 ? parseInt(dc[5], 10) || 0 : 0,
+  };
+}
+function buildDataCode(code4, sort, limit) {
+  return code4 + sort + String(limit);
+}
+
+// Try to parse a decoded filter into structured conditions joined by a
+// single connective. Returns null if the filter is too complex (parens,
+// mixed AND/OR, etc.) — in that case we show raw-text edit mode.
+const FILTER_FIELDS = ['READ_CODE', 'EVENTDATE', 'RECALLDATE', 'ENDDATE', 'STATUS', 'INACTIVE', 'PRIORITY', 'CATEGORY'];
+const FILTER_OPS = ['=', '<>', '>=', '<=', '>', '<'];
+function parseFilter(decoded) {
+  decoded = (decoded || '').trim();
+  if (!decoded) return { ok: true, connective: 'AND', conditions: [] };
+  if (decoded.includes('(') || decoded.includes(')')) return { ok: false };
+  // Has both AND and OR?
+  const hasAnd = / AND /.test(decoded), hasOr = / OR /.test(decoded);
+  if (hasAnd && hasOr) return { ok: false };
+  const connective = hasOr ? 'OR' : 'AND';
+  const parts = decoded.split(new RegExp(' ' + connective + ' '));
+  const conditions = [];
+  for (const part of parts) {
+    // Match longest operator first.
+    let matched = null;
+    for (const op of ['<>', '>=', '<=', '=', '>', '<']) {
+      const idx = part.indexOf(' ' + op + ' ');
+      if (idx > 0) { matched = { field: part.slice(0, idx).trim(), op, valueRaw: part.slice(idx + op.length + 2).trim() }; break; }
+    }
+    if (!matched) return { ok: false };
+    if (!FILTER_FIELDS.includes(matched.field)) return { ok: false };
+    // Strip surrounding double-quotes for display
+    let v = matched.valueRaw;
+    if (v.startsWith('"') && v.endsWith('"')) v = v.slice(1, -1);
+    conditions.push({ field: matched.field, op: matched.op, value: v });
+  }
+  return { ok: true, connective, conditions };
+}
+function buildFilter(connective, conditions) {
+  return conditions
+    .filter(c => c.field && c.op)
+    .map(c => `${c.field} ${c.op} "${c.value}"`)
+    .join(' ' + connective + ' ');
+}
+
+function buildDescription(code4, sort, limit, filterDecoded) {
+  const name = (RECORD_TYPES.find(r => r.code === code4) || {}).name || 'Records';
+  let lead;
+  if (limit === 0) {
+    lead = `All ${name} Records in ${sort === 'A' ? 'Ascending Order' : 'Descending order'}`;
+  } else {
+    lead = `Last ${limit} ${name} Records`;
+  }
+  return filterDecoded ? `${lead} Where ${filterDecoded}` : lead;
+}
+
+function renderPatientDataQuery(item, si, ii) {
+  const row = document.createElement('div');
+  row.className = 'item-row';
+  row.style.background = '#f0fff4';
+  row.style.borderColor = '#9ae6b4';
+  row.appendChild(itemHeader('Patient Data', si, ii));
+
+  const parts = parseDataCode(item.data_code);
+  // State held on the item object: filter_expr stays in raw (encoded) form
+  // for export; UI works in decoded form.
+  let filterDecoded = decodeVisionOps(item.filter_expr || '');
+  let parsed = parseFilter(filterDecoded);
+  let rawMode = !parsed.ok;
+  // User-override flag for description (true once they type)
+  let descOverride = false;
+  // Heuristic: if existing description doesn't match what we'd build, treat as overridden
+  const computed = buildDescription(parts.code4, parts.sort, parts.limit, filterDecoded);
+  if (item.description && item.description.trim() && item.description.trim() !== computed.trim()) {
+    descOverride = true;
+  }
+
+  function syncFromUI() {
+    item.data_code = buildDataCode(parts.code4, parts.sort, parts.limit);
+    item.filter_expr = encodeVisionOps(filterDecoded);
+    if (!descOverride) {
+      item.description = buildDescription(parts.code4, parts.sort, parts.limit, filterDecoded);
+      descInp.value = item.description;
+    }
+  }
+
+  // --- Record type
+  const typeWrap = document.createElement('div');
+  typeWrap.style.marginBottom = '8px';
+  typeWrap.appendChild(fieldLabel('Record Type', 'What kind of clinical record to query. The 4-char code (e.g. 000z = Medical History) is part of Vision\'s data_code.'));
+  const typeSel = document.createElement('select');
+  RECORD_TYPES.forEach(rt => {
+    const opt = document.createElement('option');
+    opt.value = rt.code; opt.textContent = `${rt.name}  (${rt.code})`;
+    if (rt.code === parts.code4) opt.selected = true;
+    typeSel.appendChild(opt);
+  });
+  // If current code isn't in the catalog, add it as an option
+  if (!RECORD_TYPES.find(r => r.code === parts.code4)) {
+    const opt = document.createElement('option');
+    opt.value = parts.code4; opt.textContent = `(unknown) ${parts.code4}`;
+    opt.selected = true; typeSel.insertBefore(opt, typeSel.firstChild);
+  }
+  typeSel.addEventListener('change', e => { parts.code4 = e.target.value; syncFromUI(); });
+  typeWrap.appendChild(typeSel);
+  row.appendChild(typeWrap);
+
+  // --- Sort + Limit grid
+  const grid = document.createElement('div');
+  grid.className = 'field-group';
+
+  const sortWrap = document.createElement('div');
+  sortWrap.appendChild(fieldLabel('Sort', 'Descending = newest first; Ascending = oldest first.'));
+  const sortSel = document.createElement('select');
+  [['D','Descending (newest first)'], ['A','Ascending (oldest first)']].forEach(([v, label]) => {
+    const o = document.createElement('option'); o.value = v; o.textContent = label;
+    if (parts.sort === v) o.selected = true; sortSel.appendChild(o);
+  });
+  sortSel.addEventListener('change', e => { parts.sort = e.target.value; syncFromUI(); });
+  sortWrap.appendChild(sortSel);
+  grid.appendChild(sortWrap);
+
+  const limitWrap = document.createElement('div');
+  limitWrap.appendChild(fieldLabel('Show', '0 = All matching records; 1-9 = only the most recent N.'));
+  const limitSel = document.createElement('select');
+  [['0','All'], ['1','Last 1'], ['2','Last 2'], ['3','Last 3'], ['5','Last 5'], ['10','Last 10']].forEach(([v,label]) => {
+    const o = document.createElement('option'); o.value = v; o.textContent = label;
+    if (parts.limit === parseInt(v, 10)) o.selected = true; limitSel.appendChild(o);
+  });
+  limitSel.addEventListener('change', e => { parts.limit = parseInt(e.target.value, 10); syncFromUI(); });
+  limitWrap.appendChild(limitSel);
+  grid.appendChild(limitWrap);
+
+  row.appendChild(grid);
+
+  // --- Filter section
+  const filterWrap = document.createElement('div');
+  filterWrap.style.marginTop = '10px';
+  filterWrap.appendChild(fieldLabel('Filter (optional)', 'Limit results to records matching one or more conditions.\nValues like "T", "T-3m", "T+1y" are Vision date macros (T = today).'));
+  const filterBody = document.createElement('div');
+  filterWrap.appendChild(filterBody);
+  row.appendChild(filterWrap);
+
+  function renderFilter() {
+    filterBody.innerHTML = '';
+    if (rawMode) {
+      const ta = document.createElement('textarea');
+      ta.value = filterDecoded;
+      ta.rows = 2;
+      ta.placeholder = 'e.g.  READ_CODE = "G3" AND EVENTDATE >= "01 Jan 2020"';
+      ta.style.fontFamily = 'monospace';
+      ta.style.fontSize = '12px';
+      ta.addEventListener('input', e => { filterDecoded = e.target.value; syncFromUI(); });
+      filterBody.appendChild(ta);
+      const tryBtn = document.createElement('button');
+      tryBtn.className = 'btn btn-ghost btn-sm';
+      tryBtn.textContent = 'Try guided builder';
+      tryBtn.style.marginTop = '4px';
+      tryBtn.addEventListener('click', () => {
+        const re = parseFilter(filterDecoded);
+        if (re.ok) { parsed = re; rawMode = false; renderFilter(); }
+        else { alert('This filter is too complex for the guided builder (parentheses or mixed AND/OR). Edit as raw text.'); }
+      });
+      filterBody.appendChild(tryBtn);
+      return;
+    }
+
+    // Connective
+    if (parsed.conditions.length > 1) {
+      const cWrap = document.createElement('div');
+      cWrap.style.cssText = 'margin-bottom:6px;font-size:12px;';
+      cWrap.appendChild(document.createTextNode('Join with: '));
+      ['AND','OR'].forEach(v => {
+        const lbl = document.createElement('label');
+        lbl.style.marginRight = '10px';
+        const rb = document.createElement('input');
+        rb.type = 'radio'; rb.name = `conn-${si}-${ii}`; rb.value = v;
+        rb.checked = parsed.connective === v;
+        rb.addEventListener('change', () => { parsed.connective = v; syncFromUI(); });
+        lbl.appendChild(rb); lbl.appendChild(document.createTextNode(' ' + v));
+        cWrap.appendChild(lbl);
+      });
+      filterBody.appendChild(cWrap);
+    }
+
+    parsed.conditions.forEach((cond, idx) => {
+      const r = document.createElement('div');
+      r.style.cssText = 'display:flex;gap:6px;margin-bottom:4px;align-items:center;';
+
+      const fSel = document.createElement('select');
+      fSel.style.flex = '0 0 130px';
+      FILTER_FIELDS.forEach(f => {
+        const o = document.createElement('option'); o.value = f; o.textContent = f;
+        if (cond.field === f) o.selected = true; fSel.appendChild(o);
+      });
+      fSel.addEventListener('change', e => { cond.field = e.target.value; rebuild(); });
+      r.appendChild(fSel);
+
+      const oSel = document.createElement('select');
+      oSel.style.flex = '0 0 60px';
+      FILTER_OPS.forEach(op => {
+        const o = document.createElement('option'); o.value = op; o.textContent = op;
+        if (cond.op === op) o.selected = true; oSel.appendChild(o);
+      });
+      oSel.addEventListener('change', e => { cond.op = e.target.value; rebuild(); });
+      r.appendChild(oSel);
+
+      const vInp = document.createElement('input');
+      vInp.type = 'text';
+      vInp.value = cond.value || '';
+      vInp.placeholder = cond.field === 'READ_CODE' ? 'e.g. G3' : (cond.field.endsWith('DATE') ? 'e.g. T or "01 Jan 2020"' : 'value');
+      vInp.style.flex = '1';
+      vInp.addEventListener('input', e => { cond.value = e.target.value; rebuild(); });
+      r.appendChild(vInp);
+
+      // READ code autocomplete on the value field
+      if (cond.field === 'READ_CODE') {
+        const dd = document.createElement('div');
+        dd.className = 'autocomplete-dropdown';
+        dd.style.display = 'none';
+        const wrap = document.createElement('div');
+        wrap.className = 'autocomplete-wrapper';
+        wrap.style.flex = '1';
+        r.removeChild(vInp);
+        wrap.appendChild(vInp);
+        wrap.appendChild(dd);
+        r.appendChild(wrap);
+        setupReadCodeAutocomplete(vInp, dd, sel => {
+          cond.value = sel.code.trim();
+          vInp.value = cond.value;
+          rebuild();
+        });
+      }
+
+      const del = document.createElement('button');
+      del.className = 'btn btn-ghost btn-sm';
+      del.textContent = '×';
+      del.title = 'Remove condition';
+      del.style.flex = '0 0 auto';
+      del.addEventListener('click', () => {
+        parsed.conditions.splice(idx, 1);
+        rebuild(); renderFilter();
+      });
+      r.appendChild(del);
+      filterBody.appendChild(r);
+    });
+
+    const btnRow = document.createElement('div');
+    btnRow.style.marginTop = '4px';
+    const addBtn = document.createElement('button');
+    addBtn.className = 'btn btn-ghost btn-sm';
+    addBtn.textContent = '+ Add condition';
+    addBtn.addEventListener('click', () => {
+      parsed.conditions.push({ field: 'READ_CODE', op: '=', value: '' });
+      rebuild(); renderFilter();
+    });
+    btnRow.appendChild(addBtn);
+
+    if (parsed.conditions.length) {
+      const rawBtn = document.createElement('button');
+      rawBtn.className = 'btn btn-ghost btn-sm';
+      rawBtn.textContent = 'Edit as raw text';
+      rawBtn.style.marginLeft = '6px';
+      rawBtn.addEventListener('click', () => { rawMode = true; renderFilter(); });
+      btnRow.appendChild(rawBtn);
+    }
+    filterBody.appendChild(btnRow);
+
+    function rebuild() {
+      filterDecoded = buildFilter(parsed.connective, parsed.conditions);
+      syncFromUI();
+    }
+  }
+
+  renderFilter();
+
+  // --- Description (auto-built unless overridden)
+  const descWrap = document.createElement('div');
+  descWrap.style.marginTop = '10px';
+  descWrap.appendChild(fieldLabel('Display Description', 'Text shown above the query results in Vision. Auto-generated from the fields above; edit to override.'));
+  const descInp = document.createElement('input');
+  descInp.type = 'text';
+  descInp.value = item.description || buildDescription(parts.code4, parts.sort, parts.limit, filterDecoded);
+  descInp.addEventListener('input', e => {
+    descOverride = true;
+    item.description = e.target.value;
+  });
+  descWrap.appendChild(descInp);
+  // Reset link
+  const resetBtn = document.createElement('button');
+  resetBtn.className = 'btn btn-ghost btn-sm';
+  resetBtn.textContent = 'Auto';
+  resetBtn.title = 'Regenerate description from fields';
+  resetBtn.style.marginLeft = '4px';
+  resetBtn.addEventListener('click', () => {
+    descOverride = false;
+    item.description = buildDescription(parts.code4, parts.sort, parts.limit, filterDecoded);
+    descInp.value = item.description;
+  });
+  descWrap.appendChild(resetBtn);
+  row.appendChild(descWrap);
+
+  // Initialise item with computed values if blank
+  if (!item.data_code) syncFromUI();
 
   return row;
 }
